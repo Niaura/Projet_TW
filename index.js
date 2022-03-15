@@ -1,12 +1,16 @@
-var http = require('http');
+var path = require('path');
+var express = require('express');
+const fs = require('fs')
 
-/*
-* Création du serveur
-*/
-var app = http.createServer(function(req,res){
-    res.write("Bonjour!!!");
-    res.end();
+var app = express();
+
+app.use('/dist/js', express.static('./dist/js'));
+
+app.get('/', (req, res) => {
+	res.sendFile('./index.html', { root : __dirname});
 });
 
-//Le serveur écoute sur le port 10031
-app.listen(10031);
+
+var server = app.listen(10021, function() {
+    console.log('listening');
+});
