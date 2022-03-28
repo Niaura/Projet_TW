@@ -5,13 +5,34 @@ import ReactDOM from 'react-dom';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
-import test from './images/albi.jpg';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+//import test from './images/albi.jpg';
 
 const container = document.getElementById('root');
+//peut etre changer en plusieur card avec "learn more" pour chaque image??
 
+const bull = (
+  <Box
+    component="span"
+    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
+  >
+    •
+  </Box>
+);
 
 function Test(){
   return (
+    <React.Fragment>
+    <CardContent>
+      <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+        Les endroit à visiter
+      </Typography>
+
     <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
     {itemData.map((item) => (
       <ImageListItem key={item.img}>
@@ -25,13 +46,19 @@ function Test(){
     ))}
   </ImageList>
 );
+</CardContent>
+    <CardActions>
+      <Button size="small">Learn More</Button>
+    </CardActions>
+    </React.Fragment>
+);
 }
 
 const itemData = [
-{
-  img: './images/albi.jpg',
-  title: 'Albi',
-},
+//{
+ // img: './images/albi.jpg',
+ // title: 'Albi',
+//},
 {
   img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
   title: 'Burger',
@@ -83,5 +110,3 @@ const itemData = [
 
 //ATTENTION : SI SUR MUI VOUS AVEZ document.querySelector('#app') MODIFIEZ AVEC ROOT
 ReactDOM.render(<Test />, document.querySelector('#root'));
-
-
