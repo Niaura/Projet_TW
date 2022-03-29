@@ -37,7 +37,7 @@ function Test(){
 
 
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Destinations', 'Séjours', 'Actualités','Contacts'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
