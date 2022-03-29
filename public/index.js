@@ -17,6 +17,13 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import SearchIcon from '@mui/icons-material/Search';
 import LocationCityIcon from '@mui/icons-material/LocationCity';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
+import ButtonBase from '@mui/material/ButtonBase';
 
 const container = document.getElementById('root');
 
@@ -186,11 +193,40 @@ const ResponsiveAppBar = () => {
     </AppBar>
   );
 };
-export default ResponsiveAppBar;
 
+const ResponsiveAppBarFoot = () => {
+
+  return (
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" style={{ background: '#34383e' }}>
+        <Toolbar>
+          <Grid container spacing={3}>
+            <Grid item xs={5}>
+              <Typography component="div">
+              <LocationCityIcon /><strong>Albi Tourisme</strong> <br/><br/> Albi Tourisme est un site indépendant<br/> et nouvelle génération qui vous permet<br/> de trouver toutes les informations pour<br/> organiser vos voyages.
+              </Typography>
+            </Grid>
+            <Grid item xs={5} >
+              <Typography>
+                <strong>A propos</strong> <br/><br/> <a>Qui sommes-nous ?</a> <br/> <a>L'équipe</a> <br/> <a>Conditions générales</a> <br/> <a>Confidentialité</a>
+              </Typography>
+            </Grid>
+            <Grid item xs>
+              <Typography>
+                <Button>Nous contacter</Button> <br/>
+                <Button><FacebookIcon/></Button>
+                <Button><InstagramIcon/></Button>
+                <Button><TwitterIcon/></Button>
+              </Typography>
+            </Grid>
+          </Grid>
+        </Toolbar>
+      </AppBar>
+    </Box>
+  );
+};
 
 
 //ATTENTION : SI SUR MUI VOUS AVEZ document.querySelector('#app') MODIFIEZ AVEC ROOT
-ReactDOM.render(<ResponsiveAppBar />, document.querySelector('#root'));
-
+ReactDOM.render(<> <ResponsiveAppBar/> <br/> <ResponsiveAppBarFoot /> </>, document.querySelector('#root'));
 
