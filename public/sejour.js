@@ -57,7 +57,7 @@ function Test(){
                 <Button size="small">Learn More</Button>
                 </CardActions>
             </Card>
-        
+        <Card>
         <CardHeader
             title=" Musée Toulouse-Lautrec"
             />
@@ -78,6 +78,29 @@ function Test(){
             <CardActions>
             <Button size="small">Learn More</Button>
             </CardActions>
+        </Card>
+        <Card>
+            <CardHeader
+            title=" Musée de la mode"
+            />
+            <CardMedia
+            component="img"
+            height="194"
+            image="./images/museem.jpg"
+            alt="musée de la mode"
+            />
+            <CardContent>
+            <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+            musée de la mode text
+            </Typography>
+            <Typography >
+            testyyyy
+            </Typography>
+            </CardContent>
+            <CardActions>
+            <Button size="small">Learn More</Button>
+            </CardActions> </Card>
+
 
         </Grid>
 
