@@ -242,10 +242,10 @@ function Test(){
     
     <Box sx={{ flexGrow: 1 }}>
 
-<Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+<Grid container rowSpacing={2} columnSpacing={{ xs: 2, sm: 2, md: 3 }}>
   <Grid item xs={6}>
 
-        <Card sx={{ maxWidth: 760 }}>
+        <Card sx={{ maxWidth: 700 }}>
           <CardHeader
             
             title="Cathédrale d'albi"
@@ -291,7 +291,56 @@ function Test(){
         </Grid>
 
         <Grid item xs={6}>
-        <Card sx={{ maxWidth: 760 }}>
+
+        <Card sx={{ maxWidth: 700 }}>
+          <CardHeader
+            
+            title="Musée de la mode"
+          
+          />
+          <CardMedia
+            component="img"
+            height="194"
+            image="./images/museeM.jpg"
+            alt="musee de la mode "
+          />
+          <CardContent>
+            <Typography variant="body2" color="text.secondary">
+            Riche de quelques milliers de pièces, la collection est présentée selon des thèmes différents 
+            tous les deux ans.
+            Chaque exposition propose de découvrir une centaine de pièces.
+            </Typography>
+          </CardContent>
+          <CardActions disableSpacing>
+            <IconButton aria-label="add to favorites">
+              <FavoriteIcon />
+            </IconButton>
+
+            <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>learn more</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.
+          </Typography>
+        </AccordionDetails>
+        </Accordion>
+            
+          
+          </CardActions>
+          
+        </Card>
+        </Grid>
+
+
+        <Grid item xs={6}>
+        <Card sx={{ maxWidth: 700 }}>
           <CardHeader
             
             title="Musée Toulouse-Lautrec"
@@ -336,25 +385,123 @@ function Test(){
         </Card>
         </Grid>
 
+        
+
         <Grid item xs={6}>
 
-        <Card sx={{ maxWidth: 760 }}>
+        <Card sx={{ maxWidth: 700 }}>
           <CardHeader
             
-            title="Musée de la mode"
+            title=" L’espace zoologique Exoticamis"
            
           />
           <CardMedia
             component="img"
             height="194"
-            image="./images/museeM.jpg"
-            alt="musee de la mode "
+            image="./images/zoo.jpg"
+            alt="zoologique Exoticamis "
           />
           <CardContent>
             <Typography variant="body2" color="text.secondary">
-            Riche de quelques milliers de pièces, la collection est présentée selon des thèmes différents 
-            tous les deux ans.
-            Chaque exposition propose de découvrir une centaine de pièces.
+            Le parc présente 200 animaux de 30 espèces différentes sur 1 hectare de végétation. 
+            L'espace vivarium présente des serpents, des lézards et des caïmans.
+             L'espace extérieur héberge des singes, lémuriens, tortues, animaux de la ferme et oiseaux exotiques.
+            </Typography>
+          </CardContent>
+          <CardActions disableSpacing>
+            <IconButton aria-label="add to favorites">
+              <FavoriteIcon />
+            </IconButton>
+
+            <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>learn more</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+            
+           
+          </CardActions>
+          
+        </Card>
+        </Grid>
+
+        <Grid item xs={6}>
+
+        <Card sx={{ maxWidth: 700 }}>
+          <CardHeader
+            
+            title=" Les jardins de la Berbie"
+           
+          />
+          <CardMedia
+            component="img"
+            height="194"
+            image="./images/jardin.jpg"
+            alt="jardins de la Berbie  "
+          />
+          <CardContent>
+            <Typography variant="body2" color="text.secondary">
+            Chemin de promenade ombragé, situé au cœur de la "Cité épiscopale d'Albi", 
+            les jardins du Palais de la Berbie offrent une vue panoramique sur les berges du Tarn, le Pont-vieux, 
+            les anciens moulins et la cathédrale Sainte-Cécile. 
+            </Typography>
+          </CardContent>
+          <CardActions disableSpacing>
+            <IconButton aria-label="add to favorites">
+              <FavoriteIcon />
+            </IconButton>
+
+            <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>learn more</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+            
+           
+          </CardActions>
+          
+        </Card>
+        </Grid>
+
+
+        <Grid item xs={6}>
+
+        <Card sx={{ maxWidth: 700 }}>
+          <CardHeader
+            
+            title=" Parc Rochegude"
+           
+          />
+          <CardMedia
+            component="img"
+            height="194"
+            image="./images/parc.jpg"
+            alt="parc rochegude  "
+          />
+          <CardContent>
+            <Typography variant="body2" color="text.secondary">
+            Le parc Rochegude est un poumon de verdure de 4 hectares en centre-ville d’Albi.
+             Lieu de promenade et de détente apprécié des Albigeois et des visiteurs, il vous offre de nombreux chemins de balades.
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
