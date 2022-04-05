@@ -236,7 +236,7 @@ const ResponsiveAppBarFoot = () => {
 
 
 
-function Test(){
+export function Sejour(){
   
   
   
@@ -547,4 +547,4 @@ function Test(){
 
 
 //ATTENTION : SI SUR MUI VOUS AVEZ document.querySelector('#app') MODIFIEZ AVEC ROOT
-ReactDOM.render(<> <ResponsiveAppBar/> <br/> <Test /> <br/> <ResponsiveAppBarFoot /> </> , document.querySelector('#root'));
+ReactDOM.render(<> <ResponsiveAppBar/> <br/> <Sejour /> <br/> <ResponsiveAppBarFoot /> </> , document.querySelector('#root'));
