@@ -1,6 +1,6 @@
 ////////////////////////////// PARTIE POUR REACT /////////////////////////////////////
 
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
 /////////////////////////////////////////////////////////////////////////////////////
@@ -8,7 +8,7 @@ import ReactDOM from 'react-dom';
 
 ////////////////////////////// PARTIE POUR MUI ///////////////////////////////////////
 
-import { styled } from '@mui/material/styles';
+import { styled, alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 
@@ -26,41 +26,80 @@ import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import InputBase from '@mui/material/InputBase';
+import SearchIcon from '@mui/icons-material/Search';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LocationCityIcon from '@mui/icons-material/LocationCity';
+
+
 
 /////////////////////////////////////////////////////////////////////////////////////
 
 
 ////////////////////////////// PARTIE POUR LEAFLET ///////////////////////////////////
 
-// Voir sur npm -> leaflet react : VA REMPLACER CES ENC*LES DE GOOGLE
+// Voir sur npm -> leaflet react : VA REMPLACER GOOGLE
 
+import L from 'leaflet';
+import marker from 'leaflet';
 
 /////////////////////////////////////////////////////////////////////////////////////
 
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
+
+
+//////////////////////////// BARRE DU HAUT //////////////////////////////////////////
 
 const pages = ['Destinations', 'Séjours', 'Actualités','Contacts'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-const mapStyles = {
+const Search = styled('div')(({ theme }) => ({
+  position: 'relative',
+  borderRadius: theme.shape.borderRadius,
+  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  '&:hover': {
+    backgroundColor: alpha(theme.palette.common.white, 0.25),
+  },
+  marginLeft: 0,
   width: '100%',
-  height: '100%'
-};
+  [theme.breakpoints.up('sm')]: {
+    marginLeft: theme.spacing(1),
+    width: 'auto',
+  },
+}));
 
+const SearchIconWrapper = styled('div')(({ theme }) => ({
+  padding: theme.spacing(0, 2),
+  height: '100%',
+  position: 'absolute',
+  pointerEvents: 'none',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+}));
 
-function Test(){
+const StyledInputBase = styled(InputBase)(({ theme }) => ({
+  color: 'inherit',
+  '& .MuiInputBase-input': {
+    padding: theme.spacing(1, 1, 1, 0),
+    // vertical padding + font size from searchIcon
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    transition: theme.transitions.create('width'),
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      width: '12ch',
+      '&:focus': {
+        width: '20ch',
+      },
+    },
+  },
+}));
 
+const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -78,14 +117,11 @@ function Test(){
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
   
 
   return (
-
-    
-
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+    <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -94,7 +130,7 @@ function Test(){
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
-            LOGO
+            <LocationCityIcon />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -139,7 +175,7 @@ function Test(){
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            LOGO
+            <LocationCityIcon />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -152,42 +188,161 @@ function Test(){
               </Button>
             ))}
           </Box>
-
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
+          <Search>
+            <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase
+              placeholder="Search…"
+              inputProps={{ 'aria-label': 'search' }}
+            />
+          </Search>
         </Toolbar>
       </Container>
     </AppBar>
+  );
+};
+
+
+//////////////////////////////////////////////////////////////////////////////////////
 
 
 
+/////////////////////////////////// BARRE DU BAS /////////////////////////////////////
+
+const ResponsiveAppBarFoot = () => {
+
+  return (
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" style={{ background: '#34383e' }}>
+        <Toolbar>
+          <Grid container spacing={3}>
+            <Grid item xs={5}>
+              <Typography component="div">
+              <LocationCityIcon /><strong>Albi Tourisme</strong> <br/><br/> Albi Tourisme est un site indépendant<br/> et nouvelle génération qui vous permet<br/> de trouver toutes les informations pour<br/> organiser vos voyages.
+              </Typography>
+            </Grid>
+            <Grid item xs={5} >
+              <Typography>
+                <strong>A propos</strong> <br/><br/> <a>Qui sommes-nous ?</a> <br/> <a>L'équipe</a> <br/> <a>Conditions générales</a> <br/> <a>Confidentialité</a>
+              </Typography>
+            </Grid>
+            <Grid item xs>
+              <Typography>
+                <Button>Nous contacter</Button> <br/>
+                <Button><FacebookIcon/></Button>
+                <Button><InstagramIcon/></Button>
+                <Button><TwitterIcon/></Button>
+              </Typography>
+            </Grid>
+          </Grid>
+        </Toolbar>
+      </AppBar>
+    </Box>
+  );
+};
+
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+
+const Map = () => {
+  const mapStyles = {
+    overflow: "hidden",
+    width: "100%",
+    height: "100vh"
+  };
+  const MAP_TILE = L.tileLayer(`https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`, {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  });
+
+  // Define an object literal with params that will be passed to the map:
+  const mapParams = {
+    center: [43.933333, 2.150000],
+    zoom: 14,
+    zoomControl: false,
+    maxBounds: L.latLngBounds(L.latLng(-150, -240), L.latLng(150, 240)),
+    layers: [MAP_TILE]
+  };
+   
+  // This useEffect hook runs when the component is first mounted, 
+  // similar to componentDidMount() lifecycle method of class-based
+  // components:
+  useEffect(() => {
+    const map = L.map("map", mapParams);
+
+    var popup = L.popup()
+      .setLatLng([43.933333, 2.150000])
+      .setContent("Bienvenue à Albi :DDDDDDDDDDDD.")
+      .openOn(map);
+
+    var popup2 = L.popup();
+
+    function onMapClick(e) {
+        popup2
+            .setLatLng(e.latlng)
+            .setContent("Tu as cliqué ici : " + e.latlng.toString())
+            .openOn(map);
+    }
+
+    map.on('click', onMapClick);  
+  }, []);
+
+
+
+  
+
+  return (
+    <div>
+      <div id="map" style={mapStyles} />
+      
+    </div>
+    
+  )
+};
+
+
+///////////////////////////////  PARTIE DU MILIEU ////////////////////////////////////
+
+function Test(){
+
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const position = [51.505, -0.09]
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
+
+
+  
+  
+
+  return (
+    <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={1}>
         <Grid item xs={3}>
           <Accordion>
@@ -207,7 +362,8 @@ function Test(){
           </Accordion>
         </Grid>
         <Grid item xs={6}>
-          <Item>Map</Item> 
+          <Item>Map</Item>
+          <Map />
         </Grid>
         <Grid item xs={3}>
           <Item>
@@ -220,5 +376,7 @@ function Test(){
 };
 
 
+
+
 //ATTENTION : SI SUR MUI VOUS AVEZ document.querySelector('#app') MODIFIEZ AVEC ROOT
-ReactDOM.render(<Test />, document.querySelector('#root'));
+ReactDOM.render(<> <ResponsiveAppBar/> <br/> <Test /> <br/> <ResponsiveAppBarFoot /> </>, document.querySelector('#root'));
