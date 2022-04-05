@@ -47,6 +47,8 @@ import LocationCityIcon from '@mui/icons-material/LocationCity';
 import L from 'leaflet';
 import marker from 'leaflet';
 
+import Routing from 'leaflet-routing-machine';
+
 /////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -282,21 +284,37 @@ const Map = () => {
   useEffect(() => {
     const map = L.map("map", mapParams);
 
-    var popup = L.popup()
-      .setLatLng([43.933333, 2.150000])
-      .setContent("Bienvenue à Albi :DDDDDDDDDDDD.")
-      .openOn(map);
-
-    var popup2 = L.popup();
+    var popup = L.popup();
 
     function onMapClick(e) {
-        popup2
+        popup
             .setLatLng(e.latlng)
             .setContent("Tu as cliqué ici : " + e.latlng.toString())
             .openOn(map);
     }
 
-    map.on('click', onMapClick);  
+    var univ = L.marker([43.919737, 2.138901], {alt: 'Université Jean François Champollion'}).addTo(map)
+      .bindPopup('Université Jean François Champollion')
+      .openPopup();
+
+    function cliqueMarker(e) {
+      console.log("Bonjour");
+    }
+ 
+    univ.on('click', cliqueMarker);
+
+    var mesCoordonees = [
+      [43.919737, 2.138901],
+      [43.928474, 2.143660]
+    ];
+
+    L.Routing.control({
+      waypoints: [
+        L.latLng(43.919737, 2.138901),
+        L.latLng(43.928474, 2.143660)
+      ]
+    }).addTo(map);
+
   }, []);
 
 
@@ -351,24 +369,31 @@ function Test(){
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>Accordion 1</Typography>
+            <Typography>Itinéraires disponibles :</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Itinéraire Historique
-                Itinéraire Insolite
+                Voici une liste d'itinéraires spécialement préparé pour vous ! :D
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+            <Typography>Calculer un itinéraire :</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                Vous pouvez calculer un itinéraire, sois avec des coordonées personnalisés sois grâce aux lieux déjà présent sur la map ! :D
               </Typography>
             </AccordionDetails>
           </Accordion>
         </Grid>
-        <Grid item xs={6}>
-          <Item>Map</Item>
+        <Grid item xs={7}>
           <Map />
-        </Grid>
-        <Grid item xs={3}>
-          <Item>
-            <h2>Récaptitulatif de l'itinéraire</h2>
-          </Item>
         </Grid>
       </Grid>
     </Box>
