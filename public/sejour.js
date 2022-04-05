@@ -1,6 +1,8 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 
+import Data from "./Bdd/data.json";
+
 
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -248,7 +250,7 @@ function Test(){
         <Card sx={{ maxWidth: 700 }}>
           <CardHeader
             
-            title="Cathédrale d'albi"
+            title={Data.lieux[0].nom}
            
           />
           <CardMedia
