@@ -20,10 +20,12 @@ import LocationCityIcon from '@mui/icons-material/LocationCity';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
-
+import { Redirect } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import ButtonBase from '@mui/material/ButtonBase';
+import { useNavigate } from 'react-router-dom';
+import { Test } from './sejour.js';
 
 const container = document.getElementById('root');
 
@@ -35,17 +37,9 @@ const container = document.getElementById('root');
 //  );
 //};
 
-function Test(){
-  return (
-    <Button variant ="contained">
-      Bonjour
-    </Button>
-  );
-};
 
 
-
-const pages = ['Destinations', 'Séjours', 'Actualités','Contacts'];
+const pages = ['Destinations', 'Séjours', 'Actualités', 'Contacts'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const Search = styled('div')(({ theme }) => ({
@@ -90,7 +84,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const ResponsiveAppBar = () => {
+
+
+
+const ResponsiveAppBar = ({ onClick }) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -109,7 +106,10 @@ const ResponsiveAppBar = () => {
     setAnchorElUser(null);
   };
 
-  
+  const redirection = () => {
+    let navigate = useNavigate();
+    navigate("/sejour");
+  };
 
   return (
     <AppBar position="static">
@@ -169,15 +169,27 @@ const ResponsiveAppBar = () => {
             <LocationCityIcon />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+            <Button
+              sx={{ my: 2, color: 'white', display: 'block' }}
+            >
+              Destinations
+            </Button>
+            <Button
+              sx={{ my: 2, color: 'white', display: 'block' }}
+              onClick={() => onClick('sejour')}
+            >
+              Séjours
+            </Button>
+            <Button
+              sx={{ my: 2, color: 'white', display: 'block' }}
+            >
+              Actualités
+            </Button>
+            <Button
+              sx={{ my: 2, color: 'white', display: 'block' }}
+            >
+              Contacts
+            </Button>
           </Box>
           <Search>
             <SearchIconWrapper>
@@ -203,20 +215,20 @@ const ResponsiveAppBarFoot = () => {
           <Grid container spacing={3}>
             <Grid item xs={5}>
               <Typography component="div">
-              <LocationCityIcon /><strong>Albi Tourisme</strong> <br/><br/> Albi Tourisme est un site indépendant<br/> et nouvelle génération qui vous permet<br/> de trouver toutes les informations pour<br/> organiser vos voyages.
+                <LocationCityIcon /><strong>Albi Tourisme</strong> <br /><br /> Albi Tourisme est un site indépendant<br /> et nouvelle génération qui vous permet<br /> de trouver toutes les informations pour<br /> organiser vos voyages.
               </Typography>
             </Grid>
             <Grid item xs={5} >
               <Typography>
-                <strong>A propos</strong> <br/><br/> <a>Qui sommes-nous ?</a> <br/> <a>L'équipe</a> <br/> <a>Conditions générales</a> <br/> <a>Confidentialité</a>
+                <strong>A propos</strong> <br /><br /> <a>Qui sommes-nous ?</a> <br /> <a>L'équipe</a> <br /> <a>Conditions générales</a> <br /> <a>Confidentialité</a>
               </Typography>
             </Grid>
             <Grid item xs>
               <Typography>
-                <Button>Nous contacter</Button> <br/>
-                <Button><FacebookIcon/></Button>
-                <Button><InstagramIcon/></Button>
-                <Button><TwitterIcon/></Button>
+                <Button>Nous contacter</Button> <br />
+                <Button><FacebookIcon /></Button>
+                <Button><InstagramIcon /></Button>
+                <Button><TwitterIcon /></Button>
               </Typography>
             </Grid>
           </Grid>
@@ -226,7 +238,28 @@ const ResponsiveAppBarFoot = () => {
   );
 };
 
+function App() {
+
+  let [etat, setEtat] = React.useState("notsejour");
+  function render() {
+
+    switch (etat) {
+      case "sejour":
+        return <Test />;
+      default:
+        return <></>;
+    }
+  }
+
+  return <>
+    <ResponsiveAppBar onClick={setEtat}/> <br />
+    { render()}
+    <ResponsiveAppBarFoot />
+  </>;
+}
 
 //ATTENTION : SI SUR MUI VOUS AVEZ document.querySelector('#app') MODIFIEZ AVEC ROOT
-ReactDOM.render(<> <ResponsiveAppBar/> <br/> <ResponsiveAppBarFoot /> </>, document.querySelector('#root'));
+ReactDOM.render(<>
+  <App />
+</>, document.querySelector('#root'));
 
