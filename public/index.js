@@ -23,23 +23,10 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import ButtonBase from '@mui/material/ButtonBase';
-import { Test } from './sejour.js';
-import { Test2 } from './itineraire.js';
+import { Sejour } from './sejour.js';
+import { Itineraire } from './itineraire.js';
 
 const container = document.getElementById('root');
-
-//const MyComponent = () => {
-//  return (
-//    <button variant ="contained">
-//      Bonjour
-//    </button>
-//  );
-//};
-
-
-
-const pages = ['Destinations', 'Séjours', 'Actualités', 'Contacts'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -83,7 +70,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-
+function Acceuil() {
+  return (
+    <></>
+  );
+};
 
 
 const ResponsiveAppBar = ({ onClick }) => {
@@ -114,59 +105,14 @@ const ResponsiveAppBar = ({ onClick }) => {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
-          >
-            <LocationCityIcon />
+          <Typography>
+            <Button
+              onClick={() => onClick('acceuil')}
+            >
+              <LocationCityIcon style={{ color: "white" }}/>
+            </Button>
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-          >
-            <LocationCityIcon />
-          </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             <Button
               sx={{ my: 2, color: 'white', display: 'block' }}
@@ -245,11 +191,13 @@ function App() {
 
     switch (etat) {
       case "sejour":
-        return <Test />;
+        return <Sejour />;
       case "itineraire":
-        return <Test2 />;
+        return <Itineraire />;
+      case "acceuil":
+        return <Acceuil />;
       default:
-        return <></>;
+        return <></>
     }
   }
 
