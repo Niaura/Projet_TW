@@ -352,7 +352,7 @@ const Map = () => {
 
 ///////////////////////////////  PARTIE DU MILIEU ////////////////////////////////////
 
-function Test(){
+export function Itineraire(){
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -423,4 +423,4 @@ function Test(){
 
 
 //ATTENTION : SI SUR MUI VOUS AVEZ document.querySelector('#app') MODIFIEZ AVEC ROOT
-ReactDOM.render(<> <ResponsiveAppBar/> <br/> <Test /> <br/> <ResponsiveAppBarFoot /> </>, document.querySelector('#root'));
+ReactDOM.render(<> <ResponsiveAppBar/> <br/> <Itineraire /> <br/> <ResponsiveAppBarFoot /> </>, document.querySelector('#root'));
