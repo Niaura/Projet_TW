@@ -20,12 +20,11 @@ import LocationCityIcon from '@mui/icons-material/LocationCity';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import { Redirect } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import ButtonBase from '@mui/material/ButtonBase';
-import { useNavigate } from 'react-router-dom';
 import { Test } from './sejour.js';
+import { Test2 } from './itineraire.js';
 
 const container = document.getElementById('root');
 
@@ -171,6 +170,7 @@ const ResponsiveAppBar = ({ onClick }) => {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             <Button
               sx={{ my: 2, color: 'white', display: 'block' }}
+              onClick={() => onClick('itineraire')}
             >
               Destinations
             </Button>
@@ -246,6 +246,8 @@ function App() {
     switch (etat) {
       case "sejour":
         return <Test />;
+      case "itineraire":
+        return <Test2 />;
       default:
         return <></>;
     }
