@@ -1,0 +1,46 @@
+{
+    "lieux": [
+        {
+            "id": "cathédrale",
+            "nom": "Cathédrale",
+            "localitation":"43.92862118653593, 2.142581275298721",
+            "descriptioon":["Son style gothique dit méridional la distingue des cathédrales comme Chartres, Reims, Amiens qui elles sont contemporaines." ,
+                "Son allure austère et défensive est affirmée par ses dimensions.",
+                "Que l’on arrive, par la route de Toulouse, Rodez, Millau, Cordes-sur-Ciel, la cathédrale Sainte-Cécile, est là, comme posée sur la ville, massive et orgueilleuse, dominant les toits albigeois.",
+                "Regardez-la bien, elle ne se compare à aucune autre."
+            ],
+            "Info Pratique": [
+                "Ouvert du lundi au samedi de 10h à 18h",
+                "fermé le dimanche matin pour la messe. Ouvert de 13h à 18h"
+            ],
+            "Tarifs":[
+                "Entrées dans le choeur: 5€",
+                "Inclus dans le City pass",
+                "Gratuit pour les -12ans"
+            ]
+        },
+
+        {
+            "id": "museeMode",
+            "nom": "Musée de la mode",
+            "localitation":"43.929338089715124, 2.1443518424130814",
+            "descriptioon":["Le Musée de la Mode est au cœur du patrimoine albigeois.",
+                " Le lieu à lui seul mérite le détour puisque ses cinq salles d'exposition occupent une partie de l'ancien Couvent des Annonciades.",
+                " Ce musée présente des vêtements et accessoires issus d'une collection particulière allant du XVIIIe siècle jusqu'aux années 1970. "
+            ],
+            "Info Pratique": [
+                "Ouvert du mardi au dimanche de 10h30 à 12h et de 14h30 à 18h"
+            ],
+            "Tarifs":[
+                "Tarif normal: 6€",
+                "Tarif Albi City pass: 5€",
+                "Tarif réduit: 4€",
+                "(Le tarif réduit concerne les enfants de 9 à 14 ans, les étudiants et les demandeur d'emploi)",
+                "Cratuit pour les -8ans"
+
+            ]
+        }
+
+
+    ]
+}
