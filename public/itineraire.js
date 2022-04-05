@@ -269,7 +269,7 @@ const Map = () => {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   });
 
-  // Define an object literal with params that will be passed to the map:
+  // Charge la map sur Albi
   const mapParams = {
     center: [43.933333, 2.150000],
     zoom: 14,
@@ -278,9 +278,7 @@ const Map = () => {
     layers: [MAP_TILE]
   };
    
-  // This useEffect hook runs when the component is first mounted, 
-  // similar to componentDidMount() lifecycle method of class-based
-  // components:
+  // Mettre ici toute les fonctions etc qui ont un effet sur map
   useEffect(() => {
     const map = L.map("map", mapParams);
 
@@ -289,31 +287,52 @@ const Map = () => {
     function onMapClick(e) {
         popup
             .setLatLng(e.latlng)
-            .setContent("Tu as cliqué ici : " + e.latlng.toString())
+            .console.log(e.latlng)
             .openOn(map);
     }
 
-    var univ = L.marker([43.919737, 2.138901], {alt: 'Université Jean François Champollion'}).addTo(map)
-      .bindPopup('Université Jean François Champollion')
-      .openPopup();
+    map.on('click', onMapClick);
 
-    function cliqueMarker(e) {
-      console.log("Bonjour");
-    }
- 
-    univ.on('click', cliqueMarker);
 
     var mesCoordonees = [
-      [43.919737, 2.138901],
-      [43.928474, 2.143660]
+      [43.919737, 2.138901, "Université"],
+      [43.928474, 2.143660, "Cathédrale"],
+      [43.931220, 2.133501, "Base de Loisirs"],
+      [43.854069, 2.275847, "Zoo"]
     ];
 
     L.Routing.control({
       waypoints: [
         L.latLng(43.919737, 2.138901),
-        L.latLng(43.928474, 2.143660)
+        L.latLng(43.928474, 2.143660),
+        L.latLng(43.931220, 2.133501),
+        L.latLng(43.854069, 2.275847)
       ]
     }).addTo(map);
+
+    const locationOptions = {
+      maximumAge: 10000,
+      timeout: 5000,
+      enableHighAccuracy: true
+    };
+
+    function handleLocation(position) {
+      /* Zoom avant de trouver la localisation */
+      map.setZoom(16);
+      /* Centre la carte sur la latitude et la longitude de la localisation de l'utilisateur */
+      map.panTo(new L.LatLng(position.coords.latitude, position.coords.longitude));
+    }
+
+    function handleLocationError(msg) {
+        alert("Erreur lors de la géolocalisation");
+    }
+
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(handleLocation, handleLocationError, locationOptions);
+    } else {
+        /* Le navigateur n'est pas compatible */
+        alert("Géolocalisation indisponible");
+  }
 
   }, []);
 
