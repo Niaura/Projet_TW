@@ -4,12 +4,12 @@
             "id": "cathédrale",
             "nom": "Cathédrale",
             "localitation":"43.92862118653593, 2.142581275298721",
-            "descriptioon":["Son style gothique dit méridional la distingue des cathédrales comme Chartres, Reims, Amiens qui elles sont contemporaines." ,
+            "description":["Son style gothique dit méridional la distingue des cathédrales comme Chartres, Reims, Amiens qui elles sont contemporaines." ,
                 "Son allure austère et défensive est affirmée par ses dimensions.",
                 "Que l’on arrive, par la route de Toulouse, Rodez, Millau, Cordes-sur-Ciel, la cathédrale Sainte-Cécile, est là, comme posée sur la ville, massive et orgueilleuse, dominant les toits albigeois.",
                 "Regardez-la bien, elle ne se compare à aucune autre."
             ],
-            "Info Pratique": [
+            "horaire": [
                 "Ouvert du lundi au samedi de 10h à 18h",
                 "fermé le dimanche matin pour la messe. Ouvert de 13h à 18h"
             ],
@@ -24,20 +24,112 @@
             "id": "museeMode",
             "nom": "Musée de la mode",
             "localitation":"43.929338089715124, 2.1443518424130814",
-            "descriptioon":["Le Musée de la Mode est au cœur du patrimoine albigeois.",
+            "description":["Le Musée de la Mode est au cœur du patrimoine albigeois.",
                 " Le lieu à lui seul mérite le détour puisque ses cinq salles d'exposition occupent une partie de l'ancien Couvent des Annonciades.",
                 " Ce musée présente des vêtements et accessoires issus d'une collection particulière allant du XVIIIe siècle jusqu'aux années 1970. "
             ],
-            "Info Pratique": [
+            "horaire": [
                 "Ouvert du mardi au dimanche de 10h30 à 12h et de 14h30 à 18h"
             ],
             "Tarifs":[
-                "Tarif normal: 6€",
-                "Tarif Albi City pass: 5€",
-                "Tarif réduit: 4€",
-                "(Le tarif réduit concerne les enfants de 9 à 14 ans, les étudiants et les demandeur d'emploi)",
+                "Tarif normal: 6€ \n",
+                "Tarif Albi City pass: 5€\n",
+                "Tarif réduit: 4€\n",
+                "(Le tarif réduit concerne les enfants de 9 à 14 ans, les étudiants et les demandeur d'emploi)\n",
                 "Cratuit pour les -8ans"
 
+            ]
+        },
+
+        {
+            "id": "museeToulo",
+            "nom": "Musée Toulouse-Lautrec",
+            "localitation":"43.929580823387596, 2.1435570749485002",
+            "description":["La plus importante collection publique au monde d'œuvres d’Henri de Toulouse-Lautrec parmi lesquelles les 31 affiches du peintre lithographe se trouve à Albi.",
+                " Ce sont aussi pas moins de 219 peintures, 563 dessins, 183 lithographies.",
+                "Toiles de jeunesse, portraits majeurs, tableaux des maisons closes, estampes sur le monde du spectacle, réclames et œuvres tardives en font une collection exceptionnelle."
+            ],
+            "horaire": [
+                "Ouvert du 1er octobre au 31 mai:",
+                "du mardi au dimanche de 10h/12h30 et 14h/18h ",
+                "fermé le lundi",
+                "du 1er juin au 30 septembre:",
+                "tous les jour de 10h/18h"
+            ],
+            "Tarifs":[
+                "Inclus dans le City pass",
+                "Adultes: 10€ \n",
+                "Groupe de 15 à 25 personnes: 8€ \n",
+                "Groupe scolaire hors Occitanie, étudiants, demandeurs d'emploi ou bénéficiaires du RSA (sur présentation d'un justificatif) : 5 € \n",
+                "Enfants/Etudiants: Gratuit (jusqu'à 17ans)\n",
+                "Exposition temporaire seule: 6€\n",
+                "Audioguide: 4€\n"
+            ]
+        },
+
+        {
+            "id": "zoo",
+            "nom": "Espace zoologique exoticamis",
+            "localitation":"43.929580823387596, 2.1435570749485002",
+            "description":["Une collection exceptionnelle de félins parmi les plus beaux de la planète.",
+                " Une magnifique balade au sein de la biodiversité.",
+                " Un site de 58 hectares dont le parcours à pied de 4kms dure environ 4h.",
+                "Une plaine africaine de 10 hectares dans un cadre de singulier qu'offre la vallée avec girages, zèbres, qui galopent librement avec leurs petits, au côté de gnous, antilopes et watusi.",
+                " Sans oublier l'espace rapaces et l'espace primates."
+            ],
+            "horaire": [
+                "Juillet, Aout: ouvert tous les jours de 10h à 18h",
+                "Mai,Juin,Septembre: ouvert du mardi au dimanche de 10h à 18h ",
+                "Mars, Avril, Octobre: ouvert le mercredi, le samedi, le dimanche de 10h à 12h et de 13h30 à 17h",
+                "Décembre, Février: ouvert tous les jours de 13h30 à 17h",
+                "Les Vivariums sont fermés de 12h à 13h30"
+            ],
+            "Tarifs":[
+                "Adultes/Ados à partir de 12ans: 9€ \n",
+                "Enfants de -12ans: 6,50€ \n",
+                "Gratuit pour les -3ans: 5€ \n",
+                "Abonnement annuel Adulte: 27€\n",
+                "Abonnement annuel Enfant: 19,50€\n"
+            ]
+        },
+
+        {
+            "id": "jardins",
+            "nom": "Les jardins de la Berbie",
+            "localitation":"43.92946348347638, 2.143509677336153",
+            "description":["Les jardins du palais de la Berbie sont caractéristiques des jardins classiques :",
+                " arabesques de buis taillés sur lit de graviers blancs simplement accompagnés en période estivale d’un fleurissement de qualité.",
+                " Un jardinier des espaces verts de la Ville, leur est attitré.",
+                " Il s’occupe de l’entretien exclusivement de façon naturelle puisque tout traitement chimique est prohibé, de la taille des jardins et du fleurissement estival."
+            ],
+            "horaire": [
+                "Ouvert de 8h30 à 18h15"
+                
+            ],
+            "Tarifs":[
+                "Entrées gratuite \n"
+            ]
+        },
+
+        {
+            "id": "parc",
+            "nom": "Parc Rochegude",
+            "localitation":"43.92209552412308, 2.1458624540559343",
+            "description":["Le parc porte le nom de l'Amiral Paschal de Rochegude.",
+                " Il séduit les adultes comme les enfants. ",
+                "Jardin à la française, jardin à l'anglaise, jardin des senteurs, l'île aux oiseaux composent ce labyrinthe de verdure.",
+                " Des petits jardins thématiques sont aussi à découvrir : le jardin démonstratif, le jardin des ombres ou encore le jardin des roses.",
+                " Des statues romantiques trouvent placent dans les massifs.",
+                " De petits panneaux parsemés dans le parc présentent les espèces."
+            ],
+            "horaire": [
+                "Ouvert tous les jours",
+                "Octobre à avril: 8h/18h",
+                "Mai à septembre: 8h/20h"
+                
+            ],
+            "Tarifs":[
+                "Entrées gratuite \n"
             ]
         }
 
