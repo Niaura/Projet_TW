@@ -1,10 +1,12 @@
 {
-    "lieux": [
-        {
+    "lieux": [{
             "id": "cathédrale",
             "nom": "Cathédrale",
-            "localitation":"43.92862118653593, 2.142581275298721",
-            "description":["Son style gothique dit méridional la distingue des cathédrales comme Chartres, Reims, Amiens qui elles sont contemporaines." ,
+            "localitation": "43.92862118653593, 2.142581275298721",
+            "description": ["La cathédrale Saint Cécile est la plus grande cathédrale de briques au monde. ",
+                "Majestueuse et imposante elle est visible de partout quand on arrive à Albi."
+            ],
+            "description2": ["Son style gothique dit méridional la distingue des cathédrales comme Chartres, Reims, Amiens qui elles sont contemporaines.",
                 "Son allure austère et défensive est affirmée par ses dimensions.",
                 "Que l’on arrive, par la route de Toulouse, Rodez, Millau, Cordes-sur-Ciel, la cathédrale Sainte-Cécile, est là, comme posée sur la ville, massive et orgueilleuse, dominant les toits albigeois.",
                 "Regardez-la bien, elle ne se compare à aucune autre."
@@ -13,7 +15,7 @@
                 "Ouvert du lundi au samedi de 10h à 18h",
                 "fermé le dimanche matin pour la messe. Ouvert de 13h à 18h"
             ],
-            "Tarifs":[
+            "Tarifs": [
                 "Entrées dans le choeur: 5€",
                 "Inclus dans le City pass",
                 "Gratuit pour les -12ans"
@@ -23,15 +25,18 @@
         {
             "id": "museeMode",
             "nom": "Musée de la mode",
-            "localitation":"43.929338089715124, 2.1443518424130814",
-            "description":["Le Musée de la Mode est au cœur du patrimoine albigeois.",
+            "localitation": "43.929338089715124, 2.1443518424130814",
+            "description": [" Riche de quelques milliers de pièces, la collection est présentée selon des thèmes différents tous les deux ans.",
+                "Chaque exposition propose de découvrir une centaine de pièces."
+            ],
+            "description2": ["Le Musée de la Mode est au cœur du patrimoine albigeois.",
                 " Le lieu à lui seul mérite le détour puisque ses cinq salles d'exposition occupent une partie de l'ancien Couvent des Annonciades.",
                 " Ce musée présente des vêtements et accessoires issus d'une collection particulière allant du XVIIIe siècle jusqu'aux années 1970. "
             ],
             "horaire": [
                 "Ouvert du mardi au dimanche de 10h30 à 12h et de 14h30 à 18h"
             ],
-            "Tarifs":[
+            "Tarifs": [
                 "Tarif normal: 6€ \n",
                 "Tarif Albi City pass: 5€\n",
                 "Tarif réduit: 4€\n",
@@ -44,8 +49,11 @@
         {
             "id": "museeToulo",
             "nom": "Musée Toulouse-Lautrec",
-            "localitation":"43.929580823387596, 2.1435570749485002",
-            "description":["La plus importante collection publique au monde d'œuvres d’Henri de Toulouse-Lautrec parmi lesquelles les 31 affiches du peintre lithographe se trouve à Albi.",
+            "localitation": "43.929580823387596, 2.1435570749485002",
+            "description": ["Le musée Toulouse-Lautrec est situé dans le Palais de la Berbie, au coeur de la Cité épiscopale albigeoise classée au Patrimoine Mondial de l'Humanité.",
+                "Il abrite la plus importante collection publique au monde consacrée à Henri de Toulouse-Lautrec. "
+            ],
+            "description2": ["La plus importante collection publique au monde d'œuvres d’Henri de Toulouse-Lautrec parmi lesquelles les 31 affiches du peintre lithographe se trouve à Albi.",
                 " Ce sont aussi pas moins de 219 peintures, 563 dessins, 183 lithographies.",
                 "Toiles de jeunesse, portraits majeurs, tableaux des maisons closes, estampes sur le monde du spectacle, réclames et œuvres tardives en font une collection exceptionnelle."
             ],
@@ -56,7 +64,7 @@
                 "du 1er juin au 30 septembre:",
                 "tous les jour de 10h/18h"
             ],
-            "Tarifs":[
+            "Tarifs": [
                 "Inclus dans le City pass",
                 "Adultes: 10€ \n",
                 "Groupe de 15 à 25 personnes: 8€ \n",
@@ -70,8 +78,12 @@
         {
             "id": "zoo",
             "nom": "Espace zoologique exoticamis",
-            "localitation":"43.929580823387596, 2.1435570749485002",
-            "description":["Une collection exceptionnelle de félins parmi les plus beaux de la planète.",
+            "localitation": "43.929580823387596, 2.1435570749485002",
+            "description": ["Le parc présente 200 animaux de 30 espèces différentes sur 1 hectare de végétation.",
+                "L'espace vivarium présente des serpents, des lézards et des caïmans.",
+                "L'espace extérieur héberge des singes, lémuriens, tortues, animaux de la ferme et oiseaux exotiques."
+            ],
+            "description2": ["Une collection exceptionnelle de félins parmi les plus beaux de la planète.",
                 " Une magnifique balade au sein de la biodiversité.",
                 " Un site de 58 hectares dont le parcours à pied de 4kms dure environ 4h.",
                 "Une plaine africaine de 10 hectares dans un cadre de singulier qu'offre la vallée avec girages, zèbres, qui galopent librement avec leurs petits, au côté de gnous, antilopes et watusi.",
@@ -84,7 +96,7 @@
                 "Décembre, Février: ouvert tous les jours de 13h30 à 17h",
                 "Les Vivariums sont fermés de 12h à 13h30"
             ],
-            "Tarifs":[
+            "Tarifs": [
                 "Adultes/Ados à partir de 12ans: 9€ \n",
                 "Enfants de -12ans: 6,50€ \n",
                 "Gratuit pour les -3ans: 5€ \n",
@@ -96,26 +108,65 @@
         {
             "id": "jardins",
             "nom": "Les jardins de la Berbie",
-            "localitation":"43.92946348347638, 2.143509677336153",
-            "description":["Les jardins du palais de la Berbie sont caractéristiques des jardins classiques :",
+            "localitation": "43.92946348347638, 2.143509677336153",
+            "description": ["Chemin de promenade ombragé, situé au cœur de la 'Cité épiscopale d'Albi'",
+                "les jardins du Palais de la Berbie offrent une vue panoramique sur les berges du Tarn, le Pont-vieux,",
+                "les anciens moulins et la cathédrale Sainte-Cécile. "
+            ],
+            "description2": ["Les jardins du palais de la Berbie sont caractéristiques des jardins classiques :",
                 " arabesques de buis taillés sur lit de graviers blancs simplement accompagnés en période estivale d’un fleurissement de qualité.",
                 " Un jardinier des espaces verts de la Ville, leur est attitré.",
                 " Il s’occupe de l’entretien exclusivement de façon naturelle puisque tout traitement chimique est prohibé, de la taille des jardins et du fleurissement estival."
             ],
             "horaire": [
                 "Ouvert de 8h30 à 18h15"
-                
+
             ],
-            "Tarifs":[
+            "Tarifs": [
                 "Entrées gratuite \n"
             ]
         },
 
+
+        {
+            "id": "palais",
+            "nom": "Le palais de la Berbie",
+            "localitation": "43.92949529159628, 2.1436108188089587",
+            "description": ["Le palais de la Berbie, réputé pour héberger le musée Toulouse-Lautrec, est un palais épiscopal sans commune mesure avec les demeures que les évêques du Midi de la France se firent construire au cours du Moyen-Âge.",
+                " Il est depuis 2010 classé au Patrimoine mondial de l’Unesco. "
+            ],
+            "description2": ["Le palais des évêques d’Albi ou palais de la Berbie (mot occitan qui veut dire évêque) est construit sur un site naturellement fortifié, en belvédère sur le Tarn.",
+                " Son architecture militaire affirme la puissance des évêques face aux consuls de la ville.",
+                " Au fil des siècles, les Evêques l’ont transformé en résidence d’agrément.",
+                " Classé monument historique en 1862, il fait partie des palais épiscopaux les mieux conservés de France."
+            ],
+            "horaire": [
+                "Ouvert du 1er octobre au 31 mai:",
+                "du mardi au dimanche de 10h/12h30 et 14h/18h ",
+                "fermé le lundi",
+                "du 1er juin au 30 septembre:",
+                "tous les jour de 10h/18h"
+            ],
+            "Tarifs": [
+                "Inclus dans le City pass",
+                "Adultes: 10€ \n",
+                "Groupe de 15 à 25 personnes: 8€ \n",
+                "Groupe scolaire hors Occitanie, étudiants, demandeurs d'emploi ou bénéficiaires du RSA (sur présentation d'un justificatif) : 5 € \n",
+                "Enfants/Etudiants: Gratuit (jusqu'à 17ans)\n",
+                "Exposition temporaire seule: 6€\n",
+                "Audioguide: 4€\n"
+            ]
+        },
+
+
         {
             "id": "parc",
             "nom": "Parc Rochegude",
-            "localitation":"43.92209552412308, 2.1458624540559343",
-            "description":["Le parc porte le nom de l'Amiral Paschal de Rochegude.",
+            "localitation": "43.92209552412308, 2.1458624540559343",
+            "description": [" Le parc Rochegude est un poumon de verdure de 4 hectares en centre-ville d’Albi.",
+                "Lieu de promenade et de détente apprécié des Albigeois et des visiteurs, il vous offre de nombreux chemins de balades."
+            ],
+            "description2": ["Le parc porte le nom de l'Amiral Paschal de Rochegude.",
                 " Il séduit les adultes comme les enfants. ",
                 "Jardin à la française, jardin à l'anglaise, jardin des senteurs, l'île aux oiseaux composent ce labyrinthe de verdure.",
                 " Des petits jardins thématiques sont aussi à découvrir : le jardin démonstratif, le jardin des ombres ou encore le jardin des roses.",
@@ -126,13 +177,224 @@
                 "Ouvert tous les jours",
                 "Octobre à avril: 8h/18h",
                 "Mai à septembre: 8h/20h"
-                
+
             ],
-            "Tarifs":[
+            "Tarifs": [
                 "Entrées gratuite \n"
+            ]
+        },
+
+        {
+            "id": "base",
+            "nom": "La base de loisirs de Pratgraussals",
+            "localitation": "43.931712693992594, 2.133362797924493",
+            "description": [" Le long de la rivière Tarn, à 700 mètres de la cathédrale Sainte-Cécile, la base de loisirs de Pratgraussals est un poumon vert de treize hectares.",
+                " C'est le lieu idéal pour pique-niquer, s'amuser ou même pêcher au bord du petit plan d'eau aménagé. "
+            ],
+            "description2": ["La base de loisirs de Pratgraussals vous propose en accès libre un terrain de foot et trois terrains de tennis.",
+                " Footing, marche nordique, parcours de santé sont régulièrement pratiqués dans cet espace naturel accueillant.",
+                " La pêche est aussi l’une des activités favorites des habitués de Pratgraussals sur le plan d’eau ou sur les rives du Tarn, les amateurs de pêche se retrouvent.",
+                " La base de loisirs est d'autant plus appréciée pour son tout nouveau skate park, l'un des plus beaux d'Occitanie."
+            ],
+            "horaire": [
+                "Ouvert 24/24"
+
+            ],
+            "Tarifs": [
+                "Entrées gratuite \n"
+            ]
+        },
+
+        {
+            "id": "academie",
+            "nom": "L’Académie des miniatures et des petits goûters",
+            "localitation": "43.93220552782904, 2.1433759267598855",
+            "description": [" Situé rue Rinaldi à Albi, sur la rive droite du Tarn, l'Académie des miniatures et des petits goûters présente une collection permanente de maisons et boutiques miniatures à l’échelle 1/7°. "],
+            "description2": ["C’est un ravissement pour les yeux et une plongée dans les souvenirs et l’imagination que propose l’Académie des miniatures et des petits goûters en présentant un ensemble de 53 pièces comprenant deux ensembles :",
+                " les pièces d’habitation d’une grande maison bourgeoise de la fin du XIXe et des immeubles complets comprenant des boutiques au rez-de-chaussée et des appartements aux étages.",
+                "C’est l’œuvre d’Annie Jaurès, artiste plasticienne, qui nous est donné à voir."
+            ],
+            "horaire": [
+                "1er avril au 30 septembre : 10h - 19h, fermé le lundi.",
+                "Le reste de l’année : 10h à 18h, fermé le lundi.",
+                "Fermeture annuelle en janvier."
+
+            ],
+            "Tarifs": [
+                "Entrées 5€ \n",
+                "Tarif réduit: 3.5€",
+                "Gratuit pour les -6ans"
+            ]
+        },
+
+        {
+            "id": "cap",
+            "nom": "Cap’Découverte :",
+            "localitation": "43.93220552782904, 2.1433759267598855",
+            "description": [" À 90km de Toulouse, 18 km de Cordes sur Ciel et 12 km d’Albi, Cap’Découverte vous accueille au cœur d’une nature préservée pour vous faire découvrir son espace de loisirs et d’aventures."],
+            "description2": ["Toute l’année vous pourrez découvrir en accès libre, les activités de plein air sur 680 ha avec de nombreux parcours thématiques et ludiques,",
+                " 80 km de piste cyclables à parcourir et de multiples jeux et espaces de jeux à votre disposition.",
+                "Avec ses espaces non motorisés et ludiques, ses hébergements, sa restauration, ses animations culturelles et pédagogiques,",
+                " Cap’Découverte constitue une étape touristique incontournable au cœur du Tarn et de l’Occitanie."
+            ],
+            "horaire": [
+                "Du lundi au vendredi du 25 au 29 avril et du 2 au 6 mai 2022: de 13h30 à 17h\n",
+                "du 9 juillet 2022 au 28 août 2022: tous les jours"
+
+            ],
+            "Tarifs": [
+                "Prix en fonction des activitées choisi"
             ]
         }
 
 
+
+
+    ],
+
+
+    "Resto": [{
+            "id": "Ambroisie",
+            "nom": "Ambroisie",
+            "localitation": "43.927313639730386, 2.1438618690889584",
+            "description": ["Cuisine Française, Européenne"],
+            "adresse": "4 Rue Henri de Toulouse Lautrec, 81000 Albi",
+            "tel": ": 05 63 76 43 56",
+            "horaire": [
+                "Ouvert lundi,jeudi,dimanche de 12h à 14h",
+                "Ouvert vendredi, samedi de 12h à 14h et de 19h30 à 22h30",
+                "Fermé mardi et mercredi"
+            ]
+
+        },
+
+
+        {
+            "id": "Lepont",
+            "nom": "Le Pont du Tarn",
+            "localitation": "43.93033245639734, 2.1450351267598293",
+            "description": ["Cuisine Française moderne"],
+            "adresse": "3 Rue de la Grand Côté, 81000 Albi",
+            "tel": ":  05 63 76 83 95",
+            "horaire": [
+                "Ouvert lundi,jeudi,vendredi,samedi,dimanche de 12h à 14h et de 19h à 22h",
+                "Brunch le samedi et dimanche de 9h à 11h",
+                "Fermé mardi et mercredi"
+            ]
+
+        },
+
+        {
+            "id": "hibout",
+            "nom": "Au Hibou",
+            "localitation": "43.929266499240384, 2.144434699495029",
+            "description": ["Cuisine Française, bar à bières"],
+            "adresse": "21 Rue Saint-Julien, 81000 Albi",
+            "tel": ":  05 63 76 38 99",
+            "horaire": [
+                "Ouvert du lundi au dimanche de 7h 30 à 18h ",
+                "Fermé mercredi"
+            ]
+
+        },
+
+        {
+            "id": "cocina",
+            "nom": "La cocina",
+            "localitation": "43.93003856385704, 2.1534179979244175",
+            "description": ["Cuisine Française,Espagnole"],
+            "adresse": "12 Av. Maréchal de Lattre de Tassigny, 81000 Albi",
+            "tel": ":   09 81 63 21 76",
+            "horaire": [
+                "Ouvert du lundi au vendredi 24h/24 ",
+                "Fermé samedi et dimanche"
+            ]
+
+        },
+
+        {
+            "id": "azzurro",
+            "nom": "Azzurro",
+            "localitation": "43.928893761810855, 2.195497926759762",
+            "description": ["Cuisine Française,Pizza"],
+            "adresse": "2 Rue François Arago, 81000 Albi",
+            "tel": ":   05 63 80 71 06",
+            "horaire": [
+                "Ouvert du mardi au samedi de  12h à 13h45 et de 19h à 21h30 ",
+                "Fermé lundi et samedi "
+            ]
+
+        },
+
+        {
+            "id": "fourchette",
+            "nom": "La Fourchette Adroite",
+            "localitation": "43.92947256938418, 2.143979726759809",
+            "description": ["Cuisine Française,Européenne"],
+            "adresse": "7 Pl. de l'Archevêché, 81000 Albi",
+            "tel": ":    05 63 54 05 23",
+            "horaire": [
+                "Ouvert du lundi au dimanche de  12h à 13h30 et de 19h à 22h ",
+                "Fermé mercredi et jeudi "
+            ]
+
+        },
+
+        {
+            "id": "cascarbar",
+            "nom": "Cascarbar",
+            "localitation": "43.928716419921386, 2.144234269088989",
+            "description": ["Cuisine Méditerranéene,Fruits de mer & Poisson"],
+            "adresse": " 29 Rue Saint-Julien, 81000 Albi",
+            "tel": ": 05 63 54 03 52",
+            "horaire": [
+                "Ouvert du mardi au samedi de  9h à minuit ",
+                "Fermé dimanche et lundi "
+            ]
+
+        },
+
+        {
+            "id": "epicurien",
+            "nom": "L'Epicurien",
+            "localitation": "43.924756619722835, 2.1489916402535068",
+            "description": ["Cuisine Française,Européenne"],
+            "adresse": "  42 Pl. Jean Jaurès, 81000 Albi",
+            "tel": ": 05 63 53 10 70",
+            "horaire": [
+                "Ouvert du mardi au samedi de 12h à 14h et de 19h30 à 22h ",
+                "Fermé dimanche et lundi "
+            ]
+
+        },
+
+        {
+            "id": "basilic",
+            "nom": "Basilic & Co Albi",
+            "localitation": "43.92437289788939, 2.154148126759631",
+            "description": ["Cuisine Italienne,Pizza"],
+            "adresse": "  73 Av. Colonel Teyssier, 81000 Albi",
+            "tel": ":  05 63 76 21 55",
+            "horaire": [
+                "Ouvert tous les jours de 11h30 à 14h et de 18h à 22h "
+            ]
+
+        },
+
+        {
+            "id": "amapola",
+            "nom": "Amapola kitchen",
+            "localitation": "43.92863142346531, 2.1442557267597504",
+            "description": ["Pub, Fusion"],
+            "adresse": " 100 Rue Porta, 81000 Albi",
+            "tel": ": 05 63 77 63 04",
+            "horaire": [
+                "Ouvert du lundi,jeudi,vendredi de 19h30 à 22h30",
+                "Ouvert samedi de 10h à 14h et de 19h30 à 22h30",
+                "Ouvert dimanche de 11h30 à 14h et de 19h30 à 22h30",
+                "Fermé mardi et mercredi "
+            ]
+
+        }
     ]
 }
