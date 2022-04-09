@@ -384,7 +384,7 @@
         {
             "id": "amapola",
             "nom": "Amapola kitchen",
-             "localitation": "43.932061060572565, 2.14401776737446",
+            "localitation": "43.932061060572565, 2.14401776737446",
             "description": ["Pub, Fusion"],
             "adresse": " 100 Rue Porta, 81000 Albi",
             "tel": ": 05 63 77 63 04",
@@ -396,5 +396,171 @@
             ]
 
         }
+    ],
+
+    "Hotel": [{
+            "id": "Pasteliers",
+            "nom": "Hôtel les pasteliers",
+            "localitation": "43.925577534287065, 2.1517992692266765",
+            "description": ["A proximité du centre historique de la ville, notre hôtel de charme vous accueille dans un cadre raffiné et chaleureux.",
+                " L'hôtel les Pasteliers est climatisé et met à votre disposition des chambres à thème, à la décoration soignée."
+            ],
+            "information": ["Wi-Fi gratuit",
+                "Petit déjeuner payant",
+                "Climatisation",
+                "Adapté aux enfants",
+                "Piscine"
+            ],
+            "adresse": "3 Rue Honore de Balzac, 81000 Albi",
+            "tel": ":05 63 54 26 51",
+            "horaire": [
+                "Ouvert du lundi au vendredi de 7h à 12h et de 15h à 21h",
+                "Ouvert samedi,dimanche de 8h à 12h et de 15h à 21h"
+            ],
+            "reservation": "https://secure.reservit.com/fo/booking/2/12511/dates?nbroom=1&specialMode=default&__utmz=1.1526488409.1.1.utmcsr%3Dpasteliers%7Cutmccn%3D(referral)%7Cutmcmd%3Dreferral%7Cutmcct%3D%2Fchambre-eco.php&begindate=16%2F05%2F2018&partid=0&forceStep1=1&tmonth=05&tyear=2018&hotelid=12511&numnight=1&m=booking&roomAge1=40,40&langcode=FR&enddate=17%2F05%2F2018&fyear=2018&custid=2&fmonth=05&_ga=GA1.2.777746560.1526488198&fday=16&__utmb=1.23.10.1526488409&__utmc=1&__utma=1.777746560.1526488198.1526488409.1526488409.1&tday=17"
+
+        },
+
+        {
+            "id": "vigan",
+            "nom": "Hôtel du Vigan",
+            "localitation": "43.92674821477569, 2.147568940329382",
+            "description": ["Situé sur une place bordée d'arbres du centre-ville d'Albi, cet hôtel de style décontracté se trouve à 6 minutes à pied de la cathédrale Sainte-Cécile, et à 1,4 kmn de la gare.",
+                "Les chambres sobres et colorées disposent d'un accès Wi-Fi gratuit et d'une télévision à écran plat avec les chaînes du câble."
+            ],
+            "information": ["Wi-Fi gratuit",
+                "Petit déjeuner payant",
+                "Climatisation",
+                "Parking payant",
+                "Accès handicapés",
+                "Restaurant"
+            ],
+            "adresse": "16 place du Vigan,  81000 Albi",
+            "tel": ":05 63 43 31 31 ",
+            "horaire": [
+                "Ouvert toute la semaine de minuit à 23h45"
+
+            ],
+            "reservation": "https://www.contact-hotel.com/reserver-hotel-france/1218/hostellerie-du-vigan-albi.htm"
+
+        },
+
+        {
+            "id": "laperouse",
+            "nom": "Hôtel Laperouse",
+            "localitation": "43.925053397668236, 2.1452824980008462",
+            "description": ["Cet hôtel de famille convivial se trouve à 2 minutes à pied de la scène nationale d'Albi, un centre culturel, ainsi qu'à 7 minutes du musée Toulouse-Lautrec.",
+                "Décorées dans des styles différents, les chambres à l'atmosphère décontractée disposent d'un accès Wi-Fi gratuit et d'une salle de bain attenante."
+            ],
+            "information": ["Wi-Fi gratuit",
+                "Petit déjeuner payant",
+                "Climatisation",
+                "Parking payant",
+                "Accès handicapés",
+                "Piscine extérieure"
+            ],
+            "adresse": "19-21 place Lapérouse,  81000 Albi",
+            "tel": ":05 63 54 69 22 ",
+            "horaire": [
+                "Ouvert toute la semaine de 7h à 12h et de 15h à 21h"
+
+            ],
+            "reservation": "https://www.hotel-laperouse.com/"
+
+        },
+
+        {
+            "id": "brasserie",
+            "nom": "Hôtel brasserie du parc",
+            "localitation": "43.92305122600248, 2.1452354980007877",
+            "description": ["Situé à 2 minutes de marche du parc Rochegude, cet hôtel chic se trouve à 9 minutes de la cathédrale d'Albi et du musée Toulouse-Lautrec.",
+                "Présentant une décoration élégante et contemporaine, les chambres chaleureuses aux touches colorées disposent d'une connexion Wi-Fi gratuite"
+            ],
+            "information": ["Wi-Fi gratuit",
+                "Petit déjeuner payant",
+                "Adapté aux enfants",
+                "Restaurant",
+                "Bar"
+            ],
+            "adresse": "3 Av. du Parc,  81000 Albi",
+            "tel": ":05 63 54 12 80",
+            "horaire": [
+                "Ouvert toute la semaine de 7h à 23h30"
+
+            ],
+            "reservation": "https://www.booking.com/hotel/fr/du-parc-albi.fr.html"
+
+        },
+        {
+            "id": "antoine",
+            "nom": "Hôtel Saint Antoine",
+            "localitation": "43.925873888142625, 2.149145467314837",
+            "description": ["Situé à 9 minutes à pied du musée Toulouse-Lautrec, cet hôtel de famille pittoresque a été construit en 1734. Il se trouve à 10 minutes de marche de la cathédrale Sainte-Cécile d'Albi.",
+                "Décorées dans des styles différents, les chambres et suites claires disposent d'un accès Wi-Fi gratuit, d'une télévision à écran plat et d'un minibar. "
+            ],
+            "information": ["Wi-Fi gratuit",
+                "Petit déjeuner payant",
+                "Climatisation",
+                "Parking payant",
+                "Accès handicapés"
+            ],
+            "adresse": " 17 Rue Saint-Antoine,  81000 Albi",
+            "tel": ":05 63 54 04 04",
+            "horaire": [
+                "Ouvert toute la semaine de 7h30 à 12h30 et de 13h30 à 20h30"
+
+            ],
+            "reservation": "https://hotel-saint-antoine-albi.com/reservations/"
+
+        },
+
+        {
+            "id": "rochegude",
+            "nom": "Hôtel Café Le Rochegude",
+            "localitation": "43.92011463960925, 2.143210869164922",
+            "description": ["Situé dans le centre-ville, cet hôtel à l'atmosphère décontractée se trouve à 1 km de la gare d'Albi-Ville et à 5 minutes à pied du parc Rochegude.",
+                "Les chambres standards au mobilier simple sont équipées d'une télévision à écran plat, d'une connexion Wi-Fi gratuite ainsi que d'un nécessaire à thé et café. "
+            ],
+            "information": ["Wi-Fi gratuit",
+                "Petit déjeuner payant",
+                "Climatisation",
+                "Accepte les animaux",
+                "Adapté aux enfants"
+            ],
+            "adresse": " 41 Av. Maréchal Foch,  81000 Albi",
+            "tel": ":05 63 47 64 00",
+            "horaire": [
+                "Ouvert du lundi au vendredi de 7h30 à 12h et de 16h à 19h",
+                "Ouvert samedi,dimanche de 8h30 à 10h30 et de 16h à 19h"
+            ],
+            "reservation": "https://resa.familyhotel.fr/reservation.asp?id_lang=1&id_acco=1044&id_direct=1"
+
+        },
+
+        {
+            "id": "alchimy",
+            "nom": "Hôtel de luxe Alchimy ",
+            "localitation": "43.926582224396896, 2.1453241133439267",
+            "description": ["Situé à 5 minutes à pied du musée Toulouse-Lautrec, cet hôtel chic se trouve dans le centre historique, à 4 minutes à pied de la cathédrale Sainte-Cécile, et à 12 minutes de la gare d'Albi-Ville.",
+                "Les chambres haut de gamme avec balcon à la française disposent du Wi-Fi gratuit, d'un minibar, d'une télévision à écran plat, d'une cafetière et d'un coffre-fort."
+            ],
+            "information": ["Wi-Fi gratuit",
+                "Restaurant",
+                "Bar",
+                "Accepte les animaux",
+                "Adapté aux enfants"
+            ],
+            "adresse": " 12 Pl. du Palais,  81000 Albi",
+            "tel": ": 05 63 76 18 18",
+            "horaire": [
+                "Ouvert du lundi au jeudi et dimanche de 12h à 14h et de 19h à 21h",
+                "Ouvert vendredi,samedi de 12h à 14h et de 19h à 23h"
+            ],
+            "reservation": "https://www.alchimyalbi.fr/"
+
+        }
+
+
+
     ]
 }
