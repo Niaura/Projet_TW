@@ -5,26 +5,21 @@ import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
 import SearchIcon from '@mui/icons-material/Search';
 import LocationCityIcon from '@mui/icons-material/LocationCity';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
-import ButtonBase from '@mui/material/ButtonBase';
 import { Sejour } from './sejour.js';
 import { Itineraire } from './itineraire.js';
+import { ImageFond } from './accueil.js';
+import { Suggestion } from './accueil.js';
+import HomeIcon from '@mui/icons-material/Home';
 
 const container = document.getElementById('root');
 
@@ -70,12 +65,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-function Acceuil() {
-  return (
-    <></>
-  );
-};
-
 
 const ResponsiveAppBar = ({ onClick }) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -96,42 +85,43 @@ const ResponsiveAppBar = ({ onClick }) => {
     setAnchorElUser(null);
   };
 
-  const redirection = () => {
-    let navigate = useNavigate();
-    navigate("/sejour");
-  };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" style={{ background: 'linear-gradient(to right, blue, purple)' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography>
             <Button
-              onClick={() => onClick('acceuil')}
+              variant="outlined"
+              onClick={() => onClick('accueil')}
             >
-              <LocationCityIcon style={{ color: "white" }}/>
+              <HomeIcon style={{ color: "white" }}/>
             </Button>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             <Button
+              variant="outlined"
               sx={{ my: 2, color: 'white', display: 'block' }}
               onClick={() => onClick('itineraire')}
             >
               Destinations
             </Button>
             <Button
+              variant="outlined"
               sx={{ my: 2, color: 'white', display: 'block' }}
               onClick={() => onClick('sejour')}
             >
               Séjours
             </Button>
             <Button
+              variant="outlined"
               sx={{ my: 2, color: 'white', display: 'block' }}
             >
               Actualités
             </Button>
             <Button
+              variant="outlined"
               sx={{ my: 2, color: 'white', display: 'block' }}
             >
               Contacts
@@ -166,7 +156,7 @@ const ResponsiveAppBarFoot = () => {
             </Grid>
             <Grid item xs={5} >
               <Typography>
-                <strong>A propos</strong> <br /><br /> <a>Qui sommes-nous ?</a> <br /> <a>L'équipe</a> <br /> <a>Conditions générales</a> <br /> <a>Confidentialité</a>
+                <strong>À propos</strong> <br /><br /> <a>Qui sommes-nous ?</a> <br /> <a>L'équipe</a> <br /> <a>Conditions générales</a> <br /> <a>Confidentialité</a>
               </Typography>
             </Grid>
             <Grid item xs>
@@ -186,7 +176,7 @@ const ResponsiveAppBarFoot = () => {
 
 function App() {
 
-  let [etat, setEtat] = React.useState("notsejour");
+  let [etat, setEtat] = React.useState("accueil");
   function render() {
 
     switch (etat) {
@@ -194,15 +184,20 @@ function App() {
         return <Sejour />;
       case "itineraire":
         return <Itineraire />;
-      case "acceuil":
-        return <Acceuil />;
+      case "accueil":
+        return (
+          <>
+          <ImageFond />
+          <Suggestion/>
+          </>
+        );
       default:
         return <></>
     }
   }
 
   return <>
-    <ResponsiveAppBar onClick={setEtat}/> <br />
+    <ResponsiveAppBar onClick={setEtat}/>
     { render()}
     <ResponsiveAppBarFoot />
   </>;
