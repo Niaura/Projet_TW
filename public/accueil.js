@@ -34,7 +34,7 @@ const images = [
       './images/museeT.jpg',
   },
   {
-    label: 'Le parc Rochegude',
+    label: 'Parc Rochegude',
     imgPath:
       './images/parc.jpg',
   },
