@@ -19,6 +19,7 @@ import { Sejour } from './sejour.js';
 import { Itineraire } from './itineraire.js';
 import { ImageFond } from './accueil.js';
 import { Suggestion } from './accueil.js';
+import { Formulaire } from './contact.js';
 import HomeIcon from '@mui/icons-material/Home';
 
 const container = document.getElementById('root');
@@ -123,6 +124,7 @@ const ResponsiveAppBar = ({ onClick }) => {
             <Button
               variant="outlined"
               sx={{ my: 2, color: 'white', display: 'block' }}
+              onClick={() => onClick('formulaire')}
             >
               Contacts
             </Button>
@@ -191,6 +193,8 @@ function App() {
           <Suggestion/>
           </>
         );
+      case "formulaire":
+        return <Formulaire />;
       default:
         return <></>
     }
