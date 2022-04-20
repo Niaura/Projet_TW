@@ -260,11 +260,11 @@ export function Sejour(){
             alt="cathédrale "
           />
           <CardContent>
-            <Typography variant="body2" color="text.secondary">
-            La cathédrale Saint Cécile est la plus grande cathédrale de briques au monde. 
-            Majestueuse et imposante elle est visible de partout quand on arrive à Albi.
-            </Typography>
-          </CardContent>
+          <Typography variant="body2" color="text.secondary">
+          {Data.lieux[0].description}
+          </Typography>
+         </CardContent>
+         
           <CardActions disableSpacing>
             <IconButton aria-label="add to favorites">
               <FavoriteIcon />
@@ -279,9 +279,16 @@ export function Sejour(){
           <Typography>learn more</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+          <Typography  paragraph>
+          {Data.lieux[0].description2}
+          </Typography>
+          <Typography  paragraph>
+          Horaire: <br />
+          {Data.lieux[0].horaire}
+          </Typography>
+          <Typography  paragraph>
+            Tarifs: <br />
+          {Data.lieux[0].Tarifs}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -297,7 +304,7 @@ export function Sejour(){
         <Card sx={{ maxWidth: 700 }}>
           <CardHeader
             
-            title="Musée de la mode"
+            title={Data.lieux[1].nom}
           
           />
           <CardMedia
@@ -308,9 +315,7 @@ export function Sejour(){
           />
           <CardContent>
             <Typography variant="body2" color="text.secondary">
-            Riche de quelques milliers de pièces, la collection est présentée selon des thèmes différents 
-            tous les deux ans.
-            Chaque exposition propose de découvrir une centaine de pièces.
+            {Data.lieux[1].description}
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
@@ -327,9 +332,16 @@ export function Sejour(){
           <Typography>learn more</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+          <Typography  paragraph>
+          {Data.lieux[1].description2}
+          </Typography>
+          <Typography  paragraph>
+          Horaire: <br />
+          {Data.lieux[1].horaire}
+          </Typography>
+          <Typography  paragraph>
+            Tarifs: <br />
+          {Data.lieux[1].Tarifs}
           </Typography>
         </AccordionDetails>
         </Accordion>
@@ -345,7 +357,7 @@ export function Sejour(){
         <Card sx={{ maxWidth: 700 }}>
           <CardHeader
             
-            title="Musée Toulouse-Lautrec"
+            title={Data.lieux[2].nom}
           />
           <CardMedia
             component="img"
@@ -355,9 +367,7 @@ export function Sejour(){
           />
           <CardContent>
             <Typography variant="body2" color="text.secondary">
-            Le musée Toulouse-Lautrec est situé dans le Palais de la Berbie,
-             au coeur de la Cité épiscopale albigeoise classée au Patrimoine Mondial de l'Humanité. 
-             Il abrite la plus importante collection publique au monde consacrée à Henri de Toulouse-Lautrec. 
+            {Data.lieux[2].description}
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
@@ -374,9 +384,16 @@ export function Sejour(){
           <Typography>learn more</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+          <Typography  paragraph>
+          {Data.lieux[2].description2}
+          </Typography>
+          <Typography  paragraph>
+          Horaire: <br />
+          {Data.lieux[2].horaire}
+          </Typography>
+          <Typography  paragraph>
+            Tarifs: <br />
+          {Data.lieux[2].Tarifs}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -394,7 +411,7 @@ export function Sejour(){
         <Card sx={{ maxWidth: 700 }}>
           <CardHeader
             
-            title=" L’espace zoologique Exoticamis"
+            title={Data.lieux[3].nom}
            
           />
           <CardMedia
@@ -405,9 +422,7 @@ export function Sejour(){
           />
           <CardContent>
             <Typography variant="body2" color="text.secondary">
-            Le parc présente 200 animaux de 30 espèces différentes sur 1 hectare de végétation. 
-            L'espace vivarium présente des serpents, des lézards et des caïmans.
-             L'espace extérieur héberge des singes, lémuriens, tortues, animaux de la ferme et oiseaux exotiques.
+            {Data.lieux[3].description}
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
@@ -424,9 +439,16 @@ export function Sejour(){
           <Typography>learn more</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+        <Typography  paragraph>
+          {Data.lieux[3].description2}
+          </Typography>
+          <Typography  paragraph>
+          Horaire: <br />
+          {Data.lieux[3].horaire}
+          </Typography>
+          <Typography  paragraph>
+            Tarifs: <br />
+          {Data.lieux[3].Tarifs}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -442,7 +464,7 @@ export function Sejour(){
         <Card sx={{ maxWidth: 700 }}>
           <CardHeader
             
-            title=" Les jardins de la Berbie"
+            title={Data.lieux[4].nom}
            
           />
           <CardMedia
@@ -453,9 +475,7 @@ export function Sejour(){
           />
           <CardContent>
             <Typography variant="body2" color="text.secondary">
-            Chemin de promenade ombragé, situé au cœur de la "Cité épiscopale d'Albi", 
-            les jardins du Palais de la Berbie offrent une vue panoramique sur les berges du Tarn, le Pont-vieux, 
-            les anciens moulins et la cathédrale Sainte-Cécile. 
+            {Data.lieux[4].description}
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
@@ -472,9 +492,16 @@ export function Sejour(){
           <Typography>learn more</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+        <Typography  paragraph>
+          {Data.lieux[4].description2}
+          </Typography>
+          <Typography  paragraph>
+          Horaire: <br />
+          {Data.lieux[4].horaire}
+          </Typography>
+          <Typography  paragraph>
+            Tarifs: <br />
+          {Data.lieux[4].Tarifs}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -491,7 +518,7 @@ export function Sejour(){
         <Card sx={{ maxWidth: 700 }}>
           <CardHeader
             
-            title=" Parc Rochegude"
+            title={Data.lieux[6].nom}
            
           />
           <CardMedia
@@ -502,8 +529,7 @@ export function Sejour(){
           />
           <CardContent>
             <Typography variant="body2" color="text.secondary">
-            Le parc Rochegude est un poumon de verdure de 4 hectares en centre-ville d’Albi.
-             Lieu de promenade et de détente apprécié des Albigeois et des visiteurs, il vous offre de nombreux chemins de balades.
+            {Data.lieux[6].description}
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
@@ -520,9 +546,176 @@ export function Sejour(){
           <Typography>learn more</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+        <Typography  paragraph>
+          {Data.lieux[6].description2}
+          </Typography>
+          <Typography  paragraph>
+          Horaire: <br />
+          {Data.lieux[6].horaire}
+          </Typography>
+          <Typography  paragraph>
+            Tarifs: <br />
+          {Data.lieux[6].Tarifs}
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+            
+           
+          </CardActions>
+          
+        </Card>
+        </Grid>
+
+
+        <Grid item xs={6}>
+
+        <Card sx={{ maxWidth: 700 }}>
+          <CardHeader
+            
+            title={Data.lieux[7].nom}
+           
+          />
+          <CardMedia
+            component="img"
+            height="194"
+            image="./images/base.jpg"
+            alt="base de loisirs"
+          />
+          <CardContent>
+            <Typography variant="body2" color="text.secondary">
+            {Data.lieux[7].description}
+            </Typography>
+          </CardContent>
+          <CardActions disableSpacing>
+            <IconButton aria-label="add to favorites">
+              <FavoriteIcon />
+            </IconButton>
+
+            <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>learn more</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+        <Typography  paragraph>
+          {Data.lieux[7].description2}
+          </Typography>
+          <Typography  paragraph>
+          Horaire: <br />
+          {Data.lieux[7].horaire}
+          </Typography>
+          <Typography  paragraph>
+            Tarifs: <br />
+          {Data.lieux[7].Tarifs}
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+            
+           
+          </CardActions>
+          
+        </Card>
+        </Grid>
+
+        <Grid item xs={6}>
+
+        <Card sx={{ maxWidth: 700 }}>
+          <CardHeader
+            
+            title={Data.lieux[8].nom}
+           
+          />
+          <CardMedia
+            component="img"
+            height="194"
+            image="./images/miniature.jpg"
+            alt="Académie des miniatures"
+          />
+          <CardContent>
+            <Typography variant="body2" color="text.secondary">
+            {Data.lieux[8].description}
+            </Typography>
+          </CardContent>
+          <CardActions disableSpacing>
+            <IconButton aria-label="add to favorites">
+              <FavoriteIcon />
+            </IconButton>
+
+            <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>learn more</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+        <Typography  paragraph>
+          {Data.lieux[8].description2}
+          </Typography>
+          <Typography  paragraph>
+          Horaire: <br />
+          {Data.lieux[8].horaire}
+          </Typography>
+          <Typography  paragraph>
+            Tarifs: <br />
+          {Data.lieux[8].Tarifs}
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+            
+           
+          </CardActions>
+          
+        </Card>
+        </Grid>
+
+        <Grid item xs={6}>
+
+        <Card sx={{ maxWidth: 700 }}>
+          <CardHeader
+            
+            title={Data.lieux[9].nom}
+           
+          />
+          <CardMedia
+            component="img"
+            height="194"
+            image="./images/cap.jpg"
+            alt="Cap’Découverte"
+          />
+          <CardContent>
+            <Typography variant="body2" color="text.secondary">
+            {Data.lieux[9].description}
+            </Typography>
+          </CardContent>
+          <CardActions disableSpacing>
+            <IconButton aria-label="add to favorites">
+              <FavoriteIcon />
+            </IconButton>
+
+            <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>learn more</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+        <Typography  paragraph>
+          {Data.lieux[9].description2}
+          </Typography>
+          <Typography  paragraph>
+          Horaire: <br />
+          {Data.lieux[9].horaire}
+          </Typography>
+          <Typography  paragraph>
+            Tarifs: <br />
+          {Data.lieux[9].Tarifs}
           </Typography>
         </AccordionDetails>
       </Accordion>
