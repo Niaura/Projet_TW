@@ -20,6 +20,11 @@ import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
+import Badge from '@mui/material/Badge';
+import ButtonGroup from '@mui/material/ButtonGroup';
+
 
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -238,7 +243,9 @@ const ResponsiveAppBarFoot = () => {
 
 export function Sejour(){
   
-  
+  const [test, setTest] = React.useState(1);
+  const [count, setCount] = React.useState(1);
+  const [invisible, setInvisible] = React.useState(false);
   
   return (
     
@@ -266,9 +273,21 @@ export function Sejour(){
          </CardContent>
          
           <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
+          <Badge color="secondary" badgeContent={count+21}>
+            <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                    if (test==1){
+                      setCount(count + 1),
+                      setTest(test+1);
+                    }
+                    else{
+                      setCount(count - 1),
+                      setTest(test-1);
+                    }
+                    
+                    }}>
+                <FavoriteIcon   />
             </IconButton>
+          </Badge>
 
             <Accordion>
         <AccordionSummary
@@ -319,9 +338,21 @@ export function Sejour(){
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
+          <Badge color="secondary" badgeContent={count+16}>
+            <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                    if (test==1){
+                      setCount(count + 1),
+                      setTest(test+1);
+                    }
+                    else{
+                      setCount(count - 1),
+                      setTest(test-1);
+                    }
+                    
+                    }}>
+                <FavoriteIcon   />
             </IconButton>
+          </Badge>
 
             <Accordion>
         <AccordionSummary
@@ -371,9 +402,21 @@ export function Sejour(){
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
+          <Badge color="secondary" badgeContent={count+14}>
+            <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                    if (test==1){
+                      setCount(count + 1),
+                      setTest(test+1);
+                    }
+                    else{
+                      setCount(count - 1),
+                      setTest(test-1);
+                    }
+                    
+                    }}>
+                <FavoriteIcon   />
             </IconButton>
+          </Badge>
 
             <Accordion>
         <AccordionSummary
@@ -426,9 +469,21 @@ export function Sejour(){
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
+          <Badge color="secondary" badgeContent={count+9}>
+            <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                    if (test==1){
+                      setCount(count + 1),
+                      setTest(test+1);
+                    }
+                    else{
+                      setCount(count - 1),
+                      setTest(test-1);
+                    }
+                    
+                    }}>
+                <FavoriteIcon   />
             </IconButton>
+          </Badge>
 
             <Accordion>
         <AccordionSummary
@@ -479,9 +534,21 @@ export function Sejour(){
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
+          <Badge color="secondary" badgeContent={count+5}>
+            <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                    if (test==1){
+                      setCount(count + 1),
+                      setTest(test+1);
+                    }
+                    else{
+                      setCount(count - 1),
+                      setTest(test-1);
+                    }
+                    
+                    }}>
+                <FavoriteIcon   />
             </IconButton>
+          </Badge>
 
             <Accordion>
         <AccordionSummary
@@ -533,9 +600,21 @@ export function Sejour(){
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
+          <Badge color="secondary" badgeContent={count+25}>
+            <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                    if (test==1){
+                      setCount(count + 1),
+                      setTest(test+1);
+                    }
+                    else{
+                      setCount(count - 1),
+                      setTest(test-1);
+                    }
+                    
+                    }}>
+                <FavoriteIcon   />
             </IconButton>
+          </Badge>
 
             <Accordion>
         <AccordionSummary
@@ -587,9 +666,21 @@ export function Sejour(){
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
+          <Badge color="secondary" badgeContent={count+12}>
+            <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                    if (test==1){
+                      setCount(count + 1),
+                      setTest(test+1);
+                    }
+                    else{
+                      setCount(count - 1),
+                      setTest(test-1);
+                    }
+                    
+                    }}>
+                <FavoriteIcon   />
             </IconButton>
+          </Badge>
 
             <Accordion>
         <AccordionSummary
@@ -640,9 +731,21 @@ export function Sejour(){
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
+          <Badge color="secondary" badgeContent={count+3}>
+            <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                    if (test==1){
+                      setCount(count + 1),
+                      setTest(test+1);
+                    }
+                    else{
+                      setCount(count - 1),
+                      setTest(test-1);
+                    }
+                    
+                    }}>
+                <FavoriteIcon   />
             </IconButton>
+          </Badge>
 
             <Accordion>
         <AccordionSummary
@@ -693,9 +796,21 @@ export function Sejour(){
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
+          <Badge color="secondary" badgeContent={count+4}>
+            <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                    if (test==1){
+                      setCount(count + 1),
+                      setTest(test+1);
+                    }
+                    else{
+                      setCount(count - 1),
+                      setTest(test-1);
+                    }
+                    
+                    }}>
+                <FavoriteIcon   />
             </IconButton>
+          </Badge>
 
             <Accordion>
         <AccordionSummary
