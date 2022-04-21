@@ -50,6 +50,11 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 
 
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+
+import PropTypes from 'prop-types';
+
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 
@@ -238,611 +243,691 @@ const ResponsiveAppBarFoot = () => {
 };
 
 
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`vertical-tabpanel-${index}`}
+      aria-labelledby={`vertical-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `vertical-tab-${index}`,
+    'aria-controls': `vertical-tabpanel-${index}`,
+  };
+}
+
+
 
 
 
 export function Sejour(){
   
+  //Button like
   const [test, setTest] = React.useState(1);
   const [count, setCount] = React.useState(1);
   const [invisible, setInvisible] = React.useState(false);
+
+  //menu
+  const [value, setValue] = React.useState(0);
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
   
   return (
     
-    <Box sx={{ flexGrow: 1 }}>
+    <Box
+        sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 1500 }}
+      >
 
-<Grid container rowSpacing={2} columnSpacing={{ xs: 2, sm: 2, md: 3 }}>
-  <Grid item xs={6}>
-
-        <Card sx={{ maxWidth: 700 }}>
-          <CardHeader
-            
-            title={Data.lieux[0].nom}
-           
-          />
-          <CardMedia
-            component="img"
-            height="194"
-            image="./images/ALBI.jpg"
-            alt="cathédrale "
-          />
-          <CardContent>
-          <Typography variant="body2" color="text.secondary">
-          {Data.lieux[0].description}
-          </Typography>
-         </CardContent>
-         
-          <CardActions disableSpacing>
-          <Badge color="secondary" badgeContent={count+21}>
-            <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                    if (test==1){
-                      setCount(count + 1),
-                      setTest(test+1);
-                    }
-                    else{
-                      setCount(count - 1),
-                      setTest(test-1);
-                    }
-                    
-                    }}>
-                <FavoriteIcon   />
-            </IconButton>
-          </Badge>
-
-            <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
+      <Tabs
+          orientation="vertical"
+          variant="scrollable"
+          value={value}
+          onChange={handleChange}
+          aria-label="Vertical tabs "
+          sx={{ borderRight: 1, borderColor: 'divider',width: 400, display: 'flex' }}
         >
-          <Typography>learn more</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography  paragraph>
-          {Data.lieux[0].description2}
-          </Typography>
-          <Typography  paragraph>
-          Horaire: <br />
-          {Data.lieux[0].horaire}
-          </Typography>
-          <Typography  paragraph>
-            Tarifs: <br />
-          {Data.lieux[0].Tarifs}
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-            
-           
-          </CardActions>
-          
-        </Card>
+          <Tab label="Lieux culte à visiter" {...a11yProps(0)} />
+          <Tab label="Nos restaurant" {...a11yProps(1)} />
+          <Tab label="Nos hotel" {...a11yProps(2)} />
+       
+      </Tabs>
+
+      <TabPanel value={value} index={0}>
+        <Typography gutterBottom variant="h5" component="div">
+            Nos lieux culte à visiter!
+        </Typography>
+
+        <Grid container spacing={3}>
+        <Grid item xs={4}>
+
+              <Card sx={{ maxWidth: 500 }}>
+                <CardHeader
+                  
+                  title={Data.lieux[0].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/ALBI.jpg"
+                  alt="cathédrale "
+                />
+                <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                {Data.lieux[0].description}
+                </Typography>
+              </CardContent>
+              
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+21}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography  paragraph>
+                {Data.lieux[0].description2}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.lieux[0].horaire}
+                </Typography>
+                <Typography  paragraph>
+                  Tarifs: <br />
+                {Data.lieux[0].Tarifs}
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+              <Grid item xs={4}>
+
+              <Card sx={{ maxWidth: 500 }}>
+                <CardHeader
+                  
+                  title={Data.lieux[1].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/museeM.jpg"
+                  alt="musee de la mode "
+                />
+                <CardContent>
+                  <Typography variant="body2" color="text.secondary">
+                  {Data.lieux[1].description}
+                  </Typography>
+                </CardContent>
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+16}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography  paragraph>
+                {Data.lieux[1].description2}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.lieux[1].horaire}
+                </Typography>
+                <Typography  paragraph>
+                  Tarifs: <br />
+                {Data.lieux[1].Tarifs}
+                </Typography>
+              </AccordionDetails>
+              </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+
+              <Grid item xs={4}>
+              <Card sx={{ maxWidth: 500 }}>
+                <CardHeader
+                  
+                  title={Data.lieux[2].nom}
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/museeT.jpg"
+                  alt="Musée Toulouse-Lautrec"
+                />
+                <CardContent>
+                  <Typography variant="body2" color="text.secondary">
+                  {Data.lieux[2].description}
+                  </Typography>
+                </CardContent>
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+14}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography  paragraph>
+                {Data.lieux[2].description2}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.lieux[2].horaire}
+                </Typography>
+                <Typography  paragraph>
+                  Tarifs: <br />
+                {Data.lieux[2].Tarifs}
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+              
+
+              <Grid item xs={4}>
+
+              <Card sx={{ maxWidth: 500 }}>
+                <CardHeader
+                  
+                  title={Data.lieux[3].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/zoo.jpg"
+                  alt="zoologique Exoticamis "
+                />
+                <CardContent>
+                  <Typography variant="body2" color="text.secondary">
+                  {Data.lieux[3].description}
+                  </Typography>
+                </CardContent>
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+9}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+              <Typography  paragraph>
+                {Data.lieux[3].description2}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.lieux[3].horaire}
+                </Typography>
+                <Typography  paragraph>
+                  Tarifs: <br />
+                {Data.lieux[3].Tarifs}
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+              <Grid item xs={4}>
+
+              <Card sx={{ maxWidth: 500 }}>
+                <CardHeader
+                  
+                  title={Data.lieux[4].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/jardin.jpg"
+                  alt="jardins de la Berbie  "
+                />
+                <CardContent>
+                  <Typography variant="body2" color="text.secondary">
+                  {Data.lieux[4].description}
+                  </Typography>
+                </CardContent>
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+5}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+              <Typography  paragraph>
+                {Data.lieux[4].description2}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.lieux[4].horaire}
+                </Typography>
+                <Typography  paragraph>
+                  Tarifs: <br />
+                {Data.lieux[4].Tarifs}
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+
+              <Grid item xs={4}>
+
+              <Card sx={{ maxWidth: 500 }}>
+                <CardHeader
+                  
+                  title={Data.lieux[6].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/parc.jpg"
+                  alt="parc rochegude  "
+                />
+                <CardContent>
+                  <Typography variant="body2" color="text.secondary">
+                  {Data.lieux[6].description}
+                  </Typography>
+                </CardContent>
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+25}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+              <Typography  paragraph>
+                {Data.lieux[6].description2}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.lieux[6].horaire}
+                </Typography>
+                <Typography  paragraph>
+                  Tarifs: <br />
+                {Data.lieux[6].Tarifs}
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+
+              <Grid item xs={4}>
+
+              <Card sx={{ maxWidth: 500 }}>
+                <CardHeader
+                  
+                  title={Data.lieux[7].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/base.jpg"
+                  alt="base de loisirs"
+                />
+                <CardContent>
+                  <Typography variant="body2" color="text.secondary">
+                  {Data.lieux[7].description}
+                  </Typography>
+                </CardContent>
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+12}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+              <Typography  paragraph>
+                {Data.lieux[7].description2}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.lieux[7].horaire}
+                </Typography>
+                <Typography  paragraph>
+                  Tarifs: <br />
+                {Data.lieux[7].Tarifs}
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+              <Grid item xs={4}>
+
+              <Card sx={{ maxWidth: 500 }}>
+                <CardHeader
+                  
+                  title={Data.lieux[8].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/miniature.jpg"
+                  alt="Académie des miniatures"
+                />
+                <CardContent>
+                  <Typography variant="body2" color="text.secondary">
+                  {Data.lieux[8].description}
+                  </Typography>
+                </CardContent>
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+3}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+              <Typography  paragraph>
+                {Data.lieux[8].description2}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.lieux[8].horaire}
+                </Typography>
+                <Typography  paragraph>
+                  Tarifs: <br />
+                {Data.lieux[8].Tarifs}
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+              <Grid item xs={4}>
+
+              <Card sx={{ maxWidth: 500 }}>
+                <CardHeader
+                  
+                  title={Data.lieux[9].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/cap.jpg"
+                  alt="Cap’Découverte"
+                />
+                <CardContent>
+                  <Typography variant="body2" color="text.secondary">
+                  {Data.lieux[9].description}
+                  </Typography>
+                </CardContent>
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+4}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+              <Typography  paragraph>
+                {Data.lieux[9].description2}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.lieux[9].horaire}
+                </Typography>
+                <Typography  paragraph>
+                  Tarifs: <br />
+                {Data.lieux[9].Tarifs}
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+
         </Grid>
 
-        <Grid item xs={6}>
+        </TabPanel>
 
-        <Card sx={{ maxWidth: 700 }}>
-          <CardHeader
-            
-            title={Data.lieux[1].nom}
-          
-          />
-          <CardMedia
-            component="img"
-            height="194"
-            image="./images/museeM.jpg"
-            alt="musee de la mode "
-          />
-          <CardContent>
-            <Typography variant="body2" color="text.secondary">
-            {Data.lieux[1].description}
-            </Typography>
-          </CardContent>
-          <CardActions disableSpacing>
-          <Badge color="secondary" badgeContent={count+16}>
-            <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                    if (test==1){
-                      setCount(count + 1),
-                      setTest(test+1);
-                    }
-                    else{
-                      setCount(count - 1),
-                      setTest(test-1);
-                    }
-                    
-                    }}>
-                <FavoriteIcon   />
-            </IconButton>
-          </Badge>
+        <TabPanel value={value} index={1}>
+        <Typography gutterBottom variant="h5" component="div">
+            Nos restaurant!
+        </Typography>
+        </TabPanel>
 
-            <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography>learn more</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography  paragraph>
-          {Data.lieux[1].description2}
-          </Typography>
-          <Typography  paragraph>
-          Horaire: <br />
-          {Data.lieux[1].horaire}
-          </Typography>
-          <Typography  paragraph>
-            Tarifs: <br />
-          {Data.lieux[1].Tarifs}
-          </Typography>
-        </AccordionDetails>
-        </Accordion>
-            
-          
-          </CardActions>
-          
-        </Card>
-        </Grid>
+        <TabPanel value={value} index={2}>
+        <Typography gutterBottom variant="h5" component="div">
+            Nos hotel!
+        </Typography>
+        </TabPanel>
 
 
-        <Grid item xs={6}>
-        <Card sx={{ maxWidth: 700 }}>
-          <CardHeader
-            
-            title={Data.lieux[2].nom}
-          />
-          <CardMedia
-            component="img"
-            height="194"
-            image="./images/museeT.jpg"
-            alt="Musée Toulouse-Lautrec"
-          />
-          <CardContent>
-            <Typography variant="body2" color="text.secondary">
-            {Data.lieux[2].description}
-            </Typography>
-          </CardContent>
-          <CardActions disableSpacing>
-          <Badge color="secondary" badgeContent={count+14}>
-            <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                    if (test==1){
-                      setCount(count + 1),
-                      setTest(test+1);
-                    }
-                    else{
-                      setCount(count - 1),
-                      setTest(test-1);
-                    }
-                    
-                    }}>
-                <FavoriteIcon   />
-            </IconButton>
-          </Badge>
-
-            <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography>learn more</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography  paragraph>
-          {Data.lieux[2].description2}
-          </Typography>
-          <Typography  paragraph>
-          Horaire: <br />
-          {Data.lieux[2].horaire}
-          </Typography>
-          <Typography  paragraph>
-            Tarifs: <br />
-          {Data.lieux[2].Tarifs}
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-            
-           
-          </CardActions>
-          
-        </Card>
-        </Grid>
-
-        
-
-        <Grid item xs={6}>
-
-        <Card sx={{ maxWidth: 700 }}>
-          <CardHeader
-            
-            title={Data.lieux[3].nom}
-           
-          />
-          <CardMedia
-            component="img"
-            height="194"
-            image="./images/zoo.jpg"
-            alt="zoologique Exoticamis "
-          />
-          <CardContent>
-            <Typography variant="body2" color="text.secondary">
-            {Data.lieux[3].description}
-            </Typography>
-          </CardContent>
-          <CardActions disableSpacing>
-          <Badge color="secondary" badgeContent={count+9}>
-            <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                    if (test==1){
-                      setCount(count + 1),
-                      setTest(test+1);
-                    }
-                    else{
-                      setCount(count - 1),
-                      setTest(test-1);
-                    }
-                    
-                    }}>
-                <FavoriteIcon   />
-            </IconButton>
-          </Badge>
-
-            <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography>learn more</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-        <Typography  paragraph>
-          {Data.lieux[3].description2}
-          </Typography>
-          <Typography  paragraph>
-          Horaire: <br />
-          {Data.lieux[3].horaire}
-          </Typography>
-          <Typography  paragraph>
-            Tarifs: <br />
-          {Data.lieux[3].Tarifs}
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-            
-           
-          </CardActions>
-          
-        </Card>
-        </Grid>
-
-        <Grid item xs={6}>
-
-        <Card sx={{ maxWidth: 700 }}>
-          <CardHeader
-            
-            title={Data.lieux[4].nom}
-           
-          />
-          <CardMedia
-            component="img"
-            height="194"
-            image="./images/jardin.jpg"
-            alt="jardins de la Berbie  "
-          />
-          <CardContent>
-            <Typography variant="body2" color="text.secondary">
-            {Data.lieux[4].description}
-            </Typography>
-          </CardContent>
-          <CardActions disableSpacing>
-          <Badge color="secondary" badgeContent={count+5}>
-            <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                    if (test==1){
-                      setCount(count + 1),
-                      setTest(test+1);
-                    }
-                    else{
-                      setCount(count - 1),
-                      setTest(test-1);
-                    }
-                    
-                    }}>
-                <FavoriteIcon   />
-            </IconButton>
-          </Badge>
-
-            <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography>learn more</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-        <Typography  paragraph>
-          {Data.lieux[4].description2}
-          </Typography>
-          <Typography  paragraph>
-          Horaire: <br />
-          {Data.lieux[4].horaire}
-          </Typography>
-          <Typography  paragraph>
-            Tarifs: <br />
-          {Data.lieux[4].Tarifs}
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-            
-           
-          </CardActions>
-          
-        </Card>
-        </Grid>
-
-
-        <Grid item xs={6}>
-
-        <Card sx={{ maxWidth: 700 }}>
-          <CardHeader
-            
-            title={Data.lieux[6].nom}
-           
-          />
-          <CardMedia
-            component="img"
-            height="194"
-            image="./images/parc.jpg"
-            alt="parc rochegude  "
-          />
-          <CardContent>
-            <Typography variant="body2" color="text.secondary">
-            {Data.lieux[6].description}
-            </Typography>
-          </CardContent>
-          <CardActions disableSpacing>
-          <Badge color="secondary" badgeContent={count+25}>
-            <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                    if (test==1){
-                      setCount(count + 1),
-                      setTest(test+1);
-                    }
-                    else{
-                      setCount(count - 1),
-                      setTest(test-1);
-                    }
-                    
-                    }}>
-                <FavoriteIcon   />
-            </IconButton>
-          </Badge>
-
-            <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography>learn more</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-        <Typography  paragraph>
-          {Data.lieux[6].description2}
-          </Typography>
-          <Typography  paragraph>
-          Horaire: <br />
-          {Data.lieux[6].horaire}
-          </Typography>
-          <Typography  paragraph>
-            Tarifs: <br />
-          {Data.lieux[6].Tarifs}
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-            
-           
-          </CardActions>
-          
-        </Card>
-        </Grid>
-
-
-        <Grid item xs={6}>
-
-        <Card sx={{ maxWidth: 700 }}>
-          <CardHeader
-            
-            title={Data.lieux[7].nom}
-           
-          />
-          <CardMedia
-            component="img"
-            height="194"
-            image="./images/base.jpg"
-            alt="base de loisirs"
-          />
-          <CardContent>
-            <Typography variant="body2" color="text.secondary">
-            {Data.lieux[7].description}
-            </Typography>
-          </CardContent>
-          <CardActions disableSpacing>
-          <Badge color="secondary" badgeContent={count+12}>
-            <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                    if (test==1){
-                      setCount(count + 1),
-                      setTest(test+1);
-                    }
-                    else{
-                      setCount(count - 1),
-                      setTest(test-1);
-                    }
-                    
-                    }}>
-                <FavoriteIcon   />
-            </IconButton>
-          </Badge>
-
-            <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography>learn more</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-        <Typography  paragraph>
-          {Data.lieux[7].description2}
-          </Typography>
-          <Typography  paragraph>
-          Horaire: <br />
-          {Data.lieux[7].horaire}
-          </Typography>
-          <Typography  paragraph>
-            Tarifs: <br />
-          {Data.lieux[7].Tarifs}
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-            
-           
-          </CardActions>
-          
-        </Card>
-        </Grid>
-
-        <Grid item xs={6}>
-
-        <Card sx={{ maxWidth: 700 }}>
-          <CardHeader
-            
-            title={Data.lieux[8].nom}
-           
-          />
-          <CardMedia
-            component="img"
-            height="194"
-            image="./images/miniature.jpg"
-            alt="Académie des miniatures"
-          />
-          <CardContent>
-            <Typography variant="body2" color="text.secondary">
-            {Data.lieux[8].description}
-            </Typography>
-          </CardContent>
-          <CardActions disableSpacing>
-          <Badge color="secondary" badgeContent={count+3}>
-            <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                    if (test==1){
-                      setCount(count + 1),
-                      setTest(test+1);
-                    }
-                    else{
-                      setCount(count - 1),
-                      setTest(test-1);
-                    }
-                    
-                    }}>
-                <FavoriteIcon   />
-            </IconButton>
-          </Badge>
-
-            <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography>learn more</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-        <Typography  paragraph>
-          {Data.lieux[8].description2}
-          </Typography>
-          <Typography  paragraph>
-          Horaire: <br />
-          {Data.lieux[8].horaire}
-          </Typography>
-          <Typography  paragraph>
-            Tarifs: <br />
-          {Data.lieux[8].Tarifs}
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-            
-           
-          </CardActions>
-          
-        </Card>
-        </Grid>
-
-        <Grid item xs={6}>
-
-        <Card sx={{ maxWidth: 700 }}>
-          <CardHeader
-            
-            title={Data.lieux[9].nom}
-           
-          />
-          <CardMedia
-            component="img"
-            height="194"
-            image="./images/cap.jpg"
-            alt="Cap’Découverte"
-          />
-          <CardContent>
-            <Typography variant="body2" color="text.secondary">
-            {Data.lieux[9].description}
-            </Typography>
-          </CardContent>
-          <CardActions disableSpacing>
-          <Badge color="secondary" badgeContent={count+4}>
-            <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                    if (test==1){
-                      setCount(count + 1),
-                      setTest(test+1);
-                    }
-                    else{
-                      setCount(count - 1),
-                      setTest(test-1);
-                    }
-                    
-                    }}>
-                <FavoriteIcon   />
-            </IconButton>
-          </Badge>
-
-            <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography>learn more</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-        <Typography  paragraph>
-          {Data.lieux[9].description2}
-          </Typography>
-          <Typography  paragraph>
-          Horaire: <br />
-          {Data.lieux[9].horaire}
-          </Typography>
-          <Typography  paragraph>
-            Tarifs: <br />
-          {Data.lieux[9].Tarifs}
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-            
-           
-          </CardActions>
-          
-        </Card>
-        </Grid>
-
-
-        </Grid>
         </Box>
 
         
