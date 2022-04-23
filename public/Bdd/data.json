@@ -258,6 +258,10 @@
             "nom": "Ambroisie",
             "localitation": "43.927313639730386, 2.1438618690889584",
             "description": ["Cuisine Française, Européenne"],
+            "description2": ["Dans un cadre chaleureux, vous goûterez une cuisine maison régionale et saisonnière,",
+                "avec des spécialités de tartes salées et sucrées, accompagnées de vins scrupuleusement sélectionnés (Sud-ouest, carafe AOC).",
+                "Préparation de plats végétariens"
+            ],
             "adresse": "4 Rue Henri de Toulouse Lautrec, 81000 Albi",
             "tel": ": 05 63 76 43 56",
             "horaire": [
@@ -274,6 +278,10 @@
             "nom": "Le Pont du Tarn",
             "localitation": "43.93033245639734, 2.1450351267598293",
             "description": ["Cuisine Française moderne"],
+            "description2": ["Le Pont du Tarn est situé au cœur du périmètre Unesco avec une vue imprenable sur la rive nord du Tarn.",
+                " Le Pont du Tarn propose en salle climatisée ou sur sa terrasse ombragée l’été,",
+                " une offre gourmande inspirée de la gastronomie Tarnaise, toute l’année, du jeudi au lundi."
+            ],
             "adresse": "3 Rue de la Grand Côté, 81000 Albi",
             "tel": ":  05 63 76 83 95",
             "horaire": [
@@ -289,6 +297,10 @@
             "nom": "Au Hibou",
             "localitation": "43.929266499240384, 2.144434699495029",
             "description": ["Cuisine Française, bar à bières"],
+            "description2": ["Les visiteurs réservent une table pour un repas délicieux ici et apprécient la vue sur Eglise Saint Salvi.",
+                "Ce bar pourrait vous faire plaisir avec un parfait fascinant.",
+                " Un vin délicieux accompagne bien un bon repas. Ici, vous pouvez consommer un café immense. "
+            ],
             "adresse": "21 Rue Saint-Julien, 81000 Albi",
             "tel": ":  05 63 76 38 99",
             "horaire": [
@@ -303,6 +315,9 @@
             "nom": "La cocina",
             "localitation": "43.93003856385704, 2.1534179979244175",
             "description": ["Cuisine Française,Espagnole"],
+            "description2": ["La cuisine espagnole offre des repas authentiques à ce restaurant.",
+                " Un décor spectaculaire et une ambiance plaisante permettent aux clients de se détendre."
+            ],
             "adresse": "12 Av. Maréchal de Lattre de Tassigny, 81000 Albi",
             "tel": ":   09 81 63 21 76",
             "horaire": [
@@ -317,6 +332,10 @@
             "nom": "Azzurro",
             "localitation": "43.928893761810855, 2.195497926759762",
             "description": ["Cuisine Française,Pizza"],
+            "description2": ["Plus qu'un restaurant, nous faisons grill et pizzeria.",
+                " Dégustez une délicieuse cuisine de grillades. Découvrez également notre carte de pizzas et de salades.",
+                "Pizzas sur place ou à emporter"
+            ],
             "adresse": "2 Rue François Arago, 81000 Albi",
             "tel": ":   05 63 80 71 06",
             "horaire": [
@@ -331,6 +350,7 @@
             "nom": "La Fourchette Adroite",
             "localitation": "43.92947256938418, 2.143979726759809",
             "description": ["Cuisine Française,Européenne"],
+            "description2": ["Restaurant d'esprit loft tendance, au cadre intime, pour une cuisine française inspirée par les saisons."],
             "adresse": "7 Pl. de l'Archevêché, 81000 Albi",
             "tel": ":    05 63 54 05 23",
             "horaire": [
@@ -345,6 +365,9 @@
             "nom": "Cascarbar",
             "localitation": "43.928716419921386, 2.144234269088989",
             "description": ["Cuisine Méditerranéene,Fruits de mer & Poisson"],
+            "description2": ["Le Restaurant Le Cascarbar est à la fois un Bar et un restaurant de cuisine moderne",
+                " et créative situé à deux pas de la cathédrale et du musée Toulouse lautrec au cœur du centre historique d'Albi"
+            ],
             "adresse": " 29 Rue Saint-Julien, 81000 Albi",
             "tel": ": 05 63 54 03 52",
             "horaire": [
@@ -359,6 +382,7 @@
             "nom": "L'Epicurien",
             "localitation": "43.924756619722835, 2.1489916402535068",
             "description": ["Cuisine Française,Européenne"],
+            "description2": ["Notre restaurant situé à Albi vous propose un cadre épuré et chaleureux pour partager un moment unique avec vos amis, votre famille, vos clients ou vos employés."],
             "adresse": "  42 Pl. Jean Jaurès, 81000 Albi",
             "tel": ": 05 63 53 10 70",
             "horaire": [
@@ -373,6 +397,9 @@
             "nom": "Basilic & Co Albi",
             "localitation": "43.92437289788939, 2.154148126759631",
             "description": ["Cuisine Italienne,Pizza"],
+            "description2": ["Basilic & Co vous propose des pizzas élaborées autour de produits d’exception : des ingrédients emblématiques des terroirs de France.",
+                " Plus de 20 recettes au choix, préparées à partir d’une pâte fraîche à fermentation lente, et cuites dans un four haut de gamme, à sole de pierre rotative."
+            ],
             "adresse": "  73 Av. Colonel Teyssier, 81000 Albi",
             "tel": ":  05 63 76 21 55",
             "horaire": [
@@ -386,6 +413,10 @@
             "nom": "Amapola kitchen",
             "localitation": "43.932061060572565, 2.14401776737446",
             "description": ["Pub, Fusion"],
+            "description2": ["A la frontière entre une cantine et un néobistrot, Amapola propose une formule de midi en semaine",
+                " ainsi qu'une carte de tapas à découvrir au déjeuner comme au dîner. Le dimanche chez Amapola, on brunch.'",
+                "La carte vit au rythme des saisons et est renouvelée régulièrement."
+            ],
             "adresse": " 100 Rue Porta, 81000 Albi",
             "tel": ": 05 63 77 63 04",
             "horaire": [
