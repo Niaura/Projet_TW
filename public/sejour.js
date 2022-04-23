@@ -56,6 +56,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
 import PropTypes from 'prop-types';
+import Link from '@mui/material/Link';
 
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
@@ -1720,10 +1721,9 @@ export function Sejour(){
                 Horaire: <br />
                 {Data.Hotel[0].horaire}
                 </Typography>
-                <Typography  paragraph>
-                Réservation: <br />
-                {Data.Hotel[0].reservation}
-                </Typography>
+                <Link href={Data.Hotel[0].reservation} underline="none">
+                Cliqué ici pour réserver une chambre!
+                </Link>
                 
               </AccordionDetails>
             </Accordion>
@@ -1799,10 +1799,9 @@ export function Sejour(){
                 Horaire: <br />
                 {Data.Hotel[1].horaire}
                 </Typography>
-                <Typography  paragraph>
-                Réservation: <br />
-                {Data.Hotel[1].reservation}
-                </Typography>
+                <Link href={Data.Hotel[1].reservation} underline="none">
+                Cliqué ici pour réserver une chambre!
+                </Link>
                 
               </AccordionDetails>
             </Accordion>
@@ -1878,10 +1877,9 @@ export function Sejour(){
                 Horaire: <br />
                 {Data.Hotel[2].horaire}
                 </Typography>
-                <Typography  paragraph>
-                Réservation: <br />
-                {Data.Hotel[2].reservation}
-                </Typography>
+                <Link href={Data.Hotel[2].reservation} underline="none">
+                Cliqué ici pour réserver une chambre!
+                </Link>
                 
               </AccordionDetails>
             </Accordion>
@@ -1957,10 +1955,9 @@ export function Sejour(){
                 Horaire: <br />
                 {Data.Hotel[3].horaire}
                 </Typography>
-                <Typography  paragraph>
-                Réservation: <br />
-                {Data.Hotel[3].reservation}
-                </Typography>
+                <Link href={Data.Hotel[3].reservation} underline="none">
+                Cliqué ici pour réserver une chambre!
+                </Link>
                 
               </AccordionDetails>
             </Accordion>
@@ -2037,10 +2034,9 @@ export function Sejour(){
                 Horaire: <br />
                 {Data.Hotel[4].horaire}
                 </Typography>
-                <Typography  paragraph>
-                Réservation: <br />
-                {Data.Hotel[4].reservation}
-                </Typography>
+                <Link href={Data.Hotel[4].reservation} underline="none">
+                Cliqué ici pour réserver une chambre!
+                </Link>
                 
               </AccordionDetails>
             </Accordion>
@@ -2117,10 +2113,9 @@ export function Sejour(){
                 Horaire: <br />
                 {Data.Hotel[5].horaire}
                 </Typography>
-                <Typography  paragraph>
-                Réservation: <br />
-                {Data.Hotel[5].reservation}
-                </Typography>
+                <Link href={Data.Hotel[5].reservation} underline="none">
+                Cliqué ici pour réserver une chambre!
+                </Link>
                 
               </AccordionDetails>
             </Accordion>
@@ -2197,10 +2192,9 @@ export function Sejour(){
                 Horaire: <br />
                 {Data.Hotel[6].horaire}
                 </Typography>
-                <Typography  paragraph>
-                Réservation: <br />
-                {Data.Hotel[6].reservation}
-                </Typography>
+                <Link href={Data.Hotel[6].reservation} underline="none">
+                Cliqué ici pour réserver une chambre!
+                </Link>
                 
               </AccordionDetails>
             </Accordion>
