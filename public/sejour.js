@@ -32,6 +32,8 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 
+import SwipeableViews from 'react-swipeable-views';
+import { useTheme } from '@mui/material/styles';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -246,14 +248,12 @@ const ResponsiveAppBarFoot = () => {
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
-  
-
   return (
     <div
       role="tabpanel"
       hidden={value !== index}
-      id={`vertical-tabpanel-${index}`}
-      aria-labelledby={`vertical-tab-${index}`}
+      id={`full-width-tabpanel-${index}`}
+      aria-labelledby={`full-width-tab-${index}`}
       {...other}
     >
       {value === index && (
@@ -273,8 +273,8 @@ TabPanel.propTypes = {
 
 function a11yProps(index) {
   return {
-    id: `vertical-tab-${index}`,
-    'aria-controls': `vertical-tabpanel-${index}`,
+    id: `full-width-tab-${index}`,
+    'aria-controls': `full-width-tabpanel-${index}`,
   };
 }
 
@@ -290,40 +290,49 @@ export function Sejour(){
   const [invisible, setInvisible] = React.useState(false);
 
   //menu
+  const theme = useTheme();
   const [value, setValue] = React.useState(0);
+
   const handleChange = (event, newValue) => {
     setValue(newValue);
+  };
+
+  const handleChangeIndex = (index) => {
+    setValue(index);
   };
   
   return (
     
-    <Box
-        sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 1500 }}
-      >
-
-      <Tabs
-          orientation="vertical"
-          variant="scrollable"
+    <Box sx={{ bgcolor: 'background.paper', width: 'auto'}}>
+      <AppBar position="static">
+        <Tabs
           value={value}
           onChange={handleChange}
-          aria-label="Vertical tabs "
-          sx={{ borderRight: 1, borderColor: 'divider',width: 400, display: 'flex' }}
+          indicatorColor="secondary"
+          textColor="inherit"
+          variant="fullWidth"
+          aria-label="full width tabs example"
+          position="fixed"
         >
-          <Tab label="Lieux culte à visiter" {...a11yProps(0)} />
-          <Tab label="Nos restaurant" {...a11yProps(1)} />
-          <Tab label="Nos hotel" {...a11yProps(2)} />
-       
-      </Tabs>
-
-      <TabPanel value={value} index={0}>
+          <Tab label="Item One" {...a11yProps(0)} />
+          <Tab label="Item Two" {...a11yProps(1)} />
+          <Tab label="Item Three" {...a11yProps(2)} />
+        </Tabs>
+      </AppBar>
+      <SwipeableViews
+        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        index={value}
+        onChangeIndex={handleChangeIndex}
+      >
+        <TabPanel value={value} index={0} dir={theme.direction}>
         <Typography gutterBottom variant="h5" component="div">
-            Nos lieux culte à visiter!
+            Nos lieux à visiter!
         </Typography>
 
-        <Grid container spacing={3}>
+        <Grid container justify="space-around" spacing={2}>
         <Grid item xs={4}>
 
-              <Card sx={{ maxWidth: 500 }}>
+              <Card sx={{width : 450 }}>
                 <CardHeader
                   
                   title={Data.lieux[0].nom}
@@ -389,7 +398,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ maxWidth: 500 }}>
+              <Card sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.lieux[1].nom}
@@ -454,7 +463,7 @@ export function Sejour(){
 
 
               <Grid item xs={4}>
-              <Card sx={{ maxWidth: 500 }}>
+              <Card sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.lieux[2].nom}
@@ -520,7 +529,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ maxWidth: 500 }}>
+              <Card sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.lieux[3].nom}
@@ -585,7 +594,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ maxWidth: 500 }}>
+              <Card sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.lieux[4].nom}
@@ -651,7 +660,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ maxWidth: 500 }}>
+              <Card sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.lieux[6].nom}
@@ -717,7 +726,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ maxWidth: 500 }}>
+              <Card sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.lieux[7].nom}
@@ -782,7 +791,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ maxWidth: 500 }}>
+              <Card sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.lieux[8].nom}
@@ -847,7 +856,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ maxWidth: 500 }}>
+              <Card sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.lieux[9].nom}
@@ -919,6 +928,226 @@ export function Sejour(){
         <Typography gutterBottom variant="h5" component="div">
             Nos restaurant!
         </Typography>
+          
+        <Grid container justify="space-around" spacing={2}>
+        <Grid item xs={4}>
+
+              <Card sx={{ width: 450 }}>
+                <CardHeader
+                  
+                  title={Data.Resto[0].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/Rambroise.jpg"
+                  alt="ambroise "
+                />
+                <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                {Data.Resto[0].description}
+                </Typography>
+              </CardContent>
+              
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+21}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography  paragraph>
+                {Data.Resto[0].description2}
+                </Typography>
+                <Typography  paragraph>
+                  Adresse: <br />
+                {Data.Resto[0].adresse}
+                </Typography>
+                <Typography  paragraph>
+                  Téléphone: <br />
+                {Data.Resto[0].tel}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.lieux[0].horaire}
+                </Typography>
+                
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+              <Grid item xs={4}>
+
+              <Card sx={{ width: 450 }}>
+                <CardHeader
+                  
+                  title={Data.Resto[1].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/Rpont.jpg"
+                  alt="pont du tarn "
+                />
+                <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                {Data.Resto[1].description}
+                </Typography>
+              </CardContent>
+              
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+21}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography  paragraph>
+                {Data.Resto[1].description2}
+                </Typography>
+                <Typography  paragraph>
+                  Adresse: <br />
+                {Data.Resto[1].adresse}
+                </Typography>
+                <Typography  paragraph>
+                  Téléphone: <br />
+                {Data.Resto[1].tel}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.lieux[1].horaire}
+                </Typography>
+                
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+
+              <Grid item xs={4}>
+
+              <Card sx={{ width: 450 }}>
+                <CardHeader
+                  
+                  title={Data.Resto[2].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/Rhibou.jpg"
+                  alt="au hibout "
+                />
+                <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                {Data.Resto[2].description}
+                </Typography>
+              </CardContent>
+              
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+21}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography  paragraph>
+                {Data.Resto[2].description2}
+                </Typography>
+                <Typography  paragraph>
+                  Adresse: <br />
+                {Data.Resto[2].adresse}
+                </Typography>
+                <Typography  paragraph>
+                  Téléphone: <br />
+                {Data.Resto[2].tel}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.lieux[2].horaire}
+                </Typography>
+                
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+              </Grid>
+
+
+
         </TabPanel>
 
         <TabPanel value={value} index={2}>
@@ -926,12 +1155,9 @@ export function Sejour(){
             Nos hotel!
         </Typography>
         </TabPanel>
-
-
-        </Box>
-
-        
-      );
+      </SwipeableViews>
+    </Box>
+  );
     }
 
 
