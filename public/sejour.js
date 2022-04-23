@@ -1144,6 +1144,506 @@ export function Sejour(){
               </Card>
               </Grid>
 
+              <Grid item xs={4}>
+
+              <Card sx={{ width: 450 }}>
+                <CardHeader
+                  
+                  title={Data.Resto[3].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/Rcocina.jpg"
+                  alt="la cocina "
+                />
+                <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                {Data.Resto[3].description}
+                </Typography>
+              </CardContent>
+              
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+21}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography  paragraph>
+                {Data.Resto[3].description2}
+                </Typography>
+                <Typography  paragraph>
+                  Adresse: <br />
+                {Data.Resto[3].adresse}
+                </Typography>
+                <Typography  paragraph>
+                  Téléphone: <br />
+                {Data.Resto[3].tel}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.lieux[3].horaire}
+                </Typography>
+                
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+              <Grid item xs={4}>
+
+              <Card sx={{ width: 450 }}>
+                <CardHeader
+                  
+                  title={Data.Resto[4].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/Razzurro.jpg"
+                  alt="azzurro "
+                />
+                <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                {Data.Resto[4].description}
+                </Typography>
+              </CardContent>
+              
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+21}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography  paragraph>
+                {Data.Resto[4].description2}
+                </Typography>
+                <Typography  paragraph>
+                  Adresse: <br />
+                {Data.Resto[4].adresse}
+                </Typography>
+                <Typography  paragraph>
+                  Téléphone: <br />
+                {Data.Resto[4].tel}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.lieux[4].horaire}
+                </Typography>
+                
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+
+              <Grid item xs={4}>
+
+              <Card sx={{ width: 450 }}>
+                <CardHeader
+                  
+                  title={Data.Resto[5].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/Rfourchette.jpg"
+                  alt="La Fourchette Adroite"
+                />
+                <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                {Data.Resto[5].description}
+                </Typography>
+              </CardContent>
+              
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+21}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography  paragraph>
+                {Data.Resto[5].description2}
+                </Typography>
+                <Typography  paragraph>
+                  Adresse: <br />
+                {Data.Resto[5].adresse}
+                </Typography>
+                <Typography  paragraph>
+                  Téléphone: <br />
+                {Data.Resto[5].tel}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.lieux[5].horaire}
+                </Typography>
+                
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+
+              <Grid item xs={4}>
+
+              <Card sx={{ width: 450 }}>
+                <CardHeader
+                  
+                  title={Data.Resto[6].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/Rcascarbar.jpg"
+                  alt="cascarbar"
+                />
+                <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                {Data.Resto[6].description}
+                </Typography>
+              </CardContent>
+              
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+21}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography  paragraph>
+                {Data.Resto[6].description2}
+                </Typography>
+                <Typography  paragraph>
+                  Adresse: <br />
+                {Data.Resto[6].adresse}
+                </Typography>
+                <Typography  paragraph>
+                  Téléphone: <br />
+                {Data.Resto[6].tel}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.lieux[6].horaire}
+                </Typography>
+                
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+              <Grid item xs={4}>
+
+              <Card sx={{ width: 450 }}>
+                <CardHeader
+                  
+                  title={Data.Resto[7].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/Repicurien.jpg"
+                  alt="l'epicurien"
+                />
+                <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                {Data.Resto[7].description}
+                </Typography>
+              </CardContent>
+              
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+21}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography  paragraph>
+                {Data.Resto[7].description2}
+                </Typography>
+                <Typography  paragraph>
+                  Adresse: <br />
+                {Data.Resto[7].adresse}
+                </Typography>
+                <Typography  paragraph>
+                  Téléphone: <br />
+                {Data.Resto[7].tel}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.lieux[7].horaire}
+                </Typography>
+                
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+              <Grid item xs={4}>
+
+              <Card sx={{ width: 450 }}>
+                <CardHeader
+                  
+                  title={Data.Resto[8].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/Rbasilic.jpg"
+                  alt="Basilic et Co Albi"
+                />
+                <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                {Data.Resto[8].description}
+                </Typography>
+              </CardContent>
+              
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+21}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography  paragraph>
+                {Data.Resto[8].description2}
+                </Typography>
+                <Typography  paragraph>
+                  Adresse: <br />
+                {Data.Resto[8].adresse}
+                </Typography>
+                <Typography  paragraph>
+                  Téléphone: <br />
+                {Data.Resto[8].tel}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.lieux[8].horaire}
+                </Typography>
+                
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+              <Grid item xs={4}>
+
+              <Card sx={{ width: 450 }}>
+                <CardHeader
+                  
+                  title={Data.Resto[9].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/Ramapola.jpg"
+                  alt="amapola"
+                />
+                <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                {Data.Resto[9].description}
+                </Typography>
+              </CardContent>
+              
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+21}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography  paragraph>
+                {Data.Resto[9].description2}
+                </Typography>
+                <Typography  paragraph>
+                  Adresse: <br />
+                {Data.Resto[9].adresse}
+                </Typography>
+                <Typography  paragraph>
+                  Téléphone: <br />
+                {Data.Resto[9].tel}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.lieux[9].horaire}
+                </Typography>
+                
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+
               </Grid>
 
 
