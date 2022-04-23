@@ -314,9 +314,9 @@ export function Sejour(){
           aria-label="full width tabs example"
           position="fixed"
         >
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+          <Tab label="Nos lieux à visiter" {...a11yProps(0)} />
+          <Tab label="Nos restaurant" {...a11yProps(1)} />
+          <Tab label="Nos hotel" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -989,7 +989,7 @@ export function Sejour(){
                 </Typography>
                 <Typography  paragraph>
                 Horaire: <br />
-                {Data.lieux[0].horaire}
+                {Data.Resto[0].horaire}
                 </Typography>
                 
               </AccordionDetails>
@@ -1060,7 +1060,7 @@ export function Sejour(){
                 </Typography>
                 <Typography  paragraph>
                 Horaire: <br />
-                {Data.lieux[1].horaire}
+                {Data.Resto[1].horaire}
                 </Typography>
                 
               </AccordionDetails>
@@ -1132,7 +1132,7 @@ export function Sejour(){
                 </Typography>
                 <Typography  paragraph>
                 Horaire: <br />
-                {Data.lieux[2].horaire}
+                {Data.Resto[2].horaire}
                 </Typography>
                 
               </AccordionDetails>
@@ -1203,7 +1203,7 @@ export function Sejour(){
                 </Typography>
                 <Typography  paragraph>
                 Horaire: <br />
-                {Data.lieux[3].horaire}
+                {Data.Resto[3].horaire}
                 </Typography>
                 
               </AccordionDetails>
@@ -1274,7 +1274,7 @@ export function Sejour(){
                 </Typography>
                 <Typography  paragraph>
                 Horaire: <br />
-                {Data.lieux[4].horaire}
+                {Data.Resto[4].horaire}
                 </Typography>
                 
               </AccordionDetails>
@@ -1346,7 +1346,7 @@ export function Sejour(){
                 </Typography>
                 <Typography  paragraph>
                 Horaire: <br />
-                {Data.lieux[5].horaire}
+                {Data.Resto[5].horaire}
                 </Typography>
                 
               </AccordionDetails>
@@ -1418,7 +1418,7 @@ export function Sejour(){
                 </Typography>
                 <Typography  paragraph>
                 Horaire: <br />
-                {Data.lieux[6].horaire}
+                {Data.Resto[6].horaire}
                 </Typography>
                 
               </AccordionDetails>
@@ -1489,7 +1489,7 @@ export function Sejour(){
                 </Typography>
                 <Typography  paragraph>
                 Horaire: <br />
-                {Data.lieux[7].horaire}
+                {Data.Resto[7].horaire}
                 </Typography>
                 
               </AccordionDetails>
@@ -1560,7 +1560,7 @@ export function Sejour(){
                 </Typography>
                 <Typography  paragraph>
                 Horaire: <br />
-                {Data.lieux[8].horaire}
+                {Data.Resto[8].horaire}
                 </Typography>
                 
               </AccordionDetails>
@@ -1631,7 +1631,7 @@ export function Sejour(){
                 </Typography>
                 <Typography  paragraph>
                 Horaire: <br />
-                {Data.lieux[9].horaire}
+                {Data.Resto[9].horaire}
                 </Typography>
                 
               </AccordionDetails>
@@ -1654,6 +1654,566 @@ export function Sejour(){
         <Typography gutterBottom variant="h5" component="div">
             Nos hotel!
         </Typography>
+        <Grid container justify="space-around" spacing={2}>
+        <Grid item xs={4}>
+
+              <Card sx={{ width: 450 }}>
+                <CardHeader
+                  
+                  title={Data.Hotel[0].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/Hpasteliers.jpg"
+                  alt="Pasteliers "
+                />
+                <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                {Data.Hotel[0].description}
+                </Typography>
+              </CardContent>
+              
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+21}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography  paragraph>
+                {Data.Hotel[0].information}
+                </Typography>
+                <Typography  paragraph>
+                A partir de : <br />
+                {Data.Hotel[0].tarif}
+                </Typography>
+                <Typography  paragraph>
+                  Adresse: <br />
+                {Data.Hotel[0].adresse}
+                </Typography>
+                <Typography  paragraph>
+                  Téléphone: <br />
+                {Data.Hotel[0].tel}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.Hotel[0].horaire}
+                </Typography>
+                <Typography  paragraph>
+                Réservation: <br />
+                {Data.Hotel[0].reservation}
+                </Typography>
+                
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+              <Grid item xs={4}>
+
+              <Card sx={{ width: 450 }}>
+                <CardHeader
+                  
+                  title={Data.Hotel[1].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/Hvigan.jpg"
+                  alt="vigan "
+                />
+                <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                {Data.Hotel[1].description}
+                </Typography>
+              </CardContent>
+              
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+21}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography  paragraph>
+                {Data.Hotel[1].information}
+                </Typography>
+                <Typography  paragraph>
+                A partir de : <br />
+                {Data.Hotel[1].tarif}
+                </Typography>
+                <Typography  paragraph>
+                  Adresse: <br />
+                {Data.Hotel[1].adresse}
+                </Typography>
+                <Typography  paragraph>
+                  Téléphone: <br />
+                {Data.Hotel[1].tel}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.Hotel[1].horaire}
+                </Typography>
+                <Typography  paragraph>
+                Réservation: <br />
+                {Data.Hotel[1].reservation}
+                </Typography>
+                
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+              <Grid item xs={4}>
+
+              <Card sx={{ width: 450 }}>
+                <CardHeader
+                  
+                  title={Data.Hotel[2].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/Hlaperouse.jpg"
+                  alt="laperouse "
+                />
+                <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                {Data.Hotel[2].description}
+                </Typography>
+              </CardContent>
+              
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+21}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography  paragraph>
+                {Data.Hotel[2].information}
+                </Typography>
+                <Typography  paragraph>
+                A partir de : <br />
+                {Data.Hotel[2].tarif}
+                </Typography>
+                <Typography  paragraph>
+                  Adresse: <br />
+                {Data.Hotel[2].adresse}
+                </Typography>
+                <Typography  paragraph>
+                  Téléphone: <br />
+                {Data.Hotel[2].tel}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.Hotel[2].horaire}
+                </Typography>
+                <Typography  paragraph>
+                Réservation: <br />
+                {Data.Hotel[2].reservation}
+                </Typography>
+                
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+              <Grid item xs={4}>
+
+              <Card sx={{ width: 450 }}>
+                <CardHeader
+                  
+                  title={Data.Hotel[3].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/Hbrasserie.jpg"
+                  alt="brasserie "
+                />
+                <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                {Data.Hotel[3].description}
+                </Typography>
+              </CardContent>
+              
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+21}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography  paragraph>
+                {Data.Hotel[3].information}
+                </Typography>
+                <Typography  paragraph>
+                A partir de : <br />
+                {Data.Hotel[3].tarif}
+                </Typography>
+                <Typography  paragraph>
+                  Adresse: <br />
+                {Data.Hotel[3].adresse}
+                </Typography>
+                <Typography  paragraph>
+                  Téléphone: <br />
+                {Data.Hotel[3].tel}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.Hotel[3].horaire}
+                </Typography>
+                <Typography  paragraph>
+                Réservation: <br />
+                {Data.Hotel[3].reservation}
+                </Typography>
+                
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+
+              <Grid item xs={4}>
+
+              <Card sx={{ width: 450 }}>
+                <CardHeader
+                  
+                  title={Data.Hotel[4].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/Hantoine.jpg"
+                  alt="antoine "
+                />
+                <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                {Data.Hotel[4].description}
+                </Typography>
+              </CardContent>
+              
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+21}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography  paragraph>
+                {Data.Hotel[4].information}
+                </Typography>
+                <Typography  paragraph>
+                A partir de : <br />
+                {Data.Hotel[4].tarif}
+                </Typography>
+                <Typography  paragraph>
+                  Adresse: <br />
+                {Data.Hotel[4].adresse}
+                </Typography>
+                <Typography  paragraph>
+                  Téléphone: <br />
+                {Data.Hotel[4].tel}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.Hotel[4].horaire}
+                </Typography>
+                <Typography  paragraph>
+                Réservation: <br />
+                {Data.Hotel[4].reservation}
+                </Typography>
+                
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+
+              <Grid item xs={4}>
+
+              <Card sx={{ width: 450 }}>
+                <CardHeader
+                  
+                  title={Data.Hotel[5].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/Hroche.jpg"
+                  alt="rochegude "
+                />
+                <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                {Data.Hotel[5].description}
+                </Typography>
+              </CardContent>
+              
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+21}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography  paragraph>
+                {Data.Hotel[5].information}
+                </Typography>
+                <Typography  paragraph>
+                A partir de : <br />
+                {Data.Hotel[5].tarif}
+                </Typography>
+                <Typography  paragraph>
+                  Adresse: <br />
+                {Data.Hotel[5].adresse}
+                </Typography>
+                <Typography  paragraph>
+                  Téléphone: <br />
+                {Data.Hotel[5].tel}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.Hotel[5].horaire}
+                </Typography>
+                <Typography  paragraph>
+                Réservation: <br />
+                {Data.Hotel[5].reservation}
+                </Typography>
+                
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+
+              <Grid item xs={4}>
+
+              <Card sx={{ width: 450 }}>
+                <CardHeader
+                  
+                  title={Data.Hotel[6].nom}
+                
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image="./images/Halchimy.jpg"
+                  alt="alchimy "
+                />
+                <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                {Data.Hotel[6].description}
+                </Typography>
+              </CardContent>
+              
+                <CardActions disableSpacing>
+                <Badge color="secondary" badgeContent={count+21}>
+                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
+                          if (test==1){
+                            setCount(count + 1),
+                            setTest(test+1);
+                          }
+                          else{
+                            setCount(count - 1),
+                            setTest(test-1);
+                          }
+                          
+                          }}>
+                      <FavoriteIcon   />
+                  </IconButton>
+                </Badge>
+
+                  <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>learn more</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography  paragraph>
+                {Data.Hotel[6].information}
+                </Typography>
+                <Typography  paragraph>
+                A partir de : <br />
+                {Data.Hotel[6].tarif}
+                </Typography>
+                <Typography  paragraph>
+                  Adresse: <br />
+                {Data.Hotel[6].adresse}
+                </Typography>
+                <Typography  paragraph>
+                  Téléphone: <br />
+                {Data.Hotel[6].tel}
+                </Typography>
+                <Typography  paragraph>
+                Horaire: <br />
+                {Data.Hotel[6].horaire}
+                </Typography>
+                <Typography  paragraph>
+                Réservation: <br />
+                {Data.Hotel[6].reservation}
+                </Typography>
+                
+              </AccordionDetails>
+            </Accordion>
+                  
+                
+                </CardActions>
+                
+              </Card>
+              </Grid>
+
+              </Grid>
+
+
         </TabPanel>
       </SwipeableViews>
     </Box>
