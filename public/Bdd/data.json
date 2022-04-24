@@ -41,7 +41,7 @@
                 "Tarif Albi City pass: 5€\n",
                 "Tarif réduit: 4€\n",
                 "(Le tarif réduit concerne les enfants de 9 à 14 ans, les étudiants et les demandeur d'emploi)\n",
-                "Cratuit pour les -8ans"
+                "Gratuit pour les -8ans"
 
             ]
         },
@@ -50,7 +50,7 @@
             "id": "museeToulo",
             "nom": "Musée Toulouse-Lautrec",
             "localitation": "43.929580823387596, 2.1435570749485002",
-            "description": ["Le musée Toulouse-Lautrec est situé dans le Palais de la Berbie, au coeur de la Cité épiscopale albigeoise classée au Patrimoine Mondial de l'Humanité.",
+            "description": ["Le musée est situé au coeur de la Cité épiscopale albigeoise.",
                 "Il abrite la plus importante collection publique au monde consacrée à Henri de Toulouse-Lautrec. "
             ],
             "description2": ["La plus importante collection publique au monde d'œuvres d’Henri de Toulouse-Lautrec parmi lesquelles les 31 affiches du peintre lithographe se trouve à Albi.",
@@ -80,8 +80,7 @@
             "nom": "Espace zoologique exoticamis",
             "localitation": "43.929580823387596, 2.1435570749485002",
             "description": ["Le parc présente 200 animaux de 30 espèces différentes sur 1 hectare de végétation.",
-                "L'espace vivarium présente des serpents, des lézards et des caïmans.",
-                "L'espace extérieur héberge des singes, lémuriens, tortues, animaux de la ferme et oiseaux exotiques."
+                "L'espace présente des serpents, des lézards, des caïmans des singes, lémuriens, tortues, animaux de la ferme et oiseaux exotiques."
             ],
             "description2": ["Une collection exceptionnelle de félins parmi les plus beaux de la planète.",
                 " Une magnifique balade au sein de la biodiversité.",
@@ -188,7 +187,7 @@
             "id": "base",
             "nom": "La base de loisirs de Pratgraussals",
             "localitation": "43.931712693992594, 2.133362797924493",
-            "description": [" Le long de la rivière Tarn, à 700 mètres de la cathédrale Sainte-Cécile, la base de loisirs de Pratgraussals est un poumon vert de treize hectares.",
+            "description": [" Le long de la rivière Tarn, la base de loisirs est un poumon vert de treize hectares.",
                 " C'est le lieu idéal pour pique-niquer, s'amuser ou même pêcher au bord du petit plan d'eau aménagé. "
             ],
             "description2": ["La base de loisirs de Pratgraussals vous propose en accès libre un terrain de foot et trois terrains de tennis.",
@@ -207,7 +206,7 @@
 
         {
             "id": "academie",
-            "nom": "L’Académie des miniatures et des petits goûters",
+            "nom": "L’Académie des miniatures ",
             "localitation": "43.93220552782904, 2.1433759267598855",
             "description": [" Situé rue Rinaldi à Albi, sur la rive droite du Tarn, l'Académie des miniatures et des petits goûters présente une collection permanente de maisons et boutiques miniatures à l’échelle 1/7°. "],
             "description2": ["C’est un ravissement pour les yeux et une plongée dans les souvenirs et l’imagination que propose l’Académie des miniatures et des petits goûters en présentant un ensemble de 53 pièces comprenant deux ensembles :",
@@ -434,7 +433,7 @@
             "nom": "Hôtel les pasteliers",
             "localitation": "43.925577534287065, 2.1517992692266765",
             "description": ["A proximité du centre historique de la ville, notre hôtel de charme vous accueille dans un cadre raffiné et chaleureux.",
-                " L'hôtel les Pasteliers est climatisé et met à votre disposition des chambres à thème, à la décoration soignée."
+                " L'hôtel les Pasteliers est climatisé et met à votre disposition des chambres à thème, à la décoration soignée disposent d'un accès Wi-Fi gratuit."
             ],
             "information": ["Wi-Fi gratuit",
                 "Petit déjeuner payant",
@@ -530,7 +529,7 @@
             "id": "antoine",
             "nom": "Hôtel Saint Antoine",
             "localitation": "43.925873888142625, 2.149145467314837",
-            "description": ["Situé à 9 minutes à pied du musée Toulouse-Lautrec, cet hôtel de famille pittoresque a été construit en 1734. Il se trouve à 10 minutes de marche de la cathédrale Sainte-Cécile d'Albi.",
+            "description": ["Cet hôtel de famille pittoresque a été construit en 1734 est situé à 10 minutes de marche de la cathédrale Sainte-Cécile d'Albi.",
                 "Décorées dans des styles différents, les chambres et suites claires disposent d'un accès Wi-Fi gratuit, d'une télévision à écran plat et d'un minibar. "
             ],
             "information": ["Wi-Fi gratuit",
