@@ -1,7 +1,11 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 
+
 import Data from "./Bdd/data.json";
+import { Itineraire } from './itineraire.js';
+import { Formulaire } from './contact.js';
+
 
 
 import Box from '@mui/material/Box';
@@ -15,9 +19,14 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
+
 import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import RestaurantIcon from '@mui/icons-material/Restaurant';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import HotelIcon from '@mui/icons-material/Hotel';
+import LandscapeIcon from '@mui/icons-material/Landscape';
 import ShareIcon from '@mui/icons-material/Share';
 
 import AddIcon from '@mui/icons-material/Add';
@@ -280,9 +289,6 @@ function a11yProps(index) {
 }
 
 
-
-
-
 export function Sejour(){
   
   //Button like
@@ -301,6 +307,7 @@ export function Sejour(){
   const handleChangeIndex = (index) => {
     setValue(index);
   };
+
   
   return (
     
@@ -315,9 +322,9 @@ export function Sejour(){
           aria-label="full width tabs example"
           position="fixed"
         >
-          <Tab label="Nos lieux à visiter" {...a11yProps(0)} />
-          <Tab label="Nos restaurant" {...a11yProps(1)} />
-          <Tab label="Nos hotel" {...a11yProps(2)} />
+          <Tab icon={< LandscapeIcon  />} label="Nos lieux à visiter" {...a11yProps(0)} />
+          <Tab icon={< HotelIcon />} label="Nos restaurant" {...a11yProps(1)} />
+          <Tab icon={< RestaurantIcon />} label="Nos hotel" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -326,9 +333,7 @@ export function Sejour(){
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-        <Typography gutterBottom variant="h5" component="div">
-            Nos lieux à visiter!
-        </Typography>
+        
 
         <Grid container justify="space-around" spacing={2}>
         <Grid item xs={4}>
@@ -367,6 +372,12 @@ export function Sejour(){
                       <FavoriteIcon   />
                   </IconButton>
                 </Badge>
+                
+              
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
 
                   <Accordion>
               <AccordionSummary
@@ -374,7 +385,7 @@ export function Sejour(){
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography  paragraph>
@@ -433,13 +444,17 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default">
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography  paragraph>
@@ -497,13 +512,17 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default">
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography  paragraph>
@@ -564,13 +583,18 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
               <Typography  paragraph>
@@ -629,13 +653,18 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
               <Typography  paragraph>
@@ -695,13 +724,18 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
               <Typography  paragraph>
@@ -761,13 +795,18 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
               <Typography  paragraph>
@@ -826,13 +865,18 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
               <Typography  paragraph>
@@ -891,13 +935,18 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
               <Typography  paragraph>
@@ -926,9 +975,7 @@ export function Sejour(){
         </TabPanel>
 
         <TabPanel value={value} index={1}>
-        <Typography gutterBottom variant="h5" component="div">
-            Nos restaurant!
-        </Typography>
+        
           
         <Grid container justify="space-around" spacing={2}>
         <Grid item xs={4}>
@@ -968,13 +1015,18 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography  paragraph>
@@ -1039,13 +1091,18 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography  paragraph>
@@ -1111,13 +1168,18 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography  paragraph>
@@ -1182,13 +1244,18 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography  paragraph>
@@ -1253,13 +1320,18 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography  paragraph>
@@ -1325,13 +1397,18 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography  paragraph>
@@ -1397,13 +1474,18 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography  paragraph>
@@ -1468,13 +1550,18 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography  paragraph>
@@ -1539,13 +1626,18 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography  paragraph>
@@ -1610,13 +1702,18 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography  paragraph>
@@ -1652,9 +1749,7 @@ export function Sejour(){
         </TabPanel>
 
         <TabPanel value={value} index={2}>
-        <Typography gutterBottom variant="h5" component="div">
-            Nos hotel!
-        </Typography>
+        
         <Grid container justify="space-around" spacing={2}>
         <Grid item xs={4}>
 
@@ -1693,13 +1788,18 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography  paragraph>
@@ -1771,13 +1871,18 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography  paragraph>
@@ -1849,13 +1954,18 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography  paragraph>
@@ -1927,13 +2037,18 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography  paragraph>
@@ -2006,13 +2121,18 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography  paragraph>
@@ -2085,13 +2205,18 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography  paragraph>
@@ -2164,13 +2289,18 @@ export function Sejour(){
                   </IconButton>
                 </Badge>
 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
+
                   <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>learn more</Typography>
+                <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography  paragraph>
@@ -2213,6 +2343,7 @@ export function Sejour(){
     </Box>
   );
     }
+  
 
 
   
@@ -2220,4 +2351,4 @@ export function Sejour(){
 
 
 //ATTENTION : SI SUR MUI VOUS AVEZ document.querySelector('#app') MODIFIEZ AVEC ROOT
-ReactDOM.render(<> <ResponsiveAppBar/> <br/> <Sejour /> <br/> <ResponsiveAppBarFoot /> </> , document.querySelector('#root'));
+ReactDOM.render(<> <ResponsiveAppBar/> <br/> <Sejour />  <br/> <ResponsiveAppBarFoot /> </> , document.querySelector('#root'));
