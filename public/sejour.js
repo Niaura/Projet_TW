@@ -288,13 +288,36 @@ function a11yProps(index) {
   };
 }
 
+function constructor(props) {
+  onButtonClicked = onButtonClicked.bind(this);
+  state = { currentButton: null };
+};
+
+function onButtonClicked (id) {
+  setState({ currentButton: state.currentButton === id ? null : id });
+};
+
 
 export function Sejour(){
   
   //Button like
   const [test, setTest] = React.useState(1);
   const [count, setCount] = React.useState(1);
+  const [count1, setCount1] = React.useState(1);
+  const [count2, setCount2] = React.useState(1);
+  const [count3, setCount3] = React.useState(1);
+  const [count4, setCount4] = React.useState(1);
+  const [count5, setCount5] = React.useState(1);
+  const [count6, setCount6] = React.useState(1);
+  const [count7, setCount7] = React.useState(1);
+  const [count8, setCount8] = React.useState(1);
+  const [count9, setCount9] = React.useState(1);
+  const [count10, setCount10] = React.useState(1);
+  const [count11, setCount11] = React.useState(1);
+
   const [invisible, setInvisible] = React.useState(false);
+
+  const [state, setState]= React.useState(1);
 
   //menu
   const theme = useTheme();
@@ -307,6 +330,8 @@ export function Sejour(){
   const handleChangeIndex = (index) => {
     setValue(index);
   };
+
+  
 
   
   return (
@@ -357,15 +382,22 @@ export function Sejour(){
               </CardContent>
               
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+21}>
-                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                <Badge color="secondary" badgeContent={ Data.lieux[0].aime }>
+                  <IconButton aria-label="add to favorites" color={state === 0 ? "primary" : "default" }  onClick={() => {
+                          if  (Data.lieux[0].ap==false){
+                            
+                            Data.lieux[0].aime=Data.lieux[0].aime+1
+                            setCount(Data.lieux[0].aime)
+                            Data.lieux[0].ap=true
+                            
+                            setState(0);
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.lieux[0].aime=Data.lieux[0].aime-1
+                            Data.lieux[0].ap=false
+                            setCount(Data.lieux[0].aime)
+
+                            setState(1);
                           }
                           
                           }}>
@@ -428,15 +460,17 @@ export function Sejour(){
                   </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+16}>
+                <Badge color="secondary" badgeContent={Data.lieux[1].aime}>
                   <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                          if (Data.lieux[1].ap==false){
+                            Data.lieux[1].aime=Data.lieux[1].aime+1
+                            setCount1(Data.lieux[1].aime)
+                            Data.lieux[1].ap=true
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.lieux[1].aime=Data.lieux[1].aime-1
+                            Data.lieux[1].ap=false
+                            setCount1(Data.lieux[1].aime)
                           }
                           
                           }}>
@@ -496,15 +530,17 @@ export function Sejour(){
                   </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+14}>
+                <Badge color="secondary" badgeContent={Data.lieux[2].aime}>
                   <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                          if (Data.lieux[2].ap==false){
+                            Data.lieux[2].aime=Data.lieux[2].aime+1
+                            setCount2(Data.lieux[2].aime)
+                            Data.lieux[2].ap=true
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.lieux[2].aime=Data.lieux[2].aime-1
+                            Data.lieux[2].ap=false
+                            setCount2(Data.lieux[2].aime)
                           }
                           
                           }}>
@@ -567,15 +603,17 @@ export function Sejour(){
                   </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+9}>
+                <Badge color="secondary" badgeContent={Data.lieux[3].aime}>
                   <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                           if (Data.lieux[3].ap==false){
+                            Data.lieux[3].aime=Data.lieux[3].aime+1
+                            setCount3(Data.lieux[3].aime)
+                            Data.lieux[3].ap=true
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.lieux[3].aime=Data.lieux[3].aime-1
+                            Data.lieux[3].ap=false
+                            setCount3(Data.lieux[3].aime)
                           }
                           
                           }}>
@@ -637,15 +675,17 @@ export function Sejour(){
                   </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+5}>
+                <Badge color="secondary" badgeContent={Data.lieux[4].aime}>
                   <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                          if (Data.lieux[4].ap==false){
+                            Data.lieux[4].aime=Data.lieux[4].aime+1
+                            setCount4(Data.lieux[4].aime)
+                            Data.lieux[4].ap=true
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.lieux[4].aime=Data.lieux[4].aime-1
+                            Data.lieux[4].ap=false
+                            setCount4(Data.lieux[4].aime)
                           }
                           
                           }}>
@@ -708,15 +748,17 @@ export function Sejour(){
                   </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+25}>
+                <Badge color="secondary" badgeContent={Data.lieux[6].aime}>
                   <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                          if (Data.lieux[6].ap==false){
+                            Data.lieux[6].aime=Data.lieux[6].aime+1
+                            setCount6(Data.lieux[6].aime)
+                            Data.lieux[6].ap=true
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.lieux[6].aime=Data.lieux[6].aime-1
+                            Data.lieux[6].ap=false
+                            setCount6(Data.lieux[6].aime)
                           }
                           
                           }}>
@@ -779,15 +821,18 @@ export function Sejour(){
                   </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+12}>
+                <Badge color="secondary" badgeContent={Data.lieux[7].aime}>
                   <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                           if (Data.lieux[7].ap==false){
+                            Data.lieux[7].aime=Data.lieux[7].aime+1
+                            setCount7(Data.lieux[7].aime)
+                            Data.lieux[7].ap=true
+                            
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.lieux[7].aime=Data.lieux[7].aime-1
+                            Data.lieux[7].ap=false
+                            setCount7(Data.lieux[7].aime)
                           }
                           
                           }}>
@@ -849,15 +894,18 @@ export function Sejour(){
                   </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+3}>
+                <Badge color="secondary" badgeContent={ Data.lieux[8].aime}>
                   <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                          if (Data.lieux[8].ap==false){
+                            Data.lieux[8].aime=Data.lieux[8].aime+1
+                            setCount8(Data.lieux[8].aime)
+                            Data.lieux[8].ap=true
+                            
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.lieux[8].aime=Data.lieux[8].aime-1
+                            Data.lieux[8].ap=false
+                            setCount8(Data.lieux[8].aime)
                           }
                           
                           }}>
@@ -919,15 +967,18 @@ export function Sejour(){
                   </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+4}>
+                <Badge color="secondary" badgeContent={ Data.lieux[9].aime}>
                   <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                          if (Data.lieux[9].ap==false){
+                            Data.lieux[9].aime=Data.lieux[9].aime+1
+                            setCount9(Data.lieux[9].aime)
+                            Data.lieux[9].ap=true
+                            
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.lieux[9].aime=Data.lieux[9].aime-1
+                            Data.lieux[9].ap=false
+                            setCount9(Data.lieux[9].aime)
                           }
                           
                           }}>
