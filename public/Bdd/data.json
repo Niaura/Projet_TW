@@ -287,7 +287,9 @@
                 "Ouvert lundi,jeudi,dimanche de 12h à 14h",
                 "Ouvert vendredi, samedi de 12h à 14h et de 19h30 à 22h30",
                 "Fermé mardi et mercredi"
-            ]
+            ],
+            "aime": 24,
+            "ap": false
 
         },
 
@@ -307,7 +309,9 @@
                 "Ouvert lundi,jeudi,vendredi,samedi,dimanche de 12h à 14h et de 19h à 22h",
                 "Brunch le samedi et dimanche de 9h à 11h",
                 "Fermé mardi et mercredi"
-            ]
+            ],
+            "aime": 20,
+            "ap": false
 
         },
 
@@ -325,7 +329,9 @@
             "horaire": [
                 "Ouvert du lundi au dimanche de 7h 30 à 18h ",
                 "Fermé mercredi"
-            ]
+            ],
+            "aime": 19,
+            "ap": false
 
         },
 
@@ -342,7 +348,9 @@
             "horaire": [
                 "Ouvert du lundi au vendredi 24h/24 ",
                 "Fermé samedi et dimanche"
-            ]
+            ],
+            "aime": 15,
+            "ap": false
 
         },
 
@@ -360,7 +368,9 @@
             "horaire": [
                 "Ouvert du mardi au samedi de  12h à 13h45 et de 19h à 21h30 ",
                 "Fermé lundi et samedi "
-            ]
+            ],
+            "aime": 23,
+            "ap": false
 
         },
 
@@ -375,7 +385,9 @@
             "horaire": [
                 "Ouvert du lundi au dimanche de  12h à 13h30 et de 19h à 22h ",
                 "Fermé mercredi et jeudi "
-            ]
+            ],
+            "aime": 22,
+            "ap": false
 
         },
 
@@ -392,7 +404,9 @@
             "horaire": [
                 "Ouvert du mardi au samedi de  9h à minuit ",
                 "Fermé dimanche et lundi "
-            ]
+            ],
+            "aime": 21,
+            "ap": false
 
         },
 
@@ -407,7 +421,9 @@
             "horaire": [
                 "Ouvert du mardi au samedi de 12h à 14h et de 19h30 à 22h ",
                 "Fermé dimanche et lundi "
-            ]
+            ],
+            "aime": 17,
+            "ap": false
 
         },
 
@@ -423,7 +439,9 @@
             "tel": ":  05 63 76 21 55",
             "horaire": [
                 "Ouvert tous les jours de 11h30 à 14h et de 18h à 22h "
-            ]
+            ],
+            "aime": 20,
+            "ap": false
 
         },
 
@@ -443,7 +461,9 @@
                 "Ouvert samedi de 10h à 14h et de 19h30 à 22h30",
                 "Ouvert dimanche de 11h30 à 14h et de 19h30 à 22h30",
                 "Fermé mardi et mercredi "
-            ]
+            ],
+            "aime": 23,
+            "ap": false
 
         }
     ],
@@ -468,8 +488,9 @@
                 "Ouvert samedi,dimanche de 8h à 12h et de 15h à 21h"
             ],
             "tarif": "60€",
-            "reservation": "https://secure.reservit.com/fo/booking/2/12511/dates?nbroom=1&specialMode=default&__utmz=1.1526488409.1.1.utmcsr%3Dpasteliers%7Cutmccn%3D(referral)%7Cutmcmd%3Dreferral%7Cutmcct%3D%2Fchambre-eco.php&begindate=16%2F05%2F2018&partid=0&forceStep1=1&tmonth=05&tyear=2018&hotelid=12511&numnight=1&m=booking&roomAge1=40,40&langcode=FR&enddate=17%2F05%2F2018&fyear=2018&custid=2&fmonth=05&_ga=GA1.2.777746560.1526488198&fday=16&__utmb=1.23.10.1526488409&__utmc=1&__utma=1.777746560.1526488198.1526488409.1526488409.1&tday=17"
-
+            "reservation": "https://secure.reservit.com/fo/booking/2/12511/dates?nbroom=1&specialMode=default&__utmz=1.1526488409.1.1.utmcsr%3Dpasteliers%7Cutmccn%3D(referral)%7Cutmcmd%3Dreferral%7Cutmcct%3D%2Fchambre-eco.php&begindate=16%2F05%2F2018&partid=0&forceStep1=1&tmonth=05&tyear=2018&hotelid=12511&numnight=1&m=booking&roomAge1=40,40&langcode=FR&enddate=17%2F05%2F2018&fyear=2018&custid=2&fmonth=05&_ga=GA1.2.777746560.1526488198&fday=16&__utmb=1.23.10.1526488409&__utmc=1&__utma=1.777746560.1526488198.1526488409.1526488409.1&tday=17",
+            "aime": 31,
+            "ap": false
         },
 
         {
@@ -493,8 +514,9 @@
 
             ],
             "tarif": "65€",
-            "reservation": "https://www.contact-hotel.com/reserver-hotel-france/1218/hostellerie-du-vigan-albi.htm"
-
+            "reservation": "https://www.contact-hotel.com/reserver-hotel-france/1218/hostellerie-du-vigan-albi.htm",
+            "aime": 29,
+            "ap": false
         },
 
         {
@@ -518,8 +540,9 @@
 
             ],
             "tarif": "60€",
-            "reservation": "https://www.hotel-laperouse.com/"
-
+            "reservation": "https://www.hotel-laperouse.com/",
+            "aime": 34,
+            "ap": false
         },
 
         {
@@ -542,8 +565,9 @@
 
             ],
             "tarif": "57€",
-            "reservation": "https://www.booking.com/hotel/fr/du-parc-albi.fr.html"
-
+            "reservation": "https://www.booking.com/hotel/fr/du-parc-albi.fr.html",
+            "aime": 28,
+            "ap": false
         },
         {
             "id": "antoine",
@@ -565,8 +589,9 @@
 
             ],
             "tarif": "86€",
-            "reservation": "https://hotel-saint-antoine-albi.com/reservations/"
-
+            "reservation": "https://hotel-saint-antoine-albi.com/reservations/",
+            "aime": 20,
+            "ap": false
         },
 
         {
@@ -589,8 +614,9 @@
                 "Ouvert samedi,dimanche de 8h30 à 10h30 et de 16h à 19h"
             ],
             "tarif": "53€",
-            "reservation": "https://resa.familyhotel.fr/reservation.asp?id_lang=1&id_acco=1044&id_direct=1"
-
+            "reservation": "https://resa.familyhotel.fr/reservation.asp?id_lang=1&id_acco=1044&id_direct=1",
+            "aime": 28,
+            "ap": false
         },
 
         {
@@ -613,8 +639,9 @@
                 "Ouvert vendredi,samedi de 12h à 14h et de 19h à 23h"
             ],
             "tarif": "230€",
-            "reservation": "https://www.alchimyalbi.fr/"
-
+            "reservation": "https://www.alchimyalbi.fr/",
+            "aime": 38,
+            "ap": false
         }
 
 
