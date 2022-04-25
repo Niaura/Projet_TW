@@ -177,12 +177,15 @@ export function Formulaire() {
         id="coordonnee"
         style={{ textAlign: "center", visibility: "hidden" }}
       >
-        <FormControl id="civilité" sx={{ m: 1, width: 600 }}>
-          <TextField id="nom" label="Nom*" />
+        <FormControl id="civilité" sx={{ m: 1, width: 600 }}/>
+
+          <br/>
+          
+          <TextField id="nom" label="Nom*" sx={{ m: 1, width: 600 }}/>
 
           <br />
 
-          <TextField id="prenom" label="Prénom*" />
+          <TextField id="prenom" label="Prénom*" sx={{ m: 1, width: 600 }}/>
 
           <br />
 
@@ -191,26 +194,27 @@ export function Formulaire() {
             label="Date de naisssance"
             InputLabelProps={{ shrink: true, required: true }}
             type="date"
+            sx={{ m: 1, width: 600 }}
           />
 
           <br />
 
-          <TextField id="adresse" label="Adresse*" />
+          <TextField id="adresse" label="Adresse*" sx={{ m: 1, width: 600 }} />
 
           <br />
 
-          <TextField id="codepostal" label="Code postal*" />
+          <TextField id="codepostal" label="Code postal*" sx={{ m: 1, width: 600 }}/>
 
           <br />
 
-          <TextField id="telephone" label="Téléphone*" />
+          <TextField id="telephone" label="Téléphone*" sx={{ m: 1, width: 600 }}/>
 
           <br />
 
-          <TextField id="email" label="E-mail*" />
+          <TextField id="email" label="E-mail*" sx={{ m: 1, width: 600 }}/>
 
           <br />
-        </FormControl>
+        
 
         <br />
         <Grid container spacing={2}>
