@@ -298,6 +298,7 @@ function onButtonClicked (id) {
 };
 
 
+
 export function Sejour(){
   
   //Button like
@@ -389,12 +390,24 @@ export function Sejour(){
     setValue(index);
   };
 
+
+  //images de fond
+  const styles = {
+    paperContainer: {
+        width: '100%',
+        height: '100%',
+        backgroundImage: `url(${"./images/fondN.jpg"})` ,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat'
+    }
+  };
+  
   
 
   
   return (
     
-    <Box sx={{ bgcolor: 'background.paper', width: 'auto'}}>
+    <Box  style={styles.paperContainer}>
       <AppBar position="static">
         <Tabs
           value={value}
