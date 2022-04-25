@@ -19,7 +19,9 @@
                 "Entrées dans le choeur: 5€ \n",
                 "Inclus dans le City pass \n",
                 "Gratuit pour les -12ans \n"
-            ]
+            ],
+            "aime": 12,
+            "ap": false
         },
 
         {
@@ -43,7 +45,9 @@
                 "(Le tarif réduit concerne les enfants de 9 à 14 ans, les étudiants et les demandeur d'emploi)\n",
                 "Gratuit pour les -8ans"
 
-            ]
+            ],
+            "aime": 15,
+            "ap": false
         },
 
         {
@@ -72,7 +76,9 @@
                 "Enfants/Etudiants: Gratuit (jusqu'à 17ans)\n",
                 "Exposition temporaire seule: 6€\n",
                 "Audioguide: 4€\n"
-            ]
+            ],
+            "aime": 20,
+            "ap": false
         },
 
         {
@@ -101,7 +107,9 @@
                 "Gratuit pour les -3ans: 5€ \n",
                 "Abonnement annuel Adulte: 27€\n",
                 "Abonnement annuel Enfant: 19,50€\n"
-            ]
+            ],
+            "aime": 14,
+            "ap": false
         },
 
         {
@@ -123,7 +131,9 @@
             ],
             "Tarifs": [
                 "Entrées gratuite \n"
-            ]
+            ],
+            "aime": 21,
+            "ap": false
         },
 
 
@@ -154,7 +164,9 @@
                 "Enfants/Etudiants: Gratuit (jusqu'à 17ans)\n",
                 "Exposition temporaire seule: 6€\n",
                 "Audioguide: 4€\n"
-            ]
+            ],
+            "aime": 16,
+            "ap": false
         },
 
 
@@ -180,7 +192,9 @@
             ],
             "Tarifs": [
                 "Entrées gratuite \n"
-            ]
+            ],
+            "aime": 34,
+            "ap": false
         },
 
         {
@@ -201,7 +215,9 @@
             ],
             "Tarifs": [
                 "Entrées gratuite \n"
-            ]
+            ],
+            "aime": 20,
+            "ap": false
         },
 
         {
@@ -223,7 +239,9 @@
                 "Entrées 5€ \n",
                 "Tarif réduit: 3.5€",
                 "Gratuit pour les -6ans"
-            ]
+            ],
+            "aime": 13,
+            "ap": false
         },
 
         {
@@ -243,7 +261,9 @@
             ],
             "Tarifs": [
                 "Prix en fonction des activitées choisi"
-            ]
+            ],
+            "aime": 21,
+            "ap": false
         }
 
 
