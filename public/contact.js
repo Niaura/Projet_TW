@@ -15,8 +15,43 @@ import CloseIcon from "@mui/icons-material/Close";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 import CancelScheduleSendIcon from "@mui/icons-material/CancelScheduleSend";
-import ScheduleSendIcon from "@mui/icons-material/ScheduleSend";
 import SendIcon from "@mui/icons-material/Send";
+
+export function ImageFond2(){
+  return (
+      <div style={{backgroundColor: "#D3D3D3"}}>
+        <img
+            src={'/images/contacteznous.jpg'}
+            alt="Contacter-nous"
+            width="100%"
+        >
+        </img>
+        <div
+          style={{
+          textAlign: "center",
+          
+        }}
+        >
+          <h1>--- Contactez-nous ---</h1>
+          <h3>
+            Que vous planifiiez un voyage de loisirs ou d’affaires, seul, en
+            famille ou en groupe, nous sommes ravis de vous accompagner dans
+            l’organisation de votre séjour à Albi !
+          </h3>
+          <p style={{ fontSize: "18px" }}>
+            On aime entretenir une relation personnalisée avec notre public. C'est
+            pourquoi nous vous proposons de choisir votre moyen de communication
+            privilégié.
+          </p>
+          <p style={{ fontSize: "18px" }}>
+            Contactez-nous pour toute demande d'informations et de suggestion.
+            Albi Tourisme vous aide à préparer votre séjour à Albi.
+          </p>
+        </div>
+        <br/>
+      </div>
+  );
+}
 
 export function Formulaire() {
   const handleChange = (event) => {
@@ -60,10 +95,6 @@ export function Formulaire() {
       label: <CancelScheduleSendIcon />
     },
     {
-      value: 50,
-      label: <ScheduleSendIcon />
-    },
-    {
       value: 100,
       label: <SendIcon />
     }
@@ -83,29 +114,7 @@ export function Formulaire() {
   });
   return (
     <>
-      <div
-        style={{
-          textAlign: "center",
-          backgroundColor: "#D3D3D3"
-        }}
-      >
-        <h1>--- Contactez-nous ---</h1>
-        <h3>
-          Que vous planifiiez un voyage de loisirs ou d’affaires, seul, en
-          famille ou en groupe, nous sommes ravis de vous accompagner dans
-          l’organisation de votre séjour à Albi !
-        </h3>
-        <p style={{ fontSize: "18px" }}>
-          On aime entretenir une relation personnalisée avec notre public. C'est
-          pourquoi nous vous proposons de choisir votre moyen de communication
-          privilégié.
-        </p>
-        <p style={{ fontSize: "18px" }}>
-          Contactez-nous pour toute demande d'informations et de suggestion.
-          Albi Tourisme vous aide à préparer votre séjour à Albi.
-        </p>
-      </div>
-
+      <br/>
       <div style={{ textAlign: "center" }}>
         <FormControl id="jesuis" sx={{ m: 1, width: 600 }}>
           <InputLabel id="demo-simple-select-autowidth-label">
@@ -180,7 +189,7 @@ export function Formulaire() {
         <FormControl id="civilité" sx={{ m: 1, width: 600 }}/>
 
           <br/>
-          
+
           <TextField id="nom" label="Nom*" sx={{ m: 1, width: 600 }}/>
 
           <br />
