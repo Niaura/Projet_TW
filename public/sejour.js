@@ -314,11 +314,6 @@ export function Sejour(){
   const [count8, setCount8] = React.useState(1);
   const [count9, setCount9] = React.useState(1);
 
-  const [count10, setCount10] = React.useState(1);
-  const [count11, setCount11] = React.useState(1);
-
-  const [invisible, setInvisible] = React.useState(false);
-
   const [state, setState]= React.useState(1);
   const [state1, setState1]= React.useState(1);
   const [state2, setState2]= React.useState(1);
@@ -329,6 +324,58 @@ export function Sejour(){
   const [state7, setState7]= React.useState(1);
   const [state8, setState8]= React.useState(1);
   const [state9, setState9]= React.useState(1);
+
+  //Resto
+  const [count10, setCount10] = React.useState(1);
+  const [count11, setCount11] = React.useState(1);
+  const [count12, setCount12] = React.useState(1);
+  const [count13, setCount13] = React.useState(1);
+  const [count14, setCount14] = React.useState(1);
+  const [count15, setCount15] = React.useState(1);
+  const [count16, setCount16] = React.useState(1);
+  const [count17, setCount17] = React.useState(1);
+  const [count18, setCount18] = React.useState(1);
+  const [count19, setCount19] = React.useState(1);
+
+  const [state10, setState10]= React.useState(1);
+  const [state11, setState11]= React.useState(1);
+  const [state12, setState12]= React.useState(1);
+  const [state13, setState13]= React.useState(1);
+  const [state14, setState14]= React.useState(1);
+  const [state15, setState15]= React.useState(1);
+  const [state16, setState16]= React.useState(1);
+  const [state17, setState17]= React.useState(1);
+  const [state18, setState18]= React.useState(1);
+  const [state19, setState19]= React.useState(1);
+
+   //Hotel
+   const [count20, setCount20] = React.useState(1);
+   const [count21, setCount21] = React.useState(1);
+   const [count22, setCount22] = React.useState(1);
+   const [count23, setCount23] = React.useState(1);
+   const [count24, setCount24] = React.useState(1);
+   const [count25, setCount25] = React.useState(1);
+   const [count26, setCount26] = React.useState(1);
+   const [count27, setCount27] = React.useState(1);
+   const [count28, setCount28] = React.useState(1);
+   const [count29, setCount29] = React.useState(1);
+
+   const [state20, setState20]= React.useState(1);
+   const [state21, setState21]= React.useState(1);
+   const [state22, setState22]= React.useState(1);
+   const [state23, setState23]= React.useState(1);
+   const [state24, setState24]= React.useState(1);
+   const [state25, setState25]= React.useState(1);
+   const [state26, setState26]= React.useState(1);
+   const [state27, setState27]= React.useState(1);
+   const [state28, setState28]= React.useState(1);
+   const [state29, setState29]= React.useState(1);
+
+
+
+  const [invisible, setInvisible] = React.useState(false);
+
+  
 
   //menu
   const theme = useTheme();
@@ -1077,15 +1124,20 @@ export function Sejour(){
               </CardContent>
               
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+21}>
-                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                <Badge color="secondary" badgeContent={Data.Resto[0].aime}>
+                  <IconButton aria-label="add to favorites" color={state10 === 0 ? "primary" : "default" }  onClick={() => {
+                          if (Data.Resto[0].ap==false){
+                            Data.Resto[0].aime=Data.Resto[0].aime+1
+                            setCount10(Data.Resto[0].aime)
+                            Data.Resto[0].ap=true
+                            setState10(0);
+                            
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.Resto[0].aime=Data.Resto[0].aime-1
+                            Data.Resto[0].ap=false
+                            setCount10(Data.Resto[0].aime)
+                            setState10(1);
                           }
                           
                           }}>
@@ -1153,15 +1205,20 @@ export function Sejour(){
               </CardContent>
               
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+21}>
-                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                <Badge color="secondary" badgeContent={Data.Resto[1].aime}>
+                  <IconButton aria-label="add to favorites" color={state11 === 0 ? "primary" : "default" }  onClick={() => {
+                          if (Data.Resto[1].ap==false){
+                            Data.Resto[1].aime=Data.Resto[1].aime+1
+                            setCount11(Data.Resto[1].aime)
+                            Data.Resto[1].ap=true
+                            setState11(0);
+                            
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.Resto[1].aime=Data.Resto[1].aime-1
+                            Data.Resto[1].ap=false
+                            setCount11(Data.Resto[1].aime)
+                            setState11(1);
                           }
                           
                           }}>
@@ -1230,15 +1287,20 @@ export function Sejour(){
               </CardContent>
               
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+21}>
-                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                <Badge color="secondary" badgeContent={Data.Resto[2].aime}>
+                  <IconButton aria-label="add to favorites" color={state12 === 0 ? "primary" : "default" }  onClick={() => {
+                          if (Data.Resto[2].ap==false){
+                            Data.Resto[2].aime=Data.Resto[2].aime+1
+                            setCount12(Data.Resto[2].aime)
+                            Data.Resto[2].ap=true
+                            setState12(0);
+                            
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.Resto[2].aime=Data.Resto[2].aime-1
+                            Data.Resto[2].ap=false
+                            setCount12(Data.Resto[2].aime)
+                            setState12(1);
                           }
                           
                           }}>
@@ -1306,15 +1368,20 @@ export function Sejour(){
               </CardContent>
               
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+21}>
-                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                <Badge color="secondary" badgeContent={ Data.Resto[3].aime}>
+                  <IconButton aria-label="add to favorites" color={state13 === 0 ? "primary" : "default" }  onClick={() => {
+                          if (Data.Resto[3].ap==false){
+                            Data.Resto[3].aime=Data.Resto[3].aime+1
+                            setCount13(Data.Resto[3].aime)
+                            Data.Resto[3].ap=true
+                            setState13(0);
+                            
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.Resto[3].aime=Data.Resto[3].aime-1
+                            Data.Resto[3].ap=false
+                            setCount13(Data.Resto[3].aime)
+                            setState13(1);
                           }
                           
                           }}>
@@ -1382,15 +1449,20 @@ export function Sejour(){
               </CardContent>
               
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+21}>
-                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                <Badge color="secondary" badgeContent={Data.Resto[4].aime}>
+                  <IconButton aria-label="add to favorites" color={state14 === 0 ? "primary" : "default" }  onClick={() => {
+                          if (Data.Resto[4].ap==false){
+                            Data.Resto[4].aime=Data.Resto[4].aime+1
+                            setCount14(Data.Resto[4].aime)
+                            Data.Resto[4].ap=true
+                            setState14(0);
+                            
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.Resto[4].aime=Data.Resto[4].aime-1
+                            Data.Resto[4].ap=false
+                            setCount14(Data.Resto[4].aime)
+                            setState14(1);
                           }
                           
                           }}>
@@ -1459,15 +1531,20 @@ export function Sejour(){
               </CardContent>
               
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+21}>
-                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                <Badge color="secondary" badgeContent={Data.Resto[5].aime}>
+                  <IconButton aria-label="add to favorites" color={state15 === 0 ? "primary" : "default" }  onClick={() => {
+                          if (Data.Resto[5].ap==false){
+                            Data.Resto[5].aime=Data.Resto[5].aime+1
+                            setCount15(Data.Resto[5].aime)
+                            Data.Resto[5].ap=true
+                            setState15(0);
+                            
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.Resto[5].aime=Data.Resto[5].aime-1
+                            Data.Resto[5].ap=false
+                            setCount15(Data.Resto[5].aime)
+                            setState15(1);
                           }
                           
                           }}>
@@ -1536,15 +1613,20 @@ export function Sejour(){
               </CardContent>
               
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+21}>
-                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                <Badge color="secondary" badgeContent={Data.Resto[6].aime}>
+                  <IconButton aria-label="add to favorites"color={state16 === 0 ? "primary" : "default" }  onClick={() => {
+                          if (Data.Resto[6].ap==false){
+                            Data.Resto[6].aime=Data.Resto[6].aime+1
+                            setCount16(Data.Resto[6].aime)
+                            Data.Resto[6].ap=true
+                            setState16(0);
+                            
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.Resto[6].aime=Data.Resto[6].aime-1
+                            Data.Resto[6].ap=false
+                            setCount16(Data.Resto[6].aime)
+                            setState16(1);
                           }
                           
                           }}>
@@ -1612,15 +1694,20 @@ export function Sejour(){
               </CardContent>
               
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+21}>
-                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                <Badge color="secondary" badgeContent={ Data.Resto[7].aime}>
+                  <IconButton aria-label="add to favorites" color={state17 === 0 ? "primary" : "default" }  onClick={() => {
+                          if (Data.Resto[7].ap==false){
+                            Data.Resto[7].aime=Data.Resto[7].aime+1
+                            setCount17(Data.Resto[7].aime)
+                            Data.Resto[7].ap=true
+                            setState17(0);
+                            
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.Resto[7].aime=Data.Resto[7].aime-1
+                            Data.Resto[7].ap=false
+                            setCount17(Data.Resto[7].aime)
+                            setState17(1);
                           }
                           
                           }}>
@@ -1688,15 +1775,20 @@ export function Sejour(){
               </CardContent>
               
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+21}>
-                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                <Badge color="secondary" badgeContent={ Data.Resto[8].aime}>
+                  <IconButton aria-label="add to favorites" color={state18 === 0 ? "primary" : "default" }  onClick={() => {
+                          if (Data.Resto[8].ap==false){
+                            Data.Resto[8].aime=Data.Resto[8].aime+1
+                            setCount18(Data.Resto[8].aime)
+                            Data.Resto[8].ap=true
+                            setState18(0);
+                            
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.Resto[8].aime=Data.Resto[8].aime-1
+                            Data.Resto[8].ap=false
+                            setCount18(Data.Resto[8].aime)
+                            setState18(1);
                           }
                           
                           }}>
@@ -1764,15 +1856,20 @@ export function Sejour(){
               </CardContent>
               
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+21}>
-                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                <Badge color="secondary" badgeContent={Data.Resto[9].aime}>
+                  <IconButton aria-label="add to favorites" color={state19 === 0 ? "primary" : "default" }  onClick={() => {
+                          if (Data.Resto[9].ap==false){
+                            Data.Resto[9].aime=Data.Resto[9].aime+1
+                            setCount19(Data.Resto[9].aime)
+                            Data.Resto[9].ap=true
+                            setState19(0);
+                            
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.Resto[9].aime=Data.Resto[9].aime-1
+                            Data.Resto[9].ap=false
+                            setCount19(Data.Resto[9].aime)
+                            setState19(1);
                           }
                           
                           }}>
@@ -1850,15 +1947,20 @@ export function Sejour(){
               </CardContent>
               
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+21}>
-                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                <Badge color="secondary" badgeContent={Data.Hotel[0].aime}>
+                  <IconButton aria-label="add to favorites" color={state20 === 0 ? "primary" : "default" }  onClick={() => {
+                          if (Data.Hotel[0].ap==false){
+                            Data.Hotel[0].aime=Data.Hotel[0].aime+1
+                            setCount20(Data.Hotel[0].aime)
+                            Data.Hotel[0].ap=true
+                            setState20(0);
+                            
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.Hotel[0].aime=Data.Hotel[0].aime-1
+                            Data.Hotel[0].ap=false
+                            setCount20(Data.Hotel[0].aime)
+                            setState20(1);
                           }
                           
                           }}>
@@ -1933,15 +2035,20 @@ export function Sejour(){
               </CardContent>
               
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+21}>
-                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                <Badge color="secondary" badgeContent={Data.Hotel[1].aime}>
+                  <IconButton aria-label="add to favorites" color={state21 === 0 ? "primary" : "default" }  onClick={() => {
+                          if (Data.Hotel[1].ap==false){
+                            Data.Hotel[1].aime=Data.Hotel[1].aime+1
+                            setCount21(Data.Hotel[1].aime)
+                            Data.Hotel[1].ap=true
+                            setState21(0);
+                            
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.Hotel[1].aime=Data.Hotel[1].aime-1
+                            Data.Hotel[1].ap=false
+                            setCount21(Data.Hotel[1].aime)
+                            setState21(1);
                           }
                           
                           }}>
@@ -2016,15 +2123,20 @@ export function Sejour(){
               </CardContent>
               
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+21}>
-                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                <Badge color="secondary" badgeContent={Data.Hotel[2].aime}>
+                  <IconButton aria-label="add to favorites" color={state22 === 0 ? "primary" : "default" }  onClick={() => {
+                          if (Data.Hotel[2].ap==false){
+                            Data.Hotel[2].aime=Data.Hotel[2].aime+1
+                            setCount22(Data.Hotel[2].aime)
+                            Data.Hotel[2].ap=true
+                            setState22(0);
+                            
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.Hotel[2].aime=Data.Hotel[2].aime-1
+                            Data.Hotel[2].ap=false
+                            setCount22(Data.Hotel[2].aime)
+                            setState22(1);
                           }
                           
                           }}>
@@ -2099,15 +2211,20 @@ export function Sejour(){
               </CardContent>
               
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+21}>
-                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                <Badge color="secondary" badgeContent={Data.Hotel[3].aime}>
+                  <IconButton aria-label="add to favorites" color={state23 === 0 ? "primary" : "default" }  onClick={() => {
+                          if (Data.Hotel[3].ap==false){
+                            Data.Hotel[3].aime=Data.Hotel[3].aime+1
+                            setCount23(Data.Hotel[3].aime)
+                            Data.Hotel[3].ap=true
+                            setState23(0);
+                            
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.Hotel[3].aime=Data.Hotel[3].aime-1
+                            Data.Hotel[3].ap=false
+                            setCount23(Data.Hotel[3].aime)
+                            setState23(1);
                           }
                           
                           }}>
@@ -2183,16 +2300,21 @@ export function Sejour(){
               </CardContent>
               
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+21}>
-                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
-                          }
-                          else{
-                            setCount(count - 1),
-                            setTest(test-1);
-                          }
+                <Badge color="secondary" badgeContent={ Data.Hotel[4].aime}>
+                  <IconButton aria-label="add to favorites" color={state24 === 0 ? "primary" : "default" }  onClick={() => {
+                         if (Data.Hotel[4].ap==false){
+                          Data.Hotel[4].aime=Data.Hotel[4].aime+1
+                          setCount24(Data.Hotel[4].aime)
+                          Data.Hotel[4].ap=true
+                          setState24(0);
+                          
+                        }
+                        else{
+                          Data.Hotel[4].aime=Data.Hotel[4].aime-1
+                          Data.Hotel[4].ap=false
+                          setCount24(Data.Hotel[4].aime)
+                          setState24(1);
+                        }
                           
                           }}>
                       <FavoriteIcon   />
@@ -2267,15 +2389,20 @@ export function Sejour(){
               </CardContent>
               
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+21}>
-                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                <Badge color="secondary" badgeContent={Data.Hotel[5].aime}>
+                  <IconButton aria-label="add to favorites" color={state25 === 0 ? "primary" : "default" }  onClick={() => {
+                          if (Data.Hotel[5].ap==false){
+                            Data.Hotel[5].aime=Data.Hotel[5].aime+1
+                            setCount25(Data.Hotel[5].aime)
+                            Data.Hotel[5].ap=true
+                            setState25(0);
+                            
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.Hotel[5].aime=Data.Hotel[5].aime-1
+                            Data.Hotel[5].ap=false
+                            setCount25(Data.Hotel[5].aime)
+                            setState25(1);
                           }
                           
                           }}>
@@ -2351,15 +2478,20 @@ export function Sejour(){
               </CardContent>
               
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={count+21}>
-                  <IconButton aria-label="add to favorites" color="default"  onClick={() => {
-                          if (test==1){
-                            setCount(count + 1),
-                            setTest(test+1);
+                <Badge color="secondary" badgeContent={Data.Hotel[6].aime}>
+                  <IconButton aria-label="add to favorites" color={state26 === 0 ? "primary" : "default" }  onClick={() => {
+                           if (Data.Hotel[6].ap==false){
+                            Data.Hotel[6].aime=Data.Hotel[6].aime+1
+                            setCount26(Data.Hotel[6].aime)
+                            Data.Hotel[6].ap=true
+                            setState26(0);
+                            
                           }
                           else{
-                            setCount(count - 1),
-                            setTest(test-1);
+                            Data.Hotel[6].aime=Data.Hotel[6].aime-1
+                            Data.Hotel[6].ap=false
+                            setCount26(Data.Hotel[6].aime)
+                            setState26(1);
                           }
                           
                           }}>
