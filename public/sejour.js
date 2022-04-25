@@ -434,7 +434,7 @@ export function Sejour(){
         <Grid container justify="space-around" spacing={2}>
         <Grid item xs={4}>
 
-              <Card sx={{width : 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{width : 450}}>
                 <CardHeader
                   
                   title={Data.lieux[0].nom}
@@ -447,7 +447,7 @@ export function Sejour(){
                   alt="cathédrale "
                 />
                 <CardContent>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" >
                 {Data.lieux[0].description}
                 </Typography>
               </CardContent>
@@ -491,14 +491,14 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography  paragraph>
+                <Typography variant="body2"  paragraph>
                 {Data.lieux[0].description2}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2"   paragraph>
                 Horaire: <br />
                 {Data.lieux[0].horaire}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2"   paragraph>
                   Tarifs: <br />
                 {Data.lieux[0].Tarifs}
                 </Typography>
@@ -513,7 +513,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.lieux[1].nom}
@@ -526,7 +526,7 @@ export function Sejour(){
                   alt="musee de la mode "
                 />
                 <CardContent>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" >
                   {Data.lieux[1].description}
                   </Typography>
                 </CardContent>
@@ -564,14 +564,14 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography  paragraph>
+                <Typography variant="body2" paragraph>
                 {Data.lieux[1].description2}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.lieux[1].horaire}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Tarifs: <br />
                 {Data.lieux[1].Tarifs}
                 </Typography>
@@ -586,7 +586,7 @@ export function Sejour(){
 
 
               <Grid item xs={4}>
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.lieux[2].nom}
@@ -598,7 +598,7 @@ export function Sejour(){
                   alt="Musée Toulouse-Lautrec"
                 />
                 <CardContent>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2">
                   {Data.lieux[2].description}
                   </Typography>
                 </CardContent>
@@ -636,14 +636,14 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography  paragraph>
+                <Typography variant="body2" paragraph>
                 {Data.lieux[2].description2}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.lieux[2].horaire}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Tarifs: <br />
                 {Data.lieux[2].Tarifs}
                 </Typography>
@@ -660,7 +660,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.lieux[3].nom}
@@ -673,7 +673,7 @@ export function Sejour(){
                   alt="zoologique Exoticamis "
                 />
                 <CardContent>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" >
                   {Data.lieux[3].description}
                   </Typography>
                 </CardContent>
@@ -712,14 +712,14 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-              <Typography  paragraph>
+              <Typography variant="body2" paragraph>
                 {Data.lieux[3].description2}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.lieux[3].horaire}
                 </Typography>
-                <Typography  paragraph>
+                <Typography  variant="subtitle2"paragraph>
                   Tarifs: <br />
                 {Data.lieux[3].Tarifs}
                 </Typography>
@@ -734,7 +734,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.lieux[4].nom}
@@ -747,7 +747,7 @@ export function Sejour(){
                   alt="jardins de la Berbie  "
                 />
                 <CardContent>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" >
                   {Data.lieux[4].description}
                   </Typography>
                 </CardContent>
@@ -786,14 +786,14 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-              <Typography  paragraph>
+              <Typography variant="body2" paragraph>
                 {Data.lieux[4].description2}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.lieux[4].horaire}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Tarifs: <br />
                 {Data.lieux[4].Tarifs}
                 </Typography>
@@ -809,7 +809,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.lieux[6].nom}
@@ -822,7 +822,7 @@ export function Sejour(){
                   alt="parc rochegude  "
                 />
                 <CardContent>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" >
                   {Data.lieux[6].description}
                   </Typography>
                 </CardContent>
@@ -861,14 +861,14 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-              <Typography  paragraph>
+              <Typography variant="body2" paragraph>
                 {Data.lieux[6].description2}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.lieux[6].horaire}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Tarifs: <br />
                 {Data.lieux[6].Tarifs}
                 </Typography>
@@ -884,7 +884,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.lieux[7].nom}
@@ -897,7 +897,7 @@ export function Sejour(){
                   alt="base de loisirs"
                 />
                 <CardContent>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2">
                   {Data.lieux[7].description}
                   </Typography>
                 </CardContent>
@@ -937,14 +937,14 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-              <Typography  paragraph>
+              <Typography variant="body2" paragraph>
                 {Data.lieux[7].description2}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.lieux[7].horaire}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Tarifs: <br />
                 {Data.lieux[7].Tarifs}
                 </Typography>
@@ -959,7 +959,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.lieux[8].nom}
@@ -972,7 +972,7 @@ export function Sejour(){
                   alt="Académie des miniatures"
                 />
                 <CardContent>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" >
                   {Data.lieux[8].description}
                   </Typography>
                 </CardContent>
@@ -1012,14 +1012,14 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-              <Typography  paragraph>
+              <Typography variant="body2" paragraph>
                 {Data.lieux[8].description2}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.lieux[8].horaire}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Tarifs: <br />
                 {Data.lieux[8].Tarifs}
                 </Typography>
@@ -1034,7 +1034,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.lieux[9].nom}
@@ -1047,7 +1047,7 @@ export function Sejour(){
                   alt="Cap’Découverte"
                 />
                 <CardContent>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" >
                   {Data.lieux[9].description}
                   </Typography>
                 </CardContent>
@@ -1087,14 +1087,14 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-              <Typography  paragraph>
+              <Typography variant="body2" paragraph>
                 {Data.lieux[9].description2}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.lieux[9].horaire}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Tarifs: <br />
                 {Data.lieux[9].Tarifs}
                 </Typography>
@@ -1118,7 +1118,7 @@ export function Sejour(){
         <Grid container justify="space-around" spacing={2}>
         <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.Resto[0].nom}
@@ -1131,7 +1131,7 @@ export function Sejour(){
                   alt="ambroise "
                 />
                 <CardContent>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" >
                 {Data.Resto[0].description}
                 </Typography>
               </CardContent>
@@ -1172,18 +1172,18 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography  paragraph>
+                <Typography variant="body2" paragraph>
                 {Data.Resto[0].description2}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Adresse: <br />
                 {Data.Resto[0].adresse}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Téléphone: <br />
                 {Data.Resto[0].tel}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.Resto[0].horaire}
                 </Typography>
@@ -1199,7 +1199,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.Resto[1].nom}
@@ -1212,7 +1212,7 @@ export function Sejour(){
                   alt="pont du tarn "
                 />
                 <CardContent>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" >
                 {Data.Resto[1].description}
                 </Typography>
               </CardContent>
@@ -1253,18 +1253,18 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography  paragraph>
+                <Typography variant="body2" paragraph>
                 {Data.Resto[1].description2}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Adresse: <br />
                 {Data.Resto[1].adresse}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Téléphone: <br />
                 {Data.Resto[1].tel}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.Resto[1].horaire}
                 </Typography>
@@ -1281,7 +1281,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.Resto[2].nom}
@@ -1294,7 +1294,7 @@ export function Sejour(){
                   alt="au hibout "
                 />
                 <CardContent>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" >
                 {Data.Resto[2].description}
                 </Typography>
               </CardContent>
@@ -1335,18 +1335,18 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography  paragraph>
+                <Typography variant="body2"  paragraph>
                 {Data.Resto[2].description2}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Adresse: <br />
                 {Data.Resto[2].adresse}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Téléphone: <br />
                 {Data.Resto[2].tel}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.Resto[2].horaire}
                 </Typography>
@@ -1362,7 +1362,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.Resto[3].nom}
@@ -1375,7 +1375,7 @@ export function Sejour(){
                   alt="la cocina "
                 />
                 <CardContent>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2">
                 {Data.Resto[3].description}
                 </Typography>
               </CardContent>
@@ -1416,18 +1416,18 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography  paragraph>
+                <Typography variant="body2" paragraph>
                 {Data.Resto[3].description2}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Adresse: <br />
                 {Data.Resto[3].adresse}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Téléphone: <br />
                 {Data.Resto[3].tel}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.Resto[3].horaire}
                 </Typography>
@@ -1443,7 +1443,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.Resto[4].nom}
@@ -1456,7 +1456,7 @@ export function Sejour(){
                   alt="azzurro "
                 />
                 <CardContent>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" >
                 {Data.Resto[4].description}
                 </Typography>
               </CardContent>
@@ -1497,18 +1497,18 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography  paragraph>
+                <Typography variant="body2" paragraph>
                 {Data.Resto[4].description2}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Adresse: <br />
                 {Data.Resto[4].adresse}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Téléphone: <br />
                 {Data.Resto[4].tel}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.Resto[4].horaire}
                 </Typography>
@@ -1525,7 +1525,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.Resto[5].nom}
@@ -1538,7 +1538,7 @@ export function Sejour(){
                   alt="La Fourchette Adroite"
                 />
                 <CardContent>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" >
                 {Data.Resto[5].description}
                 </Typography>
               </CardContent>
@@ -1579,18 +1579,18 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography  paragraph>
+                <Typography variant="body2" paragraph>
                 {Data.Resto[5].description2}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Adresse: <br />
                 {Data.Resto[5].adresse}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Téléphone: <br />
                 {Data.Resto[5].tel}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.Resto[5].horaire}
                 </Typography>
@@ -1607,7 +1607,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.Resto[6].nom}
@@ -1620,7 +1620,7 @@ export function Sejour(){
                   alt="cascarbar"
                 />
                 <CardContent>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" >
                 {Data.Resto[6].description}
                 </Typography>
               </CardContent>
@@ -1661,18 +1661,18 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography  paragraph>
+                <Typography variant="body2" paragraph>
                 {Data.Resto[6].description2}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Adresse: <br />
                 {Data.Resto[6].adresse}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Téléphone: <br />
                 {Data.Resto[6].tel}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.Resto[6].horaire}
                 </Typography>
@@ -1688,7 +1688,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.Resto[7].nom}
@@ -1701,7 +1701,7 @@ export function Sejour(){
                   alt="l'epicurien"
                 />
                 <CardContent>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" >
                 {Data.Resto[7].description}
                 </Typography>
               </CardContent>
@@ -1742,18 +1742,18 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography  paragraph>
+                <Typography variant="body2" paragraph>
                 {Data.Resto[7].description2}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Adresse: <br />
                 {Data.Resto[7].adresse}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Téléphone: <br />
                 {Data.Resto[7].tel}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2"  paragraph>
                 Horaire: <br />
                 {Data.Resto[7].horaire}
                 </Typography>
@@ -1769,7 +1769,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.Resto[8].nom}
@@ -1782,7 +1782,7 @@ export function Sejour(){
                   alt="Basilic et Co Albi"
                 />
                 <CardContent>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" >
                 {Data.Resto[8].description}
                 </Typography>
               </CardContent>
@@ -1823,18 +1823,18 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography  paragraph>
+                <Typography variant="body2" paragraph>
                 {Data.Resto[8].description2}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Adresse: <br />
                 {Data.Resto[8].adresse}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Téléphone: <br />
                 {Data.Resto[8].tel}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.Resto[8].horaire}
                 </Typography>
@@ -1850,7 +1850,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.Resto[9].nom}
@@ -1863,7 +1863,7 @@ export function Sejour(){
                   alt="amapola"
                 />
                 <CardContent>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" >
                 {Data.Resto[9].description}
                 </Typography>
               </CardContent>
@@ -1904,18 +1904,18 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography  paragraph>
+                <Typography variant="body2" paragraph>
                 {Data.Resto[9].description2}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Adresse: <br />
                 {Data.Resto[9].adresse}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Téléphone: <br />
                 {Data.Resto[9].tel}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.Resto[9].horaire}
                 </Typography>
@@ -1941,7 +1941,7 @@ export function Sejour(){
         <Grid container justify="space-around" spacing={2}>
         <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.Hotel[0].nom}
@@ -1954,7 +1954,7 @@ export function Sejour(){
                   alt="Pasteliers "
                 />
                 <CardContent>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" >
                 {Data.Hotel[0].description}
                 </Typography>
               </CardContent>
@@ -1995,22 +1995,22 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography  paragraph>
+                <Typography variant="body2" paragraph>
                 {Data.Hotel[0].information}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 A partir de : <br />
                 {Data.Hotel[0].tarif}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Adresse: <br />
                 {Data.Hotel[0].adresse}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Téléphone: <br />
                 {Data.Hotel[0].tel}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.Hotel[0].horaire}
                 </Typography>
@@ -2029,7 +2029,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.Hotel[1].nom}
@@ -2042,7 +2042,7 @@ export function Sejour(){
                   alt="vigan "
                 />
                 <CardContent>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" >
                 {Data.Hotel[1].description}
                 </Typography>
               </CardContent>
@@ -2083,22 +2083,22 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography  paragraph>
+                <Typography variant="body2" paragraph>
                 {Data.Hotel[1].information}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 A partir de : <br />
                 {Data.Hotel[1].tarif}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Adresse: <br />
                 {Data.Hotel[1].adresse}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Téléphone: <br />
                 {Data.Hotel[1].tel}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.Hotel[1].horaire}
                 </Typography>
@@ -2117,7 +2117,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.Hotel[2].nom}
@@ -2130,7 +2130,7 @@ export function Sejour(){
                   alt="laperouse "
                 />
                 <CardContent>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" >
                 {Data.Hotel[2].description}
                 </Typography>
               </CardContent>
@@ -2171,22 +2171,22 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography  paragraph>
+                <Typography variant="body2" paragraph>
                 {Data.Hotel[2].information}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 A partir de : <br />
                 {Data.Hotel[2].tarif}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Adresse: <br />
                 {Data.Hotel[2].adresse}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Téléphone: <br />
                 {Data.Hotel[2].tel}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.Hotel[2].horaire}
                 </Typography>
@@ -2205,7 +2205,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.Hotel[3].nom}
@@ -2218,7 +2218,7 @@ export function Sejour(){
                   alt="brasserie "
                 />
                 <CardContent>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" >
                 {Data.Hotel[3].description}
                 </Typography>
               </CardContent>
@@ -2259,22 +2259,22 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography  paragraph>
+                <Typography variant="body2" paragraph>
                 {Data.Hotel[3].information}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 A partir de : <br />
                 {Data.Hotel[3].tarif}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Adresse: <br />
                 {Data.Hotel[3].adresse}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Téléphone: <br />
                 {Data.Hotel[3].tel}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.Hotel[3].horaire}
                 </Typography>
@@ -2294,7 +2294,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.Hotel[4].nom}
@@ -2307,7 +2307,7 @@ export function Sejour(){
                   alt="antoine "
                 />
                 <CardContent>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" >
                 {Data.Hotel[4].description}
                 </Typography>
               </CardContent>
@@ -2348,22 +2348,22 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography  paragraph>
+                <Typography variant="body2" paragraph>
                 {Data.Hotel[4].information}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 A partir de : <br />
                 {Data.Hotel[4].tarif}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Adresse: <br />
                 {Data.Hotel[4].adresse}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Téléphone: <br />
                 {Data.Hotel[4].tel}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.Hotel[4].horaire}
                 </Typography>
@@ -2383,7 +2383,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.Hotel[5].nom}
@@ -2396,7 +2396,7 @@ export function Sejour(){
                   alt="rochegude "
                 />
                 <CardContent>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" >
                 {Data.Hotel[5].description}
                 </Typography>
               </CardContent>
@@ -2437,22 +2437,22 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography  paragraph>
+                <Typography variant="body2" paragraph>
                 {Data.Hotel[5].information}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 A partir de : <br />
                 {Data.Hotel[5].tarif}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Adresse: <br />
                 {Data.Hotel[5].adresse}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Téléphone: <br />
                 {Data.Hotel[5].tel}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.Hotel[5].horaire}
                 </Typography>
@@ -2472,7 +2472,7 @@ export function Sejour(){
 
               <Grid item xs={4}>
 
-              <Card sx={{ width: 450 }}>
+              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
                 <CardHeader
                   
                   title={Data.Hotel[6].nom}
@@ -2485,7 +2485,7 @@ export function Sejour(){
                   alt="alchimy "
                 />
                 <CardContent>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" >
                 {Data.Hotel[6].description}
                 </Typography>
               </CardContent>
@@ -2526,22 +2526,22 @@ export function Sejour(){
                 <Typography>en savoir plus</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography  paragraph>
+                <Typography variant="body2" paragraph>
                 {Data.Hotel[6].information}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 A partir de : <br />
                 {Data.Hotel[6].tarif}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Adresse: <br />
                 {Data.Hotel[6].adresse}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                   Téléphone: <br />
                 {Data.Hotel[6].tel}
                 </Typography>
-                <Typography  paragraph>
+                <Typography variant="subtitle2" paragraph>
                 Horaire: <br />
                 {Data.Hotel[6].horaire}
                 </Typography>
