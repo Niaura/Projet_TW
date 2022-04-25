@@ -29,6 +29,7 @@ import HotelIcon from '@mui/icons-material/Hotel';
 import LandscapeIcon from '@mui/icons-material/Landscape';
 import ShareIcon from '@mui/icons-material/Share';
 
+
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import Badge from '@mui/material/Badge';
@@ -299,7 +300,10 @@ function onButtonClicked (id) {
 
 
 
-export function Sejour(){
+
+
+
+export  function Sejour(){
   
   //Button like
   //Lieux
@@ -401,7 +405,25 @@ export function Sejour(){
         backgroundRepeat: 'no-repeat'
     }
   };
+
+    //Expande
+  const ExpandMore = styled((props) => {
+    const { expand, ...other } = props;
+    return <IconButton {...other} />;
+  })(({ theme, expand }) => ({
+    transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+    marginLeft: 'auto',
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+    }),
+  }));
+
   
+  const [expanded, setExpanded] = React.useState(false);
+
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
   
 
   
@@ -477,20 +499,17 @@ export function Sejour(){
                 </Badge>
                 
               
-                <IconButton aria-label="open map" color="default" >
-                    
-                    <LocationOnIcon/>
-                </IconButton>
-
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
                 <Typography variant="body2"  paragraph>
                 {Data.lieux[0].description2}
                 </Typography>
@@ -502,11 +521,12 @@ export function Sejour(){
                   Tarifs: <br />
                 {Data.lieux[0].Tarifs}
                 </Typography>
-              </AccordionDetails>
-            </Accordion>
+              
                   
                 
-                </CardActions>
+                
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -555,15 +575,17 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
                 <Typography variant="body2" paragraph>
                 {Data.lieux[1].description2}
                 </Typography>
@@ -575,11 +597,9 @@ export function Sejour(){
                   Tarifs: <br />
                 {Data.lieux[1].Tarifs}
                 </Typography>
-              </AccordionDetails>
-              </Accordion>
-                  
-                
-                </CardActions>
+              
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -627,15 +647,17 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
                 <Typography variant="body2" paragraph>
                 {Data.lieux[2].description2}
                 </Typography>
@@ -647,11 +669,8 @@ export function Sejour(){
                   Tarifs: <br />
                 {Data.lieux[2].Tarifs}
                 </Typography>
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -703,15 +722,17 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
               <Typography variant="body2" paragraph>
                 {Data.lieux[3].description2}
                 </Typography>
@@ -723,11 +744,8 @@ export function Sejour(){
                   Tarifs: <br />
                 {Data.lieux[3].Tarifs}
                 </Typography>
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -777,15 +795,18 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
+
               <Typography variant="body2" paragraph>
                 {Data.lieux[4].description2}
                 </Typography>
@@ -797,11 +818,8 @@ export function Sejour(){
                   Tarifs: <br />
                 {Data.lieux[4].Tarifs}
                 </Typography>
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -852,15 +870,17 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
               <Typography variant="body2" paragraph>
                 {Data.lieux[6].description2}
                 </Typography>
@@ -872,11 +892,8 @@ export function Sejour(){
                   Tarifs: <br />
                 {Data.lieux[6].Tarifs}
                 </Typography>
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -928,15 +945,17 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
               <Typography variant="body2" paragraph>
                 {Data.lieux[7].description2}
                 </Typography>
@@ -948,11 +967,8 @@ export function Sejour(){
                   Tarifs: <br />
                 {Data.lieux[7].Tarifs}
                 </Typography>
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -1003,15 +1019,17 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
               <Typography variant="body2" paragraph>
                 {Data.lieux[8].description2}
                 </Typography>
@@ -1023,11 +1041,8 @@ export function Sejour(){
                   Tarifs: <br />
                 {Data.lieux[8].Tarifs}
                 </Typography>
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -1078,15 +1093,17 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
               <Typography variant="body2" paragraph>
                 {Data.lieux[9].description2}
                 </Typography>
@@ -1098,11 +1115,9 @@ export function Sejour(){
                   Tarifs: <br />
                 {Data.lieux[9].Tarifs}
                 </Typography>
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+              
+              </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -1163,15 +1178,18 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
+
                 <Typography variant="body2" paragraph>
                 {Data.Resto[0].description2}
                 </Typography>
@@ -1188,11 +1206,8 @@ export function Sejour(){
                 {Data.Resto[0].horaire}
                 </Typography>
                 
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -1244,15 +1259,17 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
                 <Typography variant="body2" paragraph>
                 {Data.Resto[1].description2}
                 </Typography>
@@ -1269,11 +1286,8 @@ export function Sejour(){
                 {Data.Resto[1].horaire}
                 </Typography>
                 
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -1326,15 +1340,17 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
                 <Typography variant="body2"  paragraph>
                 {Data.Resto[2].description2}
                 </Typography>
@@ -1351,11 +1367,8 @@ export function Sejour(){
                 {Data.Resto[2].horaire}
                 </Typography>
                 
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -1407,15 +1420,18 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
+
                 <Typography variant="body2" paragraph>
                 {Data.Resto[3].description2}
                 </Typography>
@@ -1432,11 +1448,8 @@ export function Sejour(){
                 {Data.Resto[3].horaire}
                 </Typography>
                 
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -1488,15 +1501,17 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
                 <Typography variant="body2" paragraph>
                 {Data.Resto[4].description2}
                 </Typography>
@@ -1513,11 +1528,8 @@ export function Sejour(){
                 {Data.Resto[4].horaire}
                 </Typography>
                 
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -1570,15 +1582,17 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
                 <Typography variant="body2" paragraph>
                 {Data.Resto[5].description2}
                 </Typography>
@@ -1595,11 +1609,8 @@ export function Sejour(){
                 {Data.Resto[5].horaire}
                 </Typography>
                 
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -1652,15 +1663,17 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
                 <Typography variant="body2" paragraph>
                 {Data.Resto[6].description2}
                 </Typography>
@@ -1677,11 +1690,8 @@ export function Sejour(){
                 {Data.Resto[6].horaire}
                 </Typography>
                 
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -1733,15 +1743,18 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
+
                 <Typography variant="body2" paragraph>
                 {Data.Resto[7].description2}
                 </Typography>
@@ -1758,11 +1771,8 @@ export function Sejour(){
                 {Data.Resto[7].horaire}
                 </Typography>
                 
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -1814,15 +1824,17 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
                 <Typography variant="body2" paragraph>
                 {Data.Resto[8].description2}
                 </Typography>
@@ -1839,11 +1851,8 @@ export function Sejour(){
                 {Data.Resto[8].horaire}
                 </Typography>
                 
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -1895,15 +1904,17 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
                 <Typography variant="body2" paragraph>
                 {Data.Resto[9].description2}
                 </Typography>
@@ -1920,11 +1931,8 @@ export function Sejour(){
                 {Data.Resto[9].horaire}
                 </Typography>
                 
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -1986,15 +1994,17 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
                 <Typography variant="body2" paragraph>
                 {Data.Hotel[0].information}
                 </Typography>
@@ -2018,11 +2028,8 @@ export function Sejour(){
                 Cliqué ici pour réserver une chambre!
                 </Link>
                 
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -2074,15 +2081,17 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
                 <Typography variant="body2" paragraph>
                 {Data.Hotel[1].information}
                 </Typography>
@@ -2106,11 +2115,8 @@ export function Sejour(){
                 Cliqué ici pour réserver une chambre!
                 </Link>
                 
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -2162,15 +2168,18 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
+
                 <Typography variant="body2" paragraph>
                 {Data.Hotel[2].information}
                 </Typography>
@@ -2194,11 +2203,8 @@ export function Sejour(){
                 Cliqué ici pour réserver une chambre!
                 </Link>
                 
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -2250,15 +2256,18 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
+
                 <Typography variant="body2" paragraph>
                 {Data.Hotel[3].information}
                 </Typography>
@@ -2282,11 +2291,8 @@ export function Sejour(){
                 Cliqué ici pour réserver une chambre!
                 </Link>
                 
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -2339,15 +2345,17 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
                 <Typography variant="body2" paragraph>
                 {Data.Hotel[4].information}
                 </Typography>
@@ -2371,11 +2379,8 @@ export function Sejour(){
                 Cliqué ici pour réserver une chambre!
                 </Link>
                 
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -2428,15 +2433,17 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
                 <Typography variant="body2" paragraph>
                 {Data.Hotel[5].information}
                 </Typography>
@@ -2460,11 +2467,8 @@ export function Sejour(){
                 Cliqué ici pour réserver une chambre!
                 </Link>
                 
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
@@ -2517,15 +2521,18 @@ export function Sejour(){
                     <LocationOnIcon/>
                 </IconButton>
 
-                  <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography>en savoir plus</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
+                <ExpandMore
+                  expand={expanded}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon />
+                </ExpandMore>
+              </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
+
                 <Typography variant="body2" paragraph>
                 {Data.Hotel[6].information}
                 </Typography>
@@ -2549,11 +2556,8 @@ export function Sejour(){
                 Cliqué ici pour réserver une chambre!
                 </Link>
                 
-              </AccordionDetails>
-            </Accordion>
-                  
-                
-                </CardActions>
+                </CardContent>
+              </Collapse>
                 
               </Card>
               </Grid>
