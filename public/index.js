@@ -19,8 +19,9 @@ import { Sejour } from './sejour.js';
 import { Itineraire } from './itineraire.js';
 import { ImageFond } from './accueil.js';
 import { Suggestion } from './accueil.js';
-import { Formulaire } from './contact.js';
+import { Formulaire, ImageFond2 } from './contact.js';
 import HomeIcon from '@mui/icons-material/Home';
+import ButtonBase from '@mui/material/ButtonBase';
 
 const container = document.getElementById('root');
 
@@ -88,7 +89,7 @@ const ResponsiveAppBar = ({ onClick }) => {
 
 
   return (
-    <AppBar position="static" style={{ background: 'linear-gradient(to right, blue, purple)' }}>
+    <AppBar position="sticky" style={{ background: 'linear-gradient(to right, blue, purple)' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography>
@@ -118,12 +119,6 @@ const ResponsiveAppBar = ({ onClick }) => {
             <Button
               variant="outlined"
               sx={{ my: 2, color: 'white', display: 'block' }}
-            >
-              Actualités
-            </Button>
-            <Button
-              variant="outlined"
-              sx={{ my: 2, color: 'white', display: 'block' }}
               onClick={() => onClick('formulaire')}
             >
               Contacts
@@ -144,7 +139,25 @@ const ResponsiveAppBar = ({ onClick }) => {
   );
 };
 
-const ResponsiveAppBarFoot = () => {
+const ResponsiveAppBarFoot = ({ onClick }) => {
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
+
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -163,10 +176,31 @@ const ResponsiveAppBarFoot = () => {
             </Grid>
             <Grid item xs>
               <Typography>
-                <Button>Nous contacter</Button> <br />
-                <Button><FacebookIcon /></Button>
-                <Button><InstagramIcon /></Button>
-                <Button><TwitterIcon /></Button>
+                <Button
+                  onClick={() => onClick('formulaire')}
+                >Nous contacter</Button> <br />
+                <Button
+                  type="button"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href='https://fr-fr.facebook.com/officedetourismealbi/';
+                  }}
+                ><FacebookIcon /></Button>
+
+                <Button
+                  type="button"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href='https://www.instagram.com/albitourisme/?hl=fr';
+                  }}
+                ><InstagramIcon /></Button>
+                <Button
+                  type="button"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href='https://twitter.com/tourisme_albi';
+                  }}
+                ><TwitterIcon /></Button>
               </Typography>
             </Grid>
           </Grid>
@@ -176,34 +210,184 @@ const ResponsiveAppBarFoot = () => {
   );
 };
 
+const Suggestion2 = ({ onClick }) => {
+
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
+
+  const images = [
+    {
+      url: './images/cap.jpg',
+      title: 'Lieux',
+      width: '33%',
+    },
+    {
+      url: './images/Razzurro.jpg',
+      title: 'Restaurants',
+      width: '34%',
+    },
+    {
+      url: './images/Hpasteliers.jpg',
+      title: 'Hôtels',
+      width: '33%',
+    },
+  ];
+  
+  const ImageButton = styled(ButtonBase)(({ theme }) => ({
+    position: 'relative',
+    height: 200,
+    [theme.breakpoints.down('sm')]: {
+      width: '100% !important', // Overrides inline-style
+      height: 100,
+    },
+    '&:hover, &.Mui-focusVisible': {
+      zIndex: 1,
+      '& .MuiImageBackdrop-root': {
+        opacity: 0.15,
+      },
+      '& .MuiImageMarked-root': {
+        opacity: 0,
+      },
+      '& .MuiTypography-root': {
+        border: '4px solid currentColor',
+      },
+    },
+  }));
+  
+  const ImageSrc = styled('span')({
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center 40%',
+  });
+  
+  const Image = styled('span')(({ theme }) => ({
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: theme.palette.common.white,
+  }));
+  
+  const ImageBackdrop = styled('span')(({ theme }) => ({
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    backgroundColor: theme.palette.common.black,
+    opacity: 0.4,
+    transition: theme.transitions.create('opacity'),
+  }));
+  
+  const ImageMarked = styled('span')(({ theme }) => ({
+    height: 3,
+    width: 18,
+    backgroundColor: theme.palette.common.white,
+    position: 'absolute',
+    bottom: -2,
+    left: 'calc(50% - 9px)',
+    transition: theme.transitions.create('opacity'),
+  }));
+
+  
+
+  return (
+    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
+      {images.map((image) => (
+        <ImageButton
+          focusRipple
+          key={image.title}
+          onClick={ () => onClick('sejour')}
+          style={{
+            width: image.width,
+          }}
+        >
+          <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
+          <ImageBackdrop className="MuiImageBackdrop-root" />
+          <Image>
+            <Typography
+              component="span"
+              variant="subtitle1"
+              color="inherit"
+              sx={{
+                position: 'relative',
+                p: 4,
+                pt: 2,
+                pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+              }}
+            >
+              {image.title}
+              <ImageMarked className="MuiImageMarked-root" />
+            </Typography>
+          </Image>
+        </ImageButton>
+      ))}
+    </Box>
+  );
+}
+
+
 function App() {
 
   let [etat, setEtat] = React.useState("accueil");
-  function render() {
-
-    switch (etat) {
-      case "sejour":
-        return <Sejour />;
-      case "itineraire":
-        return <Itineraire />;
-      case "accueil":
-        return (
-          <>
-          <ImageFond />
-          <Suggestion/>
-          </>
-        );
-      case "formulaire":
-        return <Formulaire />;
-      default:
-        return <></>
+    function render() {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+      })
+      switch (etat) {
+        case "sejour":
+          return <Sejour />;
+        case "itineraire":
+          return <Itineraire />;
+        case "accueil":
+          return (
+            <>
+            <ImageFond />
+            <Suggestion/>
+            <Suggestion2 onClick={setEtat}/>
+            </>
+          );
+        case "formulaire":
+          return (
+            <>
+            <ImageFond2 />
+            <Formulaire />
+            </>
+          );
+        default:
+          return <></>
     }
   }
 
   return <>
     <ResponsiveAppBar onClick={setEtat}/>
     { render()}
-    <ResponsiveAppBarFoot />
+    <ResponsiveAppBarFoot onClick={setEtat}/>
   </>;
 }
 
