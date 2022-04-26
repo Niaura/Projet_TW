@@ -41,6 +41,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
+import { Fragment } from "react";
 
 import SwipeableViews from 'react-swipeable-views';
 import { useTheme } from '@mui/material/styles';
@@ -418,13 +419,21 @@ export  function Sejour(){
     }),
   }));
 
-  
+  const itinerariesPerCity = [{ _id: "1" }, { _id: "2" }, { _id: "3" }];
   const [expanded, setExpanded] = React.useState(false);
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+  //const handleExpandClicke = () => {
+   // setExpanded(!expanded);
+  //};
   
+  //New Expand
+  const [expandedId, setExpandedId] = React.useState(-1);
+
+  const NbLieux = [{ _id: "0" },{ _id: "1" }, { _id: "2" }, { _id: "3" },{ _id: "4" }, { _id: "5" }, { _id: "6" },{ _id: "7" }, { _id: "8" }, { _id: "9" }];
+
+  const handleExpandClick = i => {
+    setExpandedId(expandedId === i ? -1 : i);
+  }
 
   
   return (
@@ -454,41 +463,43 @@ export  function Sejour(){
         
 
         <Grid container justify="space-around" spacing={2}>
+        <Fragment>
+        {NbLieux.map((l, i) => (
         <Grid item xs={4}>
 
               <Card style={{backgroundColor: "gainsboro"}} sx={{width : 450}}>
                 <CardHeader
                   
-                  title={Data.lieux[0].nom}
+                  title={Data.lieux[l._id].nom}
                 
                 />
                 <CardMedia
                   component="img"
                   height="194"
-                  image="./images/ALBI.jpg"
+                  image={Data.lieux[l._id].image}
                   alt="cathédrale "
                 />
                 <CardContent>
                 <Typography variant="body2" >
-                {Data.lieux[0].description}
+                {Data.lieux[l._id].description}
                 </Typography>
               </CardContent>
               
                 <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={ Data.lieux[0].aime }>
+                <Badge color="secondary" badgeContent={ Data.lieux[l._id].aime }>
                   <IconButton aria-label="add to favorites" color={state === 0 ? "primary" : "default" }  onClick={() => {
-                          if  (Data.lieux[0].ap==false){
+                          if  (Data.lieux[l._id].ap==false){
                             
-                            Data.lieux[0].aime=Data.lieux[0].aime+1
-                            setCount(Data.lieux[0].aime)
-                            Data.lieux[0].ap=true
+                            Data.lieux[l._id].aime=Data.lieux[l._id].aime+1
+                            setCount(Data.lieux[l._id].aime)
+                            Data.lieux[l._id].ap=true
                             
                             setState(0);
                           }
                           else{
-                            Data.lieux[0].aime=Data.lieux[0].aime-1
-                            Data.lieux[0].ap=false
-                            setCount(Data.lieux[0].aime)
+                            Data.lieux[l._id].aime=Data.lieux[l._id].aime-1
+                            Data.lieux[l._id].ap=false
+                            setCount(Data.lieux[l._id].aime)
 
                             setState(1);
                           }
@@ -498,28 +509,31 @@ export  function Sejour(){
                   </IconButton>
                 </Badge>
                 
+                <IconButton aria-label="open map" color="default" >
+                    
+                    <LocationOnIcon/>
+                </IconButton>
               
-                <ExpandMore
-                  expand={expanded}
-                  onClick={handleExpandClick}
-                  aria-expanded={expanded}
-                  aria-label="show more"
-                >
-                  <ExpandMoreIcon />
-                </ExpandMore>
-              </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
+                <IconButton
+              onClick={() => handleExpandClick(i)}
+              aria-expanded={expandedId === i}
+              aria-label="show more"
+            >
+              <ExpandMoreIcon />
+            </IconButton>
+          </CardActions>
+          <Collapse in={expandedId === i} timeout="auto" unmountOnExit>
         <CardContent>
                 <Typography variant="body2"  paragraph>
-                {Data.lieux[0].description2}
+                {Data.lieux[l._id].description2}
                 </Typography>
                 <Typography variant="subtitle2"   paragraph>
                 Horaire: <br />
-                {Data.lieux[0].horaire}
+                {Data.lieux[l._id].horaire}
                 </Typography>
                 <Typography variant="subtitle2"   paragraph>
                   Tarifs: <br />
-                {Data.lieux[0].Tarifs}
+                {Data.lieux[l._id].Tarifs}
                 </Typography>
               
                   
@@ -531,596 +545,8 @@ export  function Sejour(){
               </Card>
               </Grid>
 
-              <Grid item xs={4}>
-
-              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
-                <CardHeader
-                  
-                  title={Data.lieux[1].nom}
-                
-                />
-                <CardMedia
-                  component="img"
-                  height="194"
-                  image="./images/museeM.jpg"
-                  alt="musee de la mode "
-                />
-                <CardContent>
-                  <Typography variant="body2" >
-                  {Data.lieux[1].description}
-                  </Typography>
-                </CardContent>
-                <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={Data.lieux[1].aime}>
-                  <IconButton aria-label="add to favorites" color={state1 === 0 ? "primary" : "default" }  onClick={() => {
-                          if (Data.lieux[1].ap==false){
-                            Data.lieux[1].aime=Data.lieux[1].aime+1
-                            setCount1(Data.lieux[1].aime)
-                            Data.lieux[1].ap=true
-                            setState1(0);
-                          }
-                          else{
-                            Data.lieux[1].aime=Data.lieux[1].aime-1
-                            Data.lieux[1].ap=false
-                            setCount1(Data.lieux[1].aime)
-                            setState1(1);
-                          }
-                          
-                          }}>
-                      <FavoriteIcon   />
-                  </IconButton>
-                </Badge>
-
-                <IconButton aria-label="open map" color="default">
-                    <LocationOnIcon/>
-                </IconButton>
-
-                <ExpandMore
-                  expand={expanded}
-                  onClick={handleExpandClick}
-                  aria-expanded={expanded}
-                  aria-label="show more"
-                >
-                  <ExpandMoreIcon />
-                </ExpandMore>
-              </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-                <Typography variant="body2" paragraph>
-                {Data.lieux[1].description2}
-                </Typography>
-                <Typography variant="subtitle2" paragraph>
-                Horaire: <br />
-                {Data.lieux[1].horaire}
-                </Typography>
-                <Typography variant="subtitle2" paragraph>
-                  Tarifs: <br />
-                {Data.lieux[1].Tarifs}
-                </Typography>
-              
-                </CardContent>
-              </Collapse>
-                
-              </Card>
-              </Grid>
-
-
-              <Grid item xs={4}>
-              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
-                <CardHeader
-                  
-                  title={Data.lieux[2].nom}
-                />
-                <CardMedia
-                  component="img"
-                  height="194"
-                  image="./images/museeT.jpg"
-                  alt="Musée Toulouse-Lautrec"
-                />
-                <CardContent>
-                  <Typography variant="body2">
-                  {Data.lieux[2].description}
-                  </Typography>
-                </CardContent>
-                <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={Data.lieux[2].aime}>
-                  <IconButton aria-label="add to favorites" color={state2 === 0 ? "primary" : "default" }  onClick={() => {
-                          if (Data.lieux[2].ap==false){
-                            Data.lieux[2].aime=Data.lieux[2].aime+1
-                            setCount2(Data.lieux[2].aime)
-                            Data.lieux[2].ap=true
-                            setState2(0);
-                          }
-                          else{
-                            Data.lieux[2].aime=Data.lieux[2].aime-1
-                            Data.lieux[2].ap=false
-                            setCount2(Data.lieux[2].aime)
-                            setState2(1);
-                          }
-                          
-                          }}>
-                      <FavoriteIcon   />
-                  </IconButton>
-                </Badge>
-
-                <IconButton aria-label="open map" color="default">
-                    <LocationOnIcon/>
-                </IconButton>
-
-                <ExpandMore
-                  expand={expanded}
-                  onClick={handleExpandClick}
-                  aria-expanded={expanded}
-                  aria-label="show more"
-                >
-                  <ExpandMoreIcon />
-                </ExpandMore>
-              </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-                <Typography variant="body2" paragraph>
-                {Data.lieux[2].description2}
-                </Typography>
-                <Typography variant="subtitle2" paragraph>
-                Horaire: <br />
-                {Data.lieux[2].horaire}
-                </Typography>
-                <Typography variant="subtitle2" paragraph>
-                  Tarifs: <br />
-                {Data.lieux[2].Tarifs}
-                </Typography>
-                </CardContent>
-              </Collapse>
-                
-              </Card>
-              </Grid>
-
-              
-
-              <Grid item xs={4}>
-
-              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
-                <CardHeader
-                  
-                  title={Data.lieux[3].nom}
-                
-                />
-                <CardMedia
-                  component="img"
-                  height="194"
-                  image="./images/zoo.jpg"
-                  alt="zoologique Exoticamis "
-                />
-                <CardContent>
-                  <Typography variant="body2" >
-                  {Data.lieux[3].description}
-                  </Typography>
-                </CardContent>
-                <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={Data.lieux[3].aime}>
-                  <IconButton aria-label="add to favorites" color={state3 === 0 ? "primary" : "default" }  onClick={() => {
-                           if (Data.lieux[3].ap==false){
-                            Data.lieux[3].aime=Data.lieux[3].aime+1
-                            setCount3(Data.lieux[3].aime)
-                            Data.lieux[3].ap=true
-                            setState3(0);
-                          }
-                          else{
-                            Data.lieux[3].aime=Data.lieux[3].aime-1
-                            Data.lieux[3].ap=false
-                            setCount3(Data.lieux[3].aime)
-                            setState3(1);
-                          }
-                          
-                          }}>
-                      <FavoriteIcon   />
-                  </IconButton>
-                </Badge>
-
-                <IconButton aria-label="open map" color="default" >
-                    
-                    <LocationOnIcon/>
-                </IconButton>
-
-                <ExpandMore
-                  expand={expanded}
-                  onClick={handleExpandClick}
-                  aria-expanded={expanded}
-                  aria-label="show more"
-                >
-                  <ExpandMoreIcon />
-                </ExpandMore>
-              </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-              <Typography variant="body2" paragraph>
-                {Data.lieux[3].description2}
-                </Typography>
-                <Typography variant="subtitle2" paragraph>
-                Horaire: <br />
-                {Data.lieux[3].horaire}
-                </Typography>
-                <Typography  variant="subtitle2"paragraph>
-                  Tarifs: <br />
-                {Data.lieux[3].Tarifs}
-                </Typography>
-                </CardContent>
-              </Collapse>
-                
-              </Card>
-              </Grid>
-
-              <Grid item xs={4}>
-
-              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
-                <CardHeader
-                  
-                  title={Data.lieux[4].nom}
-                
-                />
-                <CardMedia
-                  component="img"
-                  height="194"
-                  image="./images/jardin.jpg"
-                  alt="jardins de la Berbie  "
-                />
-                <CardContent>
-                  <Typography variant="body2" >
-                  {Data.lieux[4].description}
-                  </Typography>
-                </CardContent>
-                <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={Data.lieux[4].aime}>
-                  <IconButton aria-label="add to favorites" color={state4 === 0 ? "primary" : "default" } onClick={() => {
-                          if (Data.lieux[4].ap==false){
-                            Data.lieux[4].aime=Data.lieux[4].aime+1
-                            setCount4(Data.lieux[4].aime)
-                            Data.lieux[4].ap=true
-                            setState4(0);
-                          }
-                          else{
-                            Data.lieux[4].aime=Data.lieux[4].aime-1
-                            Data.lieux[4].ap=false
-                            setCount4(Data.lieux[4].aime)
-                            setState4(1);
-                          }
-                          
-                          }}>
-                      <FavoriteIcon   />
-                  </IconButton>
-                </Badge>
-
-                <IconButton aria-label="open map" color="default" >
-                    
-                    <LocationOnIcon/>
-                </IconButton>
-
-                <ExpandMore
-                  expand={expanded}
-                  onClick={handleExpandClick}
-                  aria-expanded={expanded}
-                  aria-label="show more"
-                >
-                  <ExpandMoreIcon />
-                </ExpandMore>
-              </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-
-              <Typography variant="body2" paragraph>
-                {Data.lieux[4].description2}
-                </Typography>
-                <Typography variant="subtitle2" paragraph>
-                Horaire: <br />
-                {Data.lieux[4].horaire}
-                </Typography>
-                <Typography variant="subtitle2" paragraph>
-                  Tarifs: <br />
-                {Data.lieux[4].Tarifs}
-                </Typography>
-                </CardContent>
-              </Collapse>
-                
-              </Card>
-              </Grid>
-
-
-              <Grid item xs={4}>
-
-              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
-                <CardHeader
-                  
-                  title={Data.lieux[6].nom}
-                
-                />
-                <CardMedia
-                  component="img"
-                  height="194"
-                  image="./images/parc.jpg"
-                  alt="parc rochegude  "
-                />
-                <CardContent>
-                  <Typography variant="body2" >
-                  {Data.lieux[6].description}
-                  </Typography>
-                </CardContent>
-                <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={Data.lieux[6].aime}>
-                  <IconButton aria-label="add to favorites" color={state6 === 0 ? "primary" : "default" }  onClick={() => {
-                          if (Data.lieux[6].ap==false){
-                            Data.lieux[6].aime=Data.lieux[6].aime+1
-                            setCount6(Data.lieux[6].aime)
-                            Data.lieux[6].ap=true
-                            setState6(0);
-                          }
-                          else{
-                            Data.lieux[6].aime=Data.lieux[6].aime-1
-                            Data.lieux[6].ap=false
-                            setCount6(Data.lieux[6].aime)
-                            setState6(1);
-                          }
-                          
-                          }}>
-                      <FavoriteIcon   />
-                  </IconButton>
-                </Badge>
-
-                <IconButton aria-label="open map" color="default" >
-                    
-                    <LocationOnIcon/>
-                </IconButton>
-
-                <ExpandMore
-                  expand={expanded}
-                  onClick={handleExpandClick}
-                  aria-expanded={expanded}
-                  aria-label="show more"
-                >
-                  <ExpandMoreIcon />
-                </ExpandMore>
-              </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-              <Typography variant="body2" paragraph>
-                {Data.lieux[6].description2}
-                </Typography>
-                <Typography variant="subtitle2" paragraph>
-                Horaire: <br />
-                {Data.lieux[6].horaire}
-                </Typography>
-                <Typography variant="subtitle2" paragraph>
-                  Tarifs: <br />
-                {Data.lieux[6].Tarifs}
-                </Typography>
-                </CardContent>
-              </Collapse>
-                
-              </Card>
-              </Grid>
-
-
-              <Grid item xs={4}>
-
-              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
-                <CardHeader
-                  
-                  title={Data.lieux[7].nom}
-                
-                />
-                <CardMedia
-                  component="img"
-                  height="194"
-                  image="./images/base.jpg"
-                  alt="base de loisirs"
-                />
-                <CardContent>
-                  <Typography variant="body2">
-                  {Data.lieux[7].description}
-                  </Typography>
-                </CardContent>
-                <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={Data.lieux[7].aime}>
-                  <IconButton aria-label="add to favorites" color={state7 === 0 ? "primary" : "default" }  onClick={() => {
-                           if (Data.lieux[7].ap==false){
-                            Data.lieux[7].aime=Data.lieux[7].aime+1
-                            setCount7(Data.lieux[7].aime)
-                            Data.lieux[7].ap=true
-                            setState7(0);
-                            
-                          }
-                          else{
-                            Data.lieux[7].aime=Data.lieux[7].aime-1
-                            Data.lieux[7].ap=false
-                            setCount7(Data.lieux[7].aime)
-                            setState7(1);
-                          }
-                          
-                          }}>
-                      <FavoriteIcon   />
-                  </IconButton>
-                </Badge>
-
-                <IconButton aria-label="open map" color="default" >
-                    
-                    <LocationOnIcon/>
-                </IconButton>
-
-                <ExpandMore
-                  expand={expanded}
-                  onClick={handleExpandClick}
-                  aria-expanded={expanded}
-                  aria-label="show more"
-                >
-                  <ExpandMoreIcon />
-                </ExpandMore>
-              </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-              <Typography variant="body2" paragraph>
-                {Data.lieux[7].description2}
-                </Typography>
-                <Typography variant="subtitle2" paragraph>
-                Horaire: <br />
-                {Data.lieux[7].horaire}
-                </Typography>
-                <Typography variant="subtitle2" paragraph>
-                  Tarifs: <br />
-                {Data.lieux[7].Tarifs}
-                </Typography>
-                </CardContent>
-              </Collapse>
-                
-              </Card>
-              </Grid>
-
-              <Grid item xs={4}>
-
-              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
-                <CardHeader
-                  
-                  title={Data.lieux[8].nom}
-                
-                />
-                <CardMedia
-                  component="img"
-                  height="194"
-                  image="./images/miniature.jpg"
-                  alt="Académie des miniatures"
-                />
-                <CardContent>
-                  <Typography variant="body2" >
-                  {Data.lieux[8].description}
-                  </Typography>
-                </CardContent>
-                <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={ Data.lieux[8].aime}>
-                  <IconButton aria-label="add to favorites" color={state8 === 0 ? "primary" : "default" }  onClick={() => {
-                          if (Data.lieux[8].ap==false){
-                            Data.lieux[8].aime=Data.lieux[8].aime+1
-                            setCount8(Data.lieux[8].aime)
-                            Data.lieux[8].ap=true
-                            setState8(0);
-                            
-                          }
-                          else{
-                            Data.lieux[8].aime=Data.lieux[8].aime-1
-                            Data.lieux[8].ap=false
-                            setCount8(Data.lieux[8].aime)
-                            setState8(1);
-                          }
-                          
-                          }}>
-                      <FavoriteIcon   />
-                  </IconButton>
-                </Badge>
-
-                <IconButton aria-label="open map" color="default" >
-                    
-                    <LocationOnIcon/>
-                </IconButton>
-
-                <ExpandMore
-                  expand={expanded}
-                  onClick={handleExpandClick}
-                  aria-expanded={expanded}
-                  aria-label="show more"
-                >
-                  <ExpandMoreIcon />
-                </ExpandMore>
-              </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-              <Typography variant="body2" paragraph>
-                {Data.lieux[8].description2}
-                </Typography>
-                <Typography variant="subtitle2" paragraph>
-                Horaire: <br />
-                {Data.lieux[8].horaire}
-                </Typography>
-                <Typography variant="subtitle2" paragraph>
-                  Tarifs: <br />
-                {Data.lieux[8].Tarifs}
-                </Typography>
-                </CardContent>
-              </Collapse>
-                
-              </Card>
-              </Grid>
-
-              <Grid item xs={4}>
-
-              <Card style={{backgroundColor: "gainsboro"}} sx={{ width: 450 }}>
-                <CardHeader
-                  
-                  title={Data.lieux[9].nom}
-                
-                />
-                <CardMedia
-                  component="img"
-                  height="194"
-                  image="./images/cap.jpg"
-                  alt="Cap’Découverte"
-                />
-                <CardContent>
-                  <Typography variant="body2" >
-                  {Data.lieux[9].description}
-                  </Typography>
-                </CardContent>
-                <CardActions disableSpacing>
-                <Badge color="secondary" badgeContent={ Data.lieux[9].aime}>
-                  <IconButton aria-label="add to favorites" color={state9 === 0 ? "primary" : "default" }  onClick={() => {
-                          if (Data.lieux[9].ap==false){
-                            Data.lieux[9].aime=Data.lieux[9].aime+1
-                            setCount9(Data.lieux[9].aime)
-                            Data.lieux[9].ap=true
-                            setState9(0);
-                            
-                          }
-                          else{
-                            Data.lieux[9].aime=Data.lieux[9].aime-1
-                            Data.lieux[9].ap=false
-                            setCount9(Data.lieux[9].aime)
-                            setState9(1);
-                          }
-                          
-                          }}>
-                      <FavoriteIcon   />
-                  </IconButton>
-                </Badge>
-
-                <IconButton aria-label="open map" color="default" >
-                    
-                    <LocationOnIcon/>
-                </IconButton>
-
-                <ExpandMore
-                  expand={expanded}
-                  onClick={handleExpandClick}
-                  aria-expanded={expanded}
-                  aria-label="show more"
-                >
-                  <ExpandMoreIcon />
-                </ExpandMore>
-              </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-              <Typography variant="body2" paragraph>
-                {Data.lieux[9].description2}
-                </Typography>
-                <Typography variant="subtitle2" paragraph>
-                Horaire: <br />
-                {Data.lieux[9].horaire}
-                </Typography>
-                <Typography variant="subtitle2" paragraph>
-                  Tarifs: <br />
-                {Data.lieux[9].Tarifs}
-                </Typography>
-              
-              </CardContent>
-              </Collapse>
-                
-              </Card>
-              </Grid>
+              ))}
+              </Fragment>
 
 
         </Grid>
