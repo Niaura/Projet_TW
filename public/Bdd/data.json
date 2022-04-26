@@ -727,5 +727,168 @@
 
 
 
+    ],
+    "Actu": [{
+            "id": "pyrogravures",
+            "type": "Exposition",
+            "nom": "Pyrogravures entre feu et bois",
+            "decription": [" Son dessin est réalisé par la brûlure du fer qui change la couleur du support et le creuse.",
+                " Dans une transposition fantastique, chacune de ses oeuvres rend gloire à la nature. "
+            ],
+            "description2": [" La pyrogravure révèle, entre les couches du bois, les couleurs d’une colle inédite qui dessinent d’étranges volutes comme les vestiges d’un temps enfoui.",
+                " Bois flottés ou récupérés sur de vieilles portes oubliées, d’anciennes armoires endormies - creusées au ciseau à bois - dans lesquels apparaissent les rainures et les noeuds formés au hasard de la sculpture."
+            ],
+            "date": "15 avril-15 juin",
+            "ou": "Chateu de Saurs",
+            "adresse": "48 Chem. Toulze, 81310 Lisle-sur-Tarn",
+            "localitation": "43.89884147535221, 1.8369647201930852",
+            "tarifs": ["Accès libre"],
+            "horaire": ["Accès libre"]
+        },
+        {
+            "id": "visideGuidé",
+            "type": "Visite guidée",
+            "nom": "Visite guidée de la Cité Episcopale d'Albi",
+            "decription": ["Visite guidée avec un guide conférencier du centre historique et",
+                " de l'extérieur de la cathédrale Sainte-Cécile classés au Patrimoine Mondial par l'UNESCO. - durée 2h"
+            ],
+            "description2": [" Découverte des site phares du périmètre classé au Patrimoine Mondial : la Cathédrale, le Palais de la Berbie, la collégiale Saint-Salvi et son cloître, les berges du Tarn, le Pont-vieux....",
+                " Pour bénéficier du tarif Albi City Pass, présentation obligatoire du pass au guide. N'oubliez pas d'acheter le pass - en réservation sur ce site ou auprès de l'Office de Tourisme."
+            ],
+            "date": "1 mai-9 mai",
+            "ou": "Office de Tourisme",
+            "adresse": "Office de Tourisme, 42 rue Mariès",
+            "localitation": "43.92849913116018, 2.144078633121076",
+            "tarifs": ["Gratuit pour les moins de 8 ans",
+                " 12 € (habitants de la C2A et étudiants) – entrée au chœur de la cathédrale incluse ; 8 € (porteurs de l’Albi Pass, enfants de 8 à 14 ans et demandeurs d’emploi)."
+            ],
+            "horaire": ["Du 01/05 au 09/05/2022, tous les jours de 14h30 à 16h30.",
+                "Du samedi 14 au lundi 16 mai 2022 de 14h30 à 16h30.",
+                "Du 21/05 au 31/05/2022, tous les jours de 14h à 16h30."
+            ]
+        },
+
+        {
+            "id": "frontiere",
+            "type": "Théatre",
+            "nom": "Frontière Nord",
+            "decription": ["Frontière Nord met en scène un univers choral de femmes et d’enfants. ",
+                " Dans une ville sans nom, des enfants découvrent les travaux de construction d’un mur, séparant brutalement le nord du sud."
+            ],
+            "description2": [" L’annonce de la construction du mur provoque incrédulité et confusion. ",
+                " Les chœurs nous racontent alors le drame collectif, un drame qui touche chacun de manière spécifique, mais qui affecte globalement la communauté"
+            ],
+            "date": "11 mai",
+            "ou": "Scène Nationale d'Albi",
+            "adresse": "Place de l'Amitié entre Peuples, 81000 Albi",
+            "localitation": "43.9247257779738, 2.1443810177738083",
+            "tarifs": ["Carte SNA Normal 18 € ",
+                " Réduit 14 € À l’unité Tarif B Normal 25 € ",
+                "Réduit 20 € ",
+                "Moins de 12 ans 10 €."
+            ],
+            "horaire": ["Mercredi 11 mai 2022 de 19h30 à 20h30."]
+        },
+        {
+            "id": "nocturnes",
+            "type": "Concert, Dégustation",
+            "nom": "Nocturnes Gourmandes du Marché Couvert",
+            "decription": ["Les commerçants et les restaurateurs du Marché Couvert vous donnent rendez-vous",
+                " pour venir déguster de bons produits régionaux à partager autour d’un verre, dans une ambiance festive ! "
+
+            ],
+            "description2": [" Les producteurs locaux et les commerçants de proximité du Marché Couvert s’appliquent à mettre chaque jour leur passion",
+                " et leur énergie au service de la gastronomie et ils sont heureux de vous accueillir pour ces Nocturnes Gourmandes !"
+            ],
+            "date": "12 mai",
+            "ou": "Marché Couvert ",
+            "adresse": "Rue Émile Grand, 81000 Albi",
+            "localitation": "43.92940910366682, 2.1449788638114686",
+            "tarifs": ["Gratuit."],
+            "horaire": ["Jeudi 12 mai 2022 de 18h à 22h30."]
+        },
+
+        {
+            "id": "nuit",
+            "type": "Exposition",
+            "nom": "Nuit européenne des musées",
+            "decription": ["La Nuit européenne des musées est organisée par le ministère de la Culture. ",
+                " Elle est placée sous le patronage du Conseil de l’Europe, de la Commission nationale française pour l’UNESCO et de l’ICOM "
+
+            ],
+            "description2": ["Le temps d’une nuit, entre le coucher du soleil et 1h du matin, le public est invité à découvrir gratuitement,",
+                " de manière insolite, festive et ludique, les richesses des musées de France, ainsi que ceux d’une trentaine de pays d’Europe.",
+                " et leur énergie au service de la gastronomie et ils sont heureux de vous accueillir pour ces Nocturnes Gourmandes !"
+            ],
+            "date": "14 mai",
+            "ou": "Office de Tourisme",
+            "adresse": "Office de Tourisme, 42 rue Mariès",
+            "localitation": "43.92849913116018, 2.144078633121076",
+            "tarifs": ["Accès libre."],
+            "horaire": ["Nuit du Samedi 14 mai 2022."]
+        },
+        {
+            "id": "triathlon",
+            "type": "Compétition sportive",
+            "nom": "Urban Triathlon Albi",
+            "decription": ["Venez vous dépasser dans cette épreuve unique alliant nage, cyclisme et course à pied, disputée en plein cœur de la cité épiscopale !"
+
+            ],
+            "description2": ["L'Urban Triathlon d'Albi invite tous les amoureux de défi à participer à cette épreuve qui allie nage, cyclisme et course à pied.",
+                "  Différentes formules sont proposées, afin de courir seul, entre amis ou avec sa famille lors de relais, et plusieurs tracés sont adaptés selon le niveau de chacun. "
+            ],
+            "date": "15 mai",
+            "ou": "Place du Vigan",
+            "adresse": "Place du Vigan",
+            "localitation": "43.927501912814165, 2.147674263810466",
+            "tarifs": ["Tarifs non communiqués."],
+            "horaire": ["Dimanche 15 mai 2022 de 7h à 19h.",
+                "Programme disponible sur le site Internet de l'événement."
+            ]
+        },
+        {
+            "id": "hotel",
+            "type": "Cirque",
+            "nom": "Hôtel",
+            "decription": ["C’est cette adresse où l’on est réuni avec des inconnus l’espace d’un instant.",
+                "HOTEL, c’est l’histoire d’un lieu… mais c’est surtout un lieu rempli d’histoires."
+
+            ],
+            "description2": ["L'Urban Triathlon d'Albi invite tous les amoureux de défi à participer à cette épreuve qui allie nage, cyclisme et course à pied.",
+                "  Du maître d’hôtel dépassé par les évènements à la soubrette espiègle, en passant par l’homme à tout faire dévoué et de son inséparable chien Carpette,",
+                " le personnel de l’hôtel est comme nous, le témoin privilégié des passages de vie aux profils particuliers. "
+            ],
+            "date": "18 mai-19 mai",
+            "ou": "Le Grand Théatre des Cordeliers",
+            "adresse": "1 Rue des Cordeliers, 81000 Albi",
+            "localitation": "43.925275800559085, 2.144863306644168",
+            "tarifs": ["Carte SNA Normal 18 €",
+                " Réduit 14 € À l’unité Tarif B Normal 25 € ",
+                "Réduit 20 €",
+                "Moins de 12 ans 10 €."
+            ],
+            "horaire": ["Mercredi 18: 19:30 - 21:00",
+                "Jeudi 19: 20:30 - 22:00."
+            ]
+        },
+        {
+            "id": "nuitP",
+            "type": "Festival",
+            "nom": "Nuit Pastel 2022",
+            "decription": ["La Nuit Pastel est une invitation à découvrir ou redécouvrir la Cité en famille ou entre amis le temps d'une échappée nocturne. ",
+                "2022 célèbre la nuit de Toulouse-Lautrec avec plus de 20 rendez-vous à partir de 17h"
+
+            ],
+            "description2": ["Dehors et dedans, le cœur de la famille culturelle battra à l’unisson pour offrir à tous une symphonie de lumière, d'art et de culture…….",
+                " La Nuit Pastel est une invitation à découvrir ou redécouvrir la Cité en famille ou entre amis le temps d'une échappée nocturne."
+            ],
+            "date": "4 juin",
+            "ou": "Centre Ville d'Albi",
+            "adresse": "Centre Ville d'Albi",
+            "localitation": "43.928185833924175, 2.1437071833025283",
+            "tarifs": ["Accés libre."],
+            "horaire": ["Samedi 4 juin 2022 de 19h à 0h."]
+        }
+
     ]
 }
