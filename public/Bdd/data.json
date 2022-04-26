@@ -21,7 +21,10 @@
                 "Gratuit pour les -12ans \n"
             ],
             "aime": 12,
-            "ap": false
+            "ap": false,
+            "image": "./images/ALBI.jpg",
+            "color1": 0,
+            "color2": 1
         },
 
         {
@@ -47,7 +50,10 @@
 
             ],
             "aime": 15,
-            "ap": false
+            "ap": false,
+            "image": "./images/museeM.jpg",
+            "color1": 0,
+            "color2": 1
         },
 
         {
@@ -78,7 +84,10 @@
                 "Audioguide: 4€\n"
             ],
             "aime": 20,
-            "ap": false
+            "ap": false,
+            "image": "./images/museeT.jpg",
+            "color1": 0,
+            "color2": 1
         },
 
         {
@@ -109,7 +118,10 @@
                 "Abonnement annuel Enfant: 19,50€\n"
             ],
             "aime": 14,
-            "ap": false
+            "ap": false,
+            "image": "./images/zoo.jpg",
+            "color1": 0,
+            "color2": 1
         },
 
         {
@@ -133,7 +145,10 @@
                 "Entrées gratuite \n"
             ],
             "aime": 21,
-            "ap": false
+            "ap": false,
+            "image": "./images/jardin.jpg",
+            "color1": 0,
+            "color2": 1
         },
 
 
@@ -166,7 +181,10 @@
                 "Audioguide: 4€\n"
             ],
             "aime": 16,
-            "ap": false
+            "ap": false,
+            "image": "./images/palais.jpg",
+            "color1": 0,
+            "color2": 1
         },
 
 
@@ -194,7 +212,10 @@
                 "Entrées gratuite \n"
             ],
             "aime": 34,
-            "ap": false
+            "ap": false,
+            "image": "./images/parc.jpg",
+            "color1": 0,
+            "color2": 1
         },
 
         {
@@ -217,7 +238,10 @@
                 "Entrées gratuite \n"
             ],
             "aime": 20,
-            "ap": false
+            "ap": false,
+            "image": "./images/base.jpg",
+            "color1": 0,
+            "color2": 1
         },
 
         {
@@ -241,7 +265,10 @@
                 "Gratuit pour les -6ans"
             ],
             "aime": 13,
-            "ap": false
+            "ap": false,
+            "image": "./images/miniature.jpg",
+            "color1": 0,
+            "color2": 1
         },
 
         {
@@ -263,7 +290,10 @@
                 "Prix en fonction des activitées choisi"
             ],
             "aime": 21,
-            "ap": false
+            "ap": false,
+            "image": "./images/cap.jpg",
+            "color1": 0,
+            "color2": 1
         }
 
 
@@ -289,7 +319,10 @@
                 "Fermé mardi et mercredi"
             ],
             "aime": 24,
-            "ap": false
+            "ap": false,
+            "image": "./images/Rambroise.jpg",
+            "color1": 0,
+            "color2": 1
 
         },
 
@@ -311,7 +344,10 @@
                 "Fermé mardi et mercredi"
             ],
             "aime": 20,
-            "ap": false
+            "ap": false,
+            "image": "./images/Rpont.jpg",
+            "color1": 0,
+            "color2": 1
 
         },
 
@@ -331,7 +367,10 @@
                 "Fermé mercredi"
             ],
             "aime": 19,
-            "ap": false
+            "ap": false,
+            "image": "./images/Rhibou.jpg",
+            "color1": 0,
+            "color2": 1
 
         },
 
@@ -350,7 +389,10 @@
                 "Fermé samedi et dimanche"
             ],
             "aime": 15,
-            "ap": false
+            "ap": false,
+            "image": "./images/Rcocina.jpg",
+            "color1": 0,
+            "color2": 1
 
         },
 
@@ -370,7 +412,10 @@
                 "Fermé lundi et samedi "
             ],
             "aime": 23,
-            "ap": false
+            "ap": false,
+            "image": "./images/Razzurro.jpg",
+            "color1": 0,
+            "color2": 1
 
         },
 
@@ -387,7 +432,10 @@
                 "Fermé mercredi et jeudi "
             ],
             "aime": 22,
-            "ap": false
+            "ap": false,
+            "image": "./images/Rfourchette.jpg",
+            "color1": 0,
+            "color2": 1
 
         },
 
@@ -406,7 +454,10 @@
                 "Fermé dimanche et lundi "
             ],
             "aime": 21,
-            "ap": false
+            "ap": false,
+            "image": "./images/Rcascarbar.jpg",
+            "color1": 0,
+            "color2": 1
 
         },
 
@@ -423,7 +474,10 @@
                 "Fermé dimanche et lundi "
             ],
             "aime": 17,
-            "ap": false
+            "ap": false,
+            "image": "./images/Repicurien.jpg",
+            "color1": 0,
+            "color2": 1
 
         },
 
@@ -441,7 +495,10 @@
                 "Ouvert tous les jours de 11h30 à 14h et de 18h à 22h "
             ],
             "aime": 20,
-            "ap": false
+            "ap": false,
+            "image": "./images/Rbasilic.jpg",
+            "color1": 0,
+            "color2": 1
 
         },
 
@@ -463,7 +520,10 @@
                 "Fermé mardi et mercredi "
             ],
             "aime": 23,
-            "ap": false
+            "ap": false,
+            "image": "./images/Ramapola.jpg",
+            "color1": 0,
+            "color2": 1
 
         }
     ],
@@ -475,11 +535,11 @@
             "description": ["A proximité du centre historique de la ville, notre hôtel de charme vous accueille dans un cadre raffiné et chaleureux.",
                 " L'hôtel les Pasteliers est climatisé et met à votre disposition des chambres à thème, à la décoration soignée disposent d'un accès Wi-Fi gratuit."
             ],
-            "information": ["Wi-Fi gratuit",
-                "Petit déjeuner payant",
-                "Climatisation",
-                "Adapté aux enfants",
-                "Piscine"
+            "information": ["Wi-Fi gratuit ",
+                "Petit déjeuner payant ",
+                "Climatisation ",
+                "Adapté aux enfants ",
+                "Piscine "
             ],
             "adresse": "3 Rue Honore de Balzac, 81000 Albi",
             "tel": ":05 63 54 26 51",
@@ -490,7 +550,10 @@
             "tarif": "60€",
             "reservation": "https://secure.reservit.com/fo/booking/2/12511/dates?nbroom=1&specialMode=default&__utmz=1.1526488409.1.1.utmcsr%3Dpasteliers%7Cutmccn%3D(referral)%7Cutmcmd%3Dreferral%7Cutmcct%3D%2Fchambre-eco.php&begindate=16%2F05%2F2018&partid=0&forceStep1=1&tmonth=05&tyear=2018&hotelid=12511&numnight=1&m=booking&roomAge1=40,40&langcode=FR&enddate=17%2F05%2F2018&fyear=2018&custid=2&fmonth=05&_ga=GA1.2.777746560.1526488198&fday=16&__utmb=1.23.10.1526488409&__utmc=1&__utma=1.777746560.1526488198.1526488409.1526488409.1&tday=17",
             "aime": 31,
-            "ap": false
+            "ap": false,
+            "image": "./images/Hpasteliers.jpg",
+            "color1": 0,
+            "color2": 1
         },
 
         {
@@ -500,12 +563,12 @@
             "description": ["Situé sur une place bordée d'arbres du centre-ville d'Albi, cet hôtel de style décontracté se trouve à 6 minutes à pied de la cathédrale Sainte-Cécile, et à 1,4 kmn de la gare.",
                 "Les chambres sobres et colorées disposent d'un accès Wi-Fi gratuit et d'une télévision à écran plat avec les chaînes du câble."
             ],
-            "information": ["Wi-Fi gratuit",
-                "Petit déjeuner payant",
-                "Climatisation",
-                "Parking payant",
-                "Accès handicapés",
-                "Restaurant"
+            "information": ["Wi-Fi gratuit ",
+                "Petit déjeuner payant ",
+                "Climatisation ",
+                "Parking payant ",
+                "Accès handicapés ",
+                "Restaurant "
             ],
             "adresse": "16 place du Vigan,  81000 Albi",
             "tel": ":05 63 43 31 31 ",
@@ -516,7 +579,10 @@
             "tarif": "65€",
             "reservation": "https://www.contact-hotel.com/reserver-hotel-france/1218/hostellerie-du-vigan-albi.htm",
             "aime": 29,
-            "ap": false
+            "ap": false,
+            "image": "./images/Hvigan.jpg",
+            "color1": 0,
+            "color2": 1
         },
 
         {
@@ -542,7 +608,10 @@
             "tarif": "60€",
             "reservation": "https://www.hotel-laperouse.com/",
             "aime": 34,
-            "ap": false
+            "ap": false,
+            "image": "./images/Hlaperouse.jpg",
+            "color1": 0,
+            "color2": 1
         },
 
         {
@@ -552,11 +621,11 @@
             "description": ["Situé à 2 minutes de marche du parc Rochegude, cet hôtel chic se trouve à 9 minutes de la cathédrale d'Albi et du musée Toulouse-Lautrec.",
                 "Présentant une décoration élégante et contemporaine, les chambres chaleureuses aux touches colorées disposent d'une connexion Wi-Fi gratuite"
             ],
-            "information": ["Wi-Fi gratuit",
-                "Petit déjeuner payant",
-                "Adapté aux enfants",
-                "Restaurant",
-                "Bar"
+            "information": ["Wi-Fi gratuit ",
+                "Petit déjeuner payant ",
+                "Adapté aux enfants ",
+                "Restaurant ",
+                "Bar "
             ],
             "adresse": "3 Av. du Parc,  81000 Albi",
             "tel": ":05 63 54 12 80",
@@ -567,7 +636,10 @@
             "tarif": "57€",
             "reservation": "https://www.booking.com/hotel/fr/du-parc-albi.fr.html",
             "aime": 28,
-            "ap": false
+            "ap": false,
+            "image": "./images/Hbrasserie.jpg",
+            "color1": 0,
+            "color2": 1
         },
         {
             "id": "antoine",
@@ -591,7 +663,10 @@
             "tarif": "86€",
             "reservation": "https://hotel-saint-antoine-albi.com/reservations/",
             "aime": 20,
-            "ap": false
+            "ap": false,
+            "image": "./images/Hantoine.jpg",
+            "color1": 0,
+            "color2": 1
         },
 
         {
@@ -601,11 +676,11 @@
             "description": ["Situé dans le centre-ville, cet hôtel à l'atmosphère décontractée se trouve à 1 km de la gare d'Albi-Ville et à 5 minutes à pied du parc Rochegude.",
                 "Les chambres standards au mobilier simple sont équipées d'une télévision à écran plat, d'une connexion Wi-Fi gratuite ainsi que d'un nécessaire à thé et café. "
             ],
-            "information": ["Wi-Fi gratuit",
-                "Petit déjeuner payant",
-                "Climatisation",
-                "Accepte les animaux",
-                "Adapté aux enfants"
+            "information": ["Wi-Fi gratuit ",
+                "Petit déjeuner payant ",
+                "Climatisation ",
+                "Accepte les animaux ",
+                "Adapté aux enfants "
             ],
             "adresse": " 41 Av. Maréchal Foch,  81000 Albi",
             "tel": ":05 63 47 64 00",
@@ -616,7 +691,10 @@
             "tarif": "53€",
             "reservation": "https://resa.familyhotel.fr/reservation.asp?id_lang=1&id_acco=1044&id_direct=1",
             "aime": 28,
-            "ap": false
+            "ap": false,
+            "image": "./images/Hroche.jpg",
+            "color1": 0,
+            "color2": 1
         },
 
         {
@@ -626,11 +704,11 @@
             "description": ["Situé à 5 minutes à pied du musée Toulouse-Lautrec, cet hôtel chic se trouve dans le centre historique, à 4 minutes à pied de la cathédrale Sainte-Cécile, et à 12 minutes de la gare d'Albi-Ville.",
                 "Les chambres haut de gamme avec balcon à la française disposent du Wi-Fi gratuit, d'un minibar, d'une télévision à écran plat, d'une cafetière et d'un coffre-fort."
             ],
-            "information": ["Wi-Fi gratuit",
-                "Restaurant",
-                "Bar",
-                "Accepte les animaux",
-                "Adapté aux enfants"
+            "information": ["Wi-Fi gratuit ",
+                "Restaurant ",
+                "Bar ",
+                "Accepte les animaux ",
+                "Adapté aux enfants "
             ],
             "adresse": " 12 Pl. du Palais,  81000 Albi",
             "tel": ": 05 63 76 18 18",
@@ -641,7 +719,10 @@
             "tarif": "230€",
             "reservation": "https://www.alchimyalbi.fr/",
             "aime": 38,
-            "ap": false
+            "ap": false,
+            "image": "./images/Halchimy.jpg",
+            "color1": 0,
+            "color2": 1
         }
 
 
