@@ -6,6 +6,16 @@ import ReactDOM from 'react-dom';
 /////////////////////////////////////////////////////////////////////////////////////
 
 
+///////////////////////////// IMPORTATION DES AUTRES FICHIERS ///////////////////////
+
+import Data from "./Bdd/data.json";
+import { Formulaire } from './contact.js';
+import { Sejour } from './sejour.js';
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+
+
 ////////////////////////////// PARTIE POUR MUI ///////////////////////////////////////
 
 import { styled, alpha } from '@mui/material/styles';
@@ -259,6 +269,10 @@ const Item = styled(Paper)(({ theme }) => ({
 //////////////////////////////////////////////////////////////////////////////////////
 
 
+const NbLieux = [{ _id: "0" },{ _id: "1" }, { _id: "2" }, { _id: "3" },{ _id: "4" }, { _id: "5" }, { _id: "6" },{ _id: "7" }, { _id: "8" }, { _id: "9" }];
+const NbResto = [{ _id: "0" },{ _id: "1" }, { _id: "2" }, { _id: "3" },{ _id: "4" }, { _id: "5" }, { _id: "6" },{ _id: "7" }, { _id: "8" }, { _id: "9" }];
+const NbHotel = [{ _id: "0" },{ _id: "1" }, { _id: "2" }, { _id: "3" },{ _id: "4" }, { _id: "5" }, { _id: "6" }];
+
 const Map = () => {
   const mapStyles = {
     overflow: "hidden",
@@ -293,6 +307,33 @@ const Map = () => {
 
     map.on('click', onMapClick);
 
+    var lesLieux = [];
+    var lesResto = [];
+    var lesHotels = [];
+
+    {NbLieux.map((l, i) => (
+
+      lesLieux.push([Data.lieux[l._id].lagitude, Data.lieux[l._id].longitude, Data.lieux[l._id].nom])
+
+    ))};
+
+    {NbResto.map((l, i) => (
+
+      lesResto.push([Data.Resto[l._id].lagitude, Data.Resto[l._id].longitude, Data.Resto[l._id].nom])
+
+    ))};
+
+    {NbHotel.map((l, i) => (
+
+      lesHotels.push([Data.Hotel[l._id].lagitude, Data.Hotel[l._id].longitude, Data.Hotel[l._id].nom])
+
+    ))};
+
+    console.log(lesLieux);
+    console.log(lesResto);
+    console.log(lesHotels);
+
+
 
     var mesCoordonees = [
       [43.919737, 2.138901, "Université"],
@@ -301,14 +342,16 @@ const Map = () => {
       [43.854069, 2.275847, "Zoo"]
     ];
 
-    L.Routing.control({
-      waypoints: [
-        L.latLng(43.919737, 2.138901),
-        L.latLng(43.928474, 2.143660),
-        L.latLng(43.931220, 2.133501),
-        L.latLng(43.854069, 2.275847)
-      ]
-    }).addTo(map);
+
+    for(var i = 0; i<lesLieux.length;i++){
+      L.Routing.control({
+        waypoints: [
+  
+          L.latLng(lesLieux[i][0], lesLieux[i][1]),
+        ]
+      }).addTo(map);
+    }
+    
 
     const locationOptions = {
       maximumAge: 10000,
