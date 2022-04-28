@@ -756,8 +756,9 @@
 
     ],
     "Actu": [{
-        "id": "pyrogravures",
+        "id": "Apyrogravures",
         "type": "Exposition",
+	"image": "./images/Apyrogravures.jpg",
         "nom": "Pyrogravures entre feu et bois",
         "decription": [" Son dessin est réalisé par la brûlure du fer qui change la couleur du support et le creuse.",
             " Dans une transposition fantastique, chacune de ses oeuvres rend gloire à la nature. "
@@ -773,8 +774,9 @@
         "horaire": ["Accès libre"]
     },
     {
-        "id": "visideGuidé",
+        "id": "Avisite",
         "type": "Visite guidée",
+	"image": "./images/Avisite.jpg",
         "nom": "Visite guidée de la Cité Episcopale d'Albi",
         "decription": ["Visite guidée avec un guide conférencier du centre historique et",
             " de l'extérieur de la cathédrale Sainte-Cécile classés au Patrimoine Mondial par l'UNESCO. - durée 2h"
@@ -796,8 +798,9 @@
     },
 
     {
-        "id": "frontiere",
+        "id": "Afrontiere",
         "type": "Théatre",
+	"image": "./images/Afrontiere.jpg",
         "nom": "Frontière Nord",
         "decription": ["Frontière Nord met en scène un univers choral de femmes et d’enfants. ",
             " Dans une ville sans nom, des enfants découvrent les travaux de construction d’un mur, séparant brutalement le nord du sud."
@@ -817,8 +820,9 @@
         "horaire": ["Mercredi 11 mai 2022 de 19h30 à 20h30."]
     },
     {
-        "id": "nocturnes",
+        "id": "Anocturnes",
         "type": "Concert, Dégustation",
+	"image": "./images/Anocturnes.jpg",
         "nom": "Nocturnes Gourmandes du Marché Couvert",
         "decription": ["Les commerçants et les restaurateurs du Marché Couvert vous donnent rendez-vous",
             " pour venir déguster de bons produits régionaux à partager autour d’un verre, dans une ambiance festive ! "
@@ -836,8 +840,9 @@
     },
 
     {
-        "id": "nuit",
+        "id": "AnuitE",
         "type": "Exposition",
+	"image": "./images/AnuitE.jpg",
         "nom": "Nuit européenne des musées",
         "decription": ["La Nuit européenne des musées est organisée par le ministère de la Culture. ",
             " Elle est placée sous le patronage du Conseil de l’Europe, de la Commission nationale française pour l’UNESCO et de l’ICOM "
@@ -855,8 +860,9 @@
         "horaire": ["Nuit du Samedi 14 mai 2022."]
     },
     {
-        "id": "triathlon",
+        "id": "Atriathlon",
         "type": "Compétition sportive",
+	"image": "./images/Atriathlon.jpg",
         "nom": "Urban Triathlon Albi",
         "decription": ["Venez vous dépasser dans cette épreuve unique alliant nage, cyclisme et course à pied, disputée en plein cœur de la cité épiscopale !"
 
@@ -874,8 +880,9 @@
         ]
     },
     {
-        "id": "hotel",
+        "id": "Ahotel",
         "type": "Cirque",
+	"image": "./images/Ahotel.jpg",
         "nom": "Hôtel",
         "decription": ["C’est cette adresse où l’on est réuni avec des inconnus l’espace d’un instant.",
             "HOTEL, c’est l’histoire d’un lieu… mais c’est surtout un lieu rempli d’histoires."
@@ -899,8 +906,9 @@
         ]
     },
     {
-        "id": "nuitP",
+        "id": "AnuitP",
         "type": "Festival",
+	"image": "./images/AnuitP.jpg",
         "nom": "Nuit Pastel 2022",
         "decription": ["La Nuit Pastel est une invitation à découvrir ou redécouvrir la Cité en famille ou entre amis le temps d'une échappée nocturne. ",
             "2022 célèbre la nuit de Toulouse-Lautrec avec plus de 20 rendez-vous à partir de 17h"
