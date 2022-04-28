@@ -9,8 +9,20 @@ import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
+import Stepper from '@mui/material/Stepper';
+import Step from '@mui/material/Step';
+import StepLabel from '@mui/material/StepLabel';
+import StepContent from '@mui/material/StepContent';
+import PropTypes from 'prop-types';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Grid from '@mui/material/Grid';
+import Data from "./Bdd/data.json";
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
 
 
+//----------------------------FONCTION IMAGE FOND ACCUEIL------------------------------
 export function ImageFond(){
     return (
         <picture>
@@ -24,6 +36,8 @@ export function ImageFond(){
     );
 }
 
+
+//----------------------------FONCTION CARROUSSEL------------------------------
 export function Suggestion() {
     const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -145,5 +159,319 @@ const images = [
 }
 
 
+
+//----------------------------FONCTION ACTUALITES------------------------------
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`scrollable-auto-tabpanel-${index}`}
+      aria-labelledby={`scrollable-auto-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box p={3}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `scrollable-auto-tab-${index}`,
+    'aria-controls': `scrollable-auto-tabpanel-${index}`,
+  };
+}
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    width: '100%',
+    backgroundColor: theme.palette.background.paper,
+  },
+}));
+
+export  function Suggestion4() {
+  const classes = useStyles();
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  const NbActu = [{ _id: "0" },{ _id: "1" }, { _id: "2" }, { _id: "3" },{ _id: "4" }, { _id: "5" }, { _id: "6" }];
+  return (
+    <>
+    <div>
+      <Typography style={{fontFamily: "Comic Sans MS", textAlign: "center", fontSize: "30px"}}>
+        VIVEZ L'ACTUALITÉ
+      </Typography>
+      <hr style={{
+        margin: "10px auto",
+        width: "50%",
+        height: "2px",
+        backgroundColor: "#f90",
+        border: "none"
+      }}/>
+      <p style={{textAlign: "center", fontSize: "19px"}}>
+        <strong>Toute l'actualité sur le sujet du tourisme à Albi.</strong><br />
+        Consultez l'ensemble des articles en choisissant le sujet qui vous plaît ! Retrouvez l'actualité du tourisme à Albi pour ne rien rater des évenements !
+      </p>
+    </div>
+    <br />
+    <div className={classes.root}>
+      <AppBar position="static" color="default">
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          indicatorColor="primary"
+          textColor="primary"
+          variant="scrollable"
+          scrollButtons="auto"
+          aria-label="scrollable auto tabs example"
+        >
+        {NbActu.map((l, i) => (
+        <Tab label={Data.Actu[l._id].nom} {...a11yProps(l._id)} />
+        ))}
+        </Tabs>
+      </AppBar>
+      {NbActu.map((l, i) => (
+        <TabPanel value={value} index={i}>
+          
+          <Grid container spacing={1}>
+            <Grid item xs={2}>
+              <img
+                  src={Data.Actu[i].image}
+                  alt={Data.Actu[i].id}
+                  width="100%"
+              />
+            </Grid>
+            <Grid item xs={10}>
+              <p><strong>Le {Data.Actu[i].date} - {Data.Actu[i].ou} - {Data.Actu[i].adresse}</strong> <br /> <br/>{Data.Actu[i].decription}<br/>{Data.Actu[i].description2}</p>
+            </Grid>
+          </Grid>
+        </TabPanel>
+      ))}
+    </div>
+    </>
+  );
+}
+
+
+//----------------------------FONCTION ETAPE / PREPARATION SEJOUR------------------------------
+export function Etape() {
+  const steps = ['Geocaching', 'Visites-spectacles', 'Tourisme participatif'];
+  const [activeStep, setActiveStep] = React.useState(0);
+  const [skipped, setSkipped] = React.useState(new Set());
+
+  const isStepOptional = (step) => {
+    return step === 1;
+  };
+
+  const isStepSkipped = (step) => {
+    return skipped.has(step);
+  };
+
+  const handleNext = () => {
+    let newSkipped = skipped;
+    if (isStepSkipped(activeStep)) {
+      newSkipped = new Set(newSkipped.values());
+      newSkipped.delete(activeStep);
+    }
+
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    setSkipped(newSkipped);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
+
+  const handleSkip = () => {
+    if (!isStepOptional(activeStep)) {
+      // You probably want to guard against something like this,
+      // it should never occur unless someone's actively trying to break something.
+      throw new Error("You can't skip a step that isn't optional.");
+    }
+
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    setSkipped((prevSkipped) => {
+      const newSkipped = new Set(prevSkipped.values());
+      newSkipped.add(activeStep);
+      return newSkipped;
+    });
+  };
+
+  const handleReset = () => {
+    setActiveStep(0);
+  };
+
+  return (
+    <Box sx={{ width: '97%' }} style={{border: "thick double #32a1ce", borderRadius: "20px"}}>
+      <h3 style={{textAlign: "center"}}>
+        Nos consignes pour réussir votre séjour à Albi !
+      </h3>
+
+      <p>
+        Partir en vacances en ayant l’esprit tranquille et éviter le stress lié au départ est le rêve de tout vacancier. Pour réussir son départ et ses vacances d’été, le respect de quelques règles simples est essentiel. Voici les quelques conseils pour bien préparer son séjour.
+      </p>
+      <br/>
+      <Stepper activeStep={activeStep}>
+        {steps.map((label, index) => {
+          const stepProps = {};
+          const labelProps = {};
+          if (isStepOptional(index)) {
+            labelProps.optional = (
+              <Typography variant="caption">Optional</Typography>
+            );
+          }
+          if (isStepSkipped(index)) {
+            stepProps.completed = false;
+          }
+          return (
+            <Step key={label} {...stepProps}>
+              <StepLabel {...labelProps}>{label}</StepLabel>
+            </Step>
+          );
+        })}
+      </Stepper>
+      {activeStep === steps.length ? (
+        <React.Fragment>
+          <Typography sx={{ mt: 2, mb: 1 }}>
+            Bravo, vous pouvez être sûr de passer un excellent séjour !
+          </Typography>
+          <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+            <Box sx={{ flex: '1 1 auto' }} />
+            <Button onClick={handleReset}>Reset</Button>
+          </Box>
+        </React.Fragment>
+      ) : (
+        <React.Fragment>
+          <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
+          <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+            <Button
+              color="inherit"
+              disabled={activeStep === 0}
+              onClick={handleBack}
+              sx={{ mr: 1 }}
+            >
+              Back
+            </Button>
+            <Box sx={{ flex: '1 1 auto' }} />
+            {isStepOptional(activeStep) && (
+              <Button color="inherit" onClick={handleSkip} sx={{ mr: 1 }}>
+                Skip
+              </Button>
+            )}
+
+            <Button onClick={handleNext}>
+              {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+            </Button>
+          </Box>
+        </React.Fragment>
+      )}
+    </Box>
+  );
+}
+
+
+
+//----------------------------FONCTION ETAPE 2------------------------------
+export function Actualite() {
+  const steps = [
+    {
+      label: 'Select campaign settings',
+      description: `For each ad campaign that you create, you can control how much
+                you're willing to spend on clicks and conversions, which networks
+                and geographical locations you want your ads to show on, and more.`,
+    },
+    {
+      label: 'Create an ad group',
+      description:
+        'An ad group contains one or more ads which target a shared set of keywords.',
+    },
+    {
+      label: 'Create an ad',
+      description: `Try out different ad text to see what brings in the most customers,
+                and learn how to enhance your ads using features like ad extensions.
+                If you run into any problems with your ads, find out how to tell if
+                they're running and how to resolve approval issues.`,
+    },
+  ];
+  
+  const [activeStep, setActiveStep] = React.useState(0);
+
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
+
+  const handleReset = () => {
+    setActiveStep(0);
+  };
+
+  return (
+    <Box sx={{ width: "100%" }}>
+      <Stepper activeStep={activeStep} orientation="vertical">
+        {steps.map((step, index) => (
+          <Step key={step.label}>
+            <StepLabel
+              optional={
+                index === 2 ? (
+                  <Typography variant="caption">Last step</Typography>
+                ) : null
+              }
+            >
+              {step.label}
+            </StepLabel>
+            <StepContent>
+              <Typography>{step.description}</Typography>
+              <Box sx={{ mb: 2 }}>
+                <div>
+                  <Button
+                    variant="contained"
+                    onClick={handleNext}
+                    sx={{ mt: 1, mr: 1 }}
+                  >
+                    {index === steps.length - 1 ? 'Finish' : 'Continue'}
+                  </Button>
+                  <Button
+                    disabled={index === 0}
+                    onClick={handleBack}
+                    sx={{ mt: 1, mr: 1 }}
+                  >
+                    Back
+                  </Button>
+                </div>
+              </Box>
+            </StepContent>
+          </Step>
+        ))}
+      </Stepper>
+      {activeStep === steps.length && (
+        <Paper square elevation={0} sx={{ p: 3 }}>
+          <Typography>All steps completed - you&apos;re finished</Typography>
+          <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
+            Reset
+          </Button>
+        </Paper>
+      )}
+    </Box>
+  );
+}
 
 
