@@ -17,11 +17,11 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import Grid from '@mui/material/Grid';
 import { Sejour } from './sejour.js';
 import { Itineraire } from './itineraire.js';
-import { ImageFond } from './accueil.js';
-import { Suggestion } from './accueil.js';
+import { ImageFond, Suggestion, Actualite, Etape, Suggestion4 } from './accueil.js';
 import { Formulaire, ImageFond2 } from './contact.js';
 import HomeIcon from '@mui/icons-material/Home';
 import ButtonBase from '@mui/material/ButtonBase';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const container = document.getElementById('root');
 
@@ -68,6 +68,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 
+//----------------------------BARRE TOP------------------------------
 const ResponsiveAppBar = ({ onClick }) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -139,6 +140,8 @@ const ResponsiveAppBar = ({ onClick }) => {
   );
 };
 
+
+//----------------------------BARRE BOTTOM------------------------------
 const ResponsiveAppBarFoot = ({ onClick }) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -210,6 +213,8 @@ const ResponsiveAppBarFoot = ({ onClick }) => {
   );
 };
 
+
+//----------------------------LIEUX / RESTAURANTS / HOTELS------------------------------
 const Suggestion2 = ({ onClick }) => {
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -234,18 +239,19 @@ const Suggestion2 = ({ onClick }) => {
     {
       url: './images/cap.jpg',
       title: 'Lieux',
-      width: '33%',
+      width: '26%',
     },
     {
       url: './images/Razzurro.jpg',
       title: 'Restaurants',
-      width: '34%',
+      width: '26%',
     },
     {
       url: './images/Hpasteliers.jpg',
       title: 'Hôtels',
-      width: '33%',
+      width: '26%',
     },
+    
   ];
   
   const ImageButton = styled(ButtonBase)(({ theme }) => ({
@@ -253,7 +259,7 @@ const Suggestion2 = ({ onClick }) => {
     height: 200,
     [theme.breakpoints.down('sm')]: {
       width: '100% !important', // Overrides inline-style
-      height: 100,
+      height: 200,
     },
     '&:hover, &.Mui-focusVisible': {
       zIndex: 1,
@@ -315,7 +321,7 @@ const Suggestion2 = ({ onClick }) => {
   
 
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 400, width: '100%', justifyContent: 'center' }}>
       {images.map((image) => (
         <ImageButton
           focusRipple
@@ -350,6 +356,86 @@ const Suggestion2 = ({ onClick }) => {
 }
 
 
+//----------------------------DECOUVRIR LA VILLE / ETES VOUS PRETS A VOYAGER------------------------------
+const Suggestion3 = ({ onClick }) => {
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
+
+  return (
+            <div style={{textAlign: "center"}}>
+              <Typography style={{fontFamily: "Comic Sans MS", textAlign: "center", fontSize: "30px"}}>
+                DECOUVRIR LA VILLE
+              </Typography>
+              <hr style={{
+                margin: "10px auto",
+                width: "50%",
+                height: "2px",
+                backgroundColor: "#f90",
+                border: "none"
+                }}
+              />
+                <p style={{textAlign: "center", fontSize: "19px"}}>
+                  <strong>Albi est une ville du Sud-Ouest de la France caractérisée par la présence de son patrimoine exceptionnel classé à l'Unesco.</strong><br/>
+                  La richesse de sa vie culturelle, la vitalité de son tissu associatif et sportif comme la qualité de son environnement inscrivent résolument le patrimoine vivant dans la vie de chacun. 
+                </p>
+                <Button
+                  onClick={() => onClick('itineraire')}
+                  style={{
+                    background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+                    borderRadius: 3,
+                    border: 0,
+                    color: "white",
+                    height: 48,
+                    padding: "0 30px",
+                    boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
+                  }}
+                >
+                  DECOUVRIR MAINTENANT ! <LocationOnIcon/>
+                </Button>
+                <br/>
+                <br/>
+                <br />
+            
+              <div>
+                <Typography style={{fontFamily: "Comic Sans MS", textAlign: "center", fontSize: "30px"}}>
+                  ÊTES-VOUS PRÊTS À VOYAGER ?
+                </Typography>
+                <hr style={{
+                  margin: "10px auto",
+                  width: "50%",
+                  height: "2px",
+                  backgroundColor: "#f90",
+                  border: "none"
+                  }}/>
+                  <p style={{textAlign: "center", fontSize: "19px"}}>
+                    <strong>Que faire, que voir à moins d'une heure en voiture d'Albi ?</strong><br/>
+                    Visite de villages, parcs, sites et monuments mais aussi randonnées et autres idées pour toute la famille. <br />
+                    Balades, musées, hôlels, gastronomie, activités insolites… Offrez-vous une découverte albigeoise à la carte !
+                  </p>
+              </div>
+              <br/>
+              <br/>
+            </div>
+  );
+}
+
+
+//----------------------------FONCTION POUR CHANGER D'AFFICHAGE------------------------------
 function App() {
 
   let [etat, setEtat] = React.useState("accueil");
@@ -368,8 +454,11 @@ function App() {
           return (
             <>
             <ImageFond />
-            <Suggestion/>
-            <Suggestion2 onClick={setEtat}/>
+            <Suggestion3 onClick={setEtat}/>
+            <Suggestion2 onClick={setEtat}/> 
+            <br/>
+            <Suggestion4/>
+
             </>
           );
         case "formulaire":
