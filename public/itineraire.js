@@ -56,8 +56,10 @@ import LocationCityIcon from '@mui/icons-material/LocationCity';
 
 import L from 'leaflet';
 import marker from 'leaflet';
+import popup from 'leaflet';
 
 import Routing from 'leaflet-routing-machine';
+import { usePreviousProps } from '@mui/utils';
 
 /////////////////////////////////////////////////////////////////////////////////////
 
@@ -76,12 +78,14 @@ const Item = styled(Paper)(({ theme }) => ({
 
 
 
+
+
 //////////////////////////////////////////////////////////////////////////////////////
 
 
-const NbLieux = [{ _id: "0" },{ _id: "1" }, { _id: "2" }, { _id: "3" },{ _id: "4" }, { _id: "5" }, { _id: "6" },{ _id: "7" }, { _id: "8" }, { _id: "9" }];
-const NbResto = [{ _id: "0" },{ _id: "1" }, { _id: "2" }, { _id: "3" },{ _id: "4" }, { _id: "5" }, { _id: "6" },{ _id: "7" }, { _id: "8" }, { _id: "9" }];
-const NbHotel = [{ _id: "0" },{ _id: "1" }, { _id: "2" }, { _id: "3" },{ _id: "4" }, { _id: "5" }, { _id: "6" }];
+const NbLieux = [{ _id: "0" }, { _id: "1" }, { _id: "2" }, { _id: "3" }, { _id: "4" }, { _id: "5" }, { _id: "6" }, { _id: "7" }, { _id: "8" }, { _id: "9" }];
+const NbResto = [{ _id: "0" }, { _id: "1" }, { _id: "2" }, { _id: "3" }, { _id: "4" }, { _id: "5" }, { _id: "6" }, { _id: "7" }, { _id: "8" }, { _id: "9" }];
+const NbHotel = [{ _id: "0" }, { _id: "1" }, { _id: "2" }, { _id: "3" }, { _id: "4" }, { _id: "5" }, { _id: "6" }];
 
 const Map = () => {
   const mapStyles = {
@@ -101,7 +105,7 @@ const Map = () => {
     maxBounds: L.latLngBounds(L.latLng(-150, -240), L.latLng(150, 240)),
     layers: [MAP_TILE]
   };
-   
+
   // Mettre ici toute les fonctions etc qui ont un effet sur map
   useEffect(() => {
     const map = L.map("map", mapParams);
@@ -109,10 +113,10 @@ const Map = () => {
     var popup = L.popup();
 
     function onMapClick(e) {
-        popup
-            .setLatLng(e.latlng)
-            .console.log(e.latlng)
-            .openOn(map);
+      popup
+        .setLatLng(e.latlng)
+        .console.log(e.latlng)
+        .openOn(map);
     }
 
     map.on('click', onMapClick);
@@ -121,23 +125,29 @@ const Map = () => {
     var lesResto = [];
     var lesHotels = [];
 
-    {NbLieux.map((l, i) => (
+    {
+      NbLieux.map((l, i) => (
 
-      lesLieux.push([Data.lieux[l._id].lagitude, Data.lieux[l._id].longitude, Data.lieux[l._id].nom])
+        lesLieux.push([Data.lieux[l._id].lagitude, Data.lieux[l._id].longitude, Data.lieux[l._id].nom, Data.lieux[l._id].description])
 
-    ))};
+      ))
+    };
 
-    {NbResto.map((l, i) => (
+    {
+      NbResto.map((l, i) => (
 
-      lesResto.push([Data.Resto[l._id].lagitude, Data.Resto[l._id].longitude, Data.Resto[l._id].nom])
+        lesResto.push([Data.Resto[l._id].lagitude, Data.Resto[l._id].longitude, Data.Resto[l._id].nom, Data.Resto[l._id].description2])
 
-    ))};
+      ))
+    };
 
-    {NbHotel.map((l, i) => (
+    {
+      NbHotel.map((l, i) => (
 
-      lesHotels.push([Data.Hotel[l._id].lagitude, Data.Hotel[l._id].longitude, Data.Hotel[l._id].nom])
+        lesHotels.push([Data.Hotel[l._id].lagitude, Data.Hotel[l._id].longitude, Data.Hotel[l._id].nom, Data.Hotel[l._id].description])
 
-    ))};
+      ))
+    };
 
     console.log(lesLieux);
     console.log(lesResto);
@@ -152,16 +162,81 @@ const Map = () => {
       [43.854069, 2.275847, "Zoo"]
     ];
 
+    var greenIcon = new L.Icon({
+      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
+    });
 
-    for(var i = 0; i<lesLieux.length;i++){
-      L.Routing.control({
-        waypoints: [
-  
-          L.latLng(lesLieux[i][0], lesLieux[i][1]),
-        ]
-      }).addTo(map);
+    var purpleIcon = new L.Icon({
+      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
+      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
+    });
+
+
+    var redIcon = new L.Icon({
+      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
+    });
+
+
+
+
+
+    for (var i = 0; i < lesLieux.length; i++) {
+
+      var marker = L.marker([lesLieux[i][0], lesLieux[i][1]]);
+
+      var popup = L.popup().setContent(lesLieux[i][2]);
+
+      marker.bindPopup(popup).openPopup();
+      marker.addTo(map);
+
     }
-    
+
+    for (var i = 0; i < lesResto.length; i++) {
+
+      var marker = L.marker([lesResto[i][0], lesResto[i][1]], { icon: greenIcon });
+
+      var popup = L.popup().setContent(lesResto[i][2]);
+
+      marker.bindPopup(popup).openPopup();
+      marker.addTo(map);
+
+    }
+
+    for (var i = 0; i < lesHotels.length; i++) {
+
+      var marker = L.marker([lesHotels[i][0], lesHotels[i][1]], { icon: purpleIcon });
+
+      var popup = L.popup().setContent(lesHotels[i][2]);
+
+      marker.bindPopup(popup).openPopup();
+      marker.addTo(map);
+
+    }
+
+
+    //for (var i = 0; i < lesLieux.length; i++) {
+    //  L.Routing.control({
+    //    waypoints: [
+
+    //      L.latLng(lesLieux[i][0], lesLieux[i][1]),
+    //    ]
+    //  }).addTo(map);
+    //}
+
 
     const locationOptions = {
       maximumAge: 10000,
@@ -177,35 +252,35 @@ const Map = () => {
     }
 
     function handleLocationError(msg) {
-        alert("Erreur lors de la géolocalisation");
+      alert("Erreur lors de la géolocalisation");
     }
 
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(handleLocation, handleLocationError, locationOptions);
     } else {
-        /* Le navigateur n'est pas compatible */
-        alert("Géolocalisation indisponible");
-  }
+      /* Le navigateur n'est pas compatible */
+      alert("Géolocalisation indisponible");
+    }
 
   }, []);
 
 
 
-  
+
 
   return (
     <div>
       <div id="map" style={mapStyles} />
-      
+
     </div>
-    
+
   )
 };
 
 
 ///////////////////////////////  PARTIE DU MILIEU ////////////////////////////////////
 
-export function Itineraire(){
+export function Itineraire() {
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -228,8 +303,8 @@ export function Itineraire(){
   };
 
 
-  
-  
+
+
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -241,7 +316,7 @@ export function Itineraire(){
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-            <Typography>Itinéraires disponibles :</Typography>
+              <Typography>Itinéraires disponibles :</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -255,7 +330,7 @@ export function Itineraire(){
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-            <Typography>Calculer un itinéraire :</Typography>
+              <Typography>Calculer un itinéraire :</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
