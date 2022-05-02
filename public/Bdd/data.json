@@ -925,6 +925,171 @@
         "horaire": ["Samedi 4 juin 2022 de 19h à 0h."]
     }
 
-]
-}
+    ],
+    "ClientelesEtrangers2020": [{
+        "id": "Espagne",
+        "nom": "Espagne",
+        "nbvisiteur": 452
+    },
+    {
+        "id": "Italie",
+        "nom": "Italie",
+        "nbvisiteur": 38
+    },
+    
+    {
+        "id": "Allemagne",
+        "nom": "Allemagne",
+        "nbvisiteur": 77
+    },
+    {
+        "id": "Belgique",
+        "nom": "Belgique",
+        "nbvisiteur": 218
+    },
+    {
+        "id": "Royaume-Uni",
+        "nom": "Roayume-Uni",
+        "nbvisiteur": 100
+    },
+    {
+        "id": "Pays-Bas",
+        "nom": "Pays-Bas",
+        "nbvisiteur": 85
+    }
+    ],
 
+
+    "ClientelesEtrangers2019": [{
+        "id": "Espagne",
+        "nom": "Espagne",
+        "nbvisiteur": 2883
+    },
+    {
+        "id": "Italie",
+        "nom": "Italie",
+        "nbvisiteur": 232
+    },
+    
+    {
+        "id": "Allemagne",
+        "nom": "Allemagne",
+        "nbvisiteur": 422
+    },
+    {
+        "id": "Belgique",
+        "nom": "Belgique",
+        "nbvisiteur": 554
+    },
+    {
+        "id": "Royaume-Uni",
+        "nom": "Roayume-Uni",
+        "nbvisiteur": 966
+    },
+    {
+        "id": "Pays-Bas",
+        "nom": "Pays-Bas",
+        "nbvisiteur": 422
+    }
+    ],
+
+    "ClientelesFrancais": [{
+        "id": "Residents ville",
+        "nom": "Résidents ville",
+        "nbvisiteur": 1090
+    },
+    {
+        "id": "Haute-Garonne",
+        "nom": "Haute-Garonne",
+        "nbvisiteur": 639
+    },
+    {
+        "id": "Paris",
+        "nom": "Paris",
+        "nbvisiteur": 330
+    },
+    {
+        "id": "Hérault",
+        "nom": "Hérault",
+        "nbvisiteur": 317
+    },
+    {
+        "id": "Loire-Atlantique",
+        "nom": "Loire-Atlantique",
+        "nbvisiteur": 276
+    },
+    {
+        "id": "Gironde",
+        "nom": "Gironde",
+        "nbvisiteur": 243
+    },
+    {
+        "id": "Bouches du Rhône",
+        "nom": "Bouches du Rhône",
+        "nbvisiteur": 237
+    },
+    {
+        "id": "Tarn",
+        "nom": "Tarn",
+        "nbvisiteur": 231
+    },
+    {
+        "id": "Nord",
+        "nom": "Nord",
+        "nbvisiteur": 200
+    },
+    {
+        "id": "Rhône",
+        "nom": "Rhône",
+        "nbvisiteur": 193
+    }
+    ],
+
+    "Attractivité2016": [{
+        "id": "Cathedrale",
+        "nom": "Cathédrale Sainte-Cécile",
+        "nbvisiteur": 802681
+    },
+    {
+        "id": "musee",
+        "nom": "Musée Toulouse-Lautrec",
+        "nbvisiteur": 163855
+    },
+    {
+        "id": "Festival",
+        "nom": "Festival Pause Guitare",
+        "nbvisiteur": 75000
+    },
+    {
+        "id": "Carnaval",
+        "nom": "Carnaval d'Albi",
+        "nbvisiteur": 90000
+    },
+    {
+        "id": "Nuit",
+        "nom": "La Nuit Paster",
+        "nbvisiteur": 30000
+    },
+    {
+        "id": "Fete",
+        "nom": "La fête de la musique",
+        "nbvisiteur": 35000
+    },
+    {
+        "id": "Place",
+        "nom": "Place(s) aux artistes",
+        "nbvisiteur": 28000
+    },
+    {
+        "id": "journée",
+        "nom": "Journée du patrimoine",
+        "nbvisiteur": 23000
+    },
+    {
+        "id": "train",
+        "nom": "Le petit train touristique",
+        "nbvisiteur": 24300
+    }
+    ]
+
+}
