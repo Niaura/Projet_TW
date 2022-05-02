@@ -20,7 +20,18 @@ import Grid from '@mui/material/Grid';
 import Data from "./Bdd/data.json";
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
-
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  ArcElement,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+import { Bar } from 'react-chartjs-2';
+import { Pie } from 'react-chartjs-2';
 
 //----------------------------FONCTION IMAGE FOND ACCUEIL------------------------------
 export function ImageFond(){
@@ -475,3 +486,161 @@ export function Actualite() {
 }
 
 
+//----------------------------FONCTION GRAPHIQUE------------------------------
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  ArcElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+//L'ACCUEIL EN 2020
+export const options = {
+  responsive: true,
+  plugins: {
+    title: {
+      display: true,
+      text: 'Répartition des clientèles qualifiées étrangères',
+    },
+  },
+};
+
+var ClientelesEtrangersLabels = [];
+var ClientelesEtrangersData2019 = [];
+var ClientelesEtrangersData2020= [];
+
+for (let i=0; i<Data.ClientelesEtrangers2019.length; i++){
+  ClientelesEtrangersLabels.push(Data.ClientelesEtrangers2019[i].nom);
+  ClientelesEtrangersData2019.push(Data.ClientelesEtrangers2019[i].nbvisiteur);
+  ClientelesEtrangersData2020.push(Data.ClientelesEtrangers2020[i].nbvisiteur);
+}
+
+export const data = {
+  labels: ClientelesEtrangersLabels,
+  datasets: [
+    {
+      label: 'Clientèle en 2020',
+      data: ClientelesEtrangersData2020,
+      backgroundColor: 'rgba(72, 116, 217, 0.9)',
+    },
+    {
+      label: 'Clientèle en 2019',
+      data: ClientelesEtrangersData2019,
+      backgroundColor: 'rgba(216, 85, 85, 0.9)',
+    },
+  ]
+
+};
+
+//ATTRACTIVITE EN 2016
+
+var AttractiviteLabel = [];
+var AttractiviteData = [];
+var TabCouleur = [
+'rgba(255, 99, 132, 0.2)',
+'rgba(54, 162, 235, 0.2)',
+'rgba(255, 206, 86, 0.2)',
+'rgba(75, 192, 192, 0.2)',
+'rgba(153, 102, 255, 0.2)',
+'rgba(255, 159, 64, 0.2)',
+'rgba(158, 60, 158, 0.2)',
+'rgba(124, 169, 49, 0.2)',
+'rgba(64, 199, 195, 0.2)'
+]
+
+var TabBordure = [
+'rgba(255, 99, 132, 1)',
+'rgba(54, 162, 235, 1)',
+'rgba(255, 206, 86, 1)',
+'rgba(75, 192, 192, 1)',
+'rgba(153, 102, 255, 1)',
+'rgba(255, 159, 64, 1)',
+'rgba(158, 60, 158, 1)',
+'rgba(124, 169, 49, 1)',
+'rgba(64, 199, 195, 1)'
+]
+
+for (let i=0; i<Data.Attractivité2016.length; i++){
+  AttractiviteLabel.push(Data.Attractivité2016[i].nom);
+  AttractiviteData.push(Data.Attractivité2016[i].nbvisiteur);
+}
+
+export const options2 = {
+  responsive: true,
+  plugins: {
+    title: {
+      display: true,
+      text: 'Nombre de visiteurs sur les différents sites touristiques',
+    },
+  },
+};
+
+export const data2 = {
+  labels: AttractiviteLabel,
+  datasets: [
+    {
+      label: 'Attractivité en 2016',
+      data: AttractiviteData,
+      backgroundColor: TabCouleur,
+      borderColor: TabBordure,
+      borderWidth: 1,
+    },
+  ],
+  
+};
+
+export function Graphique() {
+  return( 
+    <>
+    <div>
+      <Typography style={{fontFamily: "Comic Sans MS", textAlign: "center", fontSize: "30px"}}>
+        L'ACCUEIL EN 2020
+      </Typography>
+      <hr style={{
+        margin: "10px auto",
+        width: "50%",
+        height: "2px",
+        backgroundColor: "#f90",
+        border: "none"
+      }}/>
+      <p style={{textAlign: "center", fontSize: "19px"}}>
+        <strong>L'accueil des visiteurs en 2020 a été fortement impacté par la crise sanitaire</strong><br />
+        Alors que le début d’année 2020 s’annonçait plutôt bon, le reste de l’année comme pour tous les Offices de Tourisme nationaux a été catastrophique.<br/>
+        Nous enregistrons une chute de notre fréquentation dans la ville d'Albi.
+      </p>
+    </div>
+    <div style={{width: "600px", margin:"0 auto"}} >
+      <Bar options={options} data={data} />
+    </div>
+
+    <br/>
+    <br/>
+    
+    <div>
+      <Typography style={{fontFamily: "Comic Sans MS", textAlign: "center", fontSize: "30px"}}>
+        ATTRACTIVITÉ DE LA VILLE EN 2016
+      </Typography>
+      <hr style={{
+        margin: "10px auto",
+        width: "50%",
+        height: "2px",
+        backgroundColor: "#f90",
+        border: "none"
+      }}/>
+      <p style={{textAlign: "center", fontSize: "19px"}}>
+        <strong>Joyau du gothique méridional, la cathédrale Sainte-Cécile, la plus grande cathédrale de briques du monde</strong><br />
+        Après avoir atteint le seuil du million de visiteurs, la cité tarnaise en a reçu 1,5 million en 2016. Ce chiffre prend en compte les visiteurs des principaux sites  <br/>
+        (cathédrale, musée Toulouse-Lautrec), mais aussi les participants des événements comme la Semaine fédérale de cyclotourisme et ses 15 000 participants en août dernier.
+      </p>
+    </div>
+
+    <div style={{width: "500px", margin:"0 auto"}} >
+      <Pie options={options2}data={data2} />
+    </div>
+    <br/>
+    </>
+  );
+}
