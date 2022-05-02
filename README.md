@@ -5,5 +5,6 @@ Commandes pour lancer le programme :
  - npm install react-swipeable-views-utils
  - npm install react-swipeable-views
  - npm install @material-ui/core
+ - npm i react-chartjs-2 chart.js
  - npm run-script build
  - npm start
