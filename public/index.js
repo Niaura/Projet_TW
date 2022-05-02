@@ -17,7 +17,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import Grid from '@mui/material/Grid';
 import { Sejour } from './sejour.js';
 import { Itineraire } from './itineraire.js';
-import { ImageFond, Suggestion, Actualite, Etape, Suggestion4 } from './accueil.js';
+import { ImageFond, Suggestion, Actualite, Etape, Suggestion4, Graphique } from './accueil.js';
 import { Formulaire, ImageFond2 } from './contact.js';
 import HomeIcon from '@mui/icons-material/Home';
 import ButtonBase from '@mui/material/ButtonBase';
@@ -377,60 +377,60 @@ const Suggestion3 = ({ onClick }) => {
   };
 
   return (
-            <div style={{textAlign: "center"}}>
-              <Typography style={{fontFamily: "Comic Sans MS", textAlign: "center", fontSize: "30px"}}>
-                DECOUVRIR LA VILLE
-              </Typography>
-              <hr style={{
-                margin: "10px auto",
-                width: "50%",
-                height: "2px",
-                backgroundColor: "#f90",
-                border: "none"
-                }}
-              />
-                <p style={{textAlign: "center", fontSize: "19px"}}>
-                  <strong>Albi est une ville du Sud-Ouest de la France caractérisée par la présence de son patrimoine exceptionnel classé à l'Unesco.</strong><br/>
-                  La richesse de sa vie culturelle, la vitalité de son tissu associatif et sportif comme la qualité de son environnement inscrivent résolument le patrimoine vivant dans la vie de chacun. 
-                </p>
-                <Button
-                  onClick={() => onClick('itineraire')}
-                  style={{
-                    background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
-                    borderRadius: 3,
-                    border: 0,
-                    color: "white",
-                    height: 48,
-                    padding: "0 30px",
-                    boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
-                  }}
-                >
-                  DECOUVRIR MAINTENANT ! <LocationOnIcon/>
-                </Button>
-                <br/>
-                <br/>
-                <br />
-            
-              <div>
-                <Typography style={{fontFamily: "Comic Sans MS", textAlign: "center", fontSize: "30px"}}>
-                  ÊTES-VOUS PRÊTS À VOYAGER ?
-                </Typography>
-                <hr style={{
-                  margin: "10px auto",
-                  width: "50%",
-                  height: "2px",
-                  backgroundColor: "#f90",
-                  border: "none"
-                  }}/>
-                  <p style={{textAlign: "center", fontSize: "19px"}}>
-                    <strong>Que faire, que voir à moins d'une heure en voiture d'Albi ?</strong><br/>
-                    Visite de villages, parcs, sites et monuments mais aussi randonnées et autres idées pour toute la famille. <br />
-                    Balades, musées, hôlels, gastronomie, activités insolites… Offrez-vous une découverte albigeoise à la carte !
-                  </p>
-              </div>
-              <br/>
-              <br/>
-            </div>
+    <>
+    <div style={{ textAlign: "center" }}>
+      <Typography style={{ fontFamily: "Comic Sans MS", textAlign: "center", fontSize: "30px" }}>
+        DECOUVRIR LA VILLE
+      </Typography>
+      <hr style={{
+        margin: "10px auto",
+        width: "50%",
+        height: "2px",
+        backgroundColor: "#f90",
+        border: "none"
+      }} />
+      <p style={{ fontSize: "19px" }}>
+        <strong>Albi est une ville du Sud-Ouest de la France caractérisée par la présence de son patrimoine exceptionnel classé à l'Unesco.</strong><br />
+        La richesse de sa vie culturelle, la vitalité de son tissu associatif et sportif comme la qualité de son environnement inscrivent résolument le patrimoine vivant dans la vie de chacun.
+      </p>
+        <Button
+          onClick={() => onClick('itineraire')}
+          style={{
+            background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+            borderRadius: 3,
+            border: 0,
+            color: "white",
+            height: 48,
+            padding: "0 30px",
+            boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
+          }}
+        >
+          DECOUVRIR MAINTENANT ! <LocationOnIcon />
+        </Button>
+        <br />
+        <br />
+        <br />
+
+        <div>
+          <Typography style={{ fontFamily: "Comic Sans MS", textAlign: "center", fontSize: "30px" }}>
+            ÊTES-VOUS PRÊTS À VOYAGER ?
+          </Typography>
+          <hr style={{
+            margin: "10px auto",
+            width: "50%",
+            height: "2px",
+            backgroundColor: "#f90",
+            border: "none"
+          }} />
+          <p style={{ textAlign: "center", fontSize: "19px" }}>
+            <strong>Que faire, que voir à moins d'une heure en voiture d'Albi ?</strong><br />
+            Visite de villages, parcs, sites et monuments mais aussi randonnées et autres idées pour toute la famille.<br />
+            Balades, musées, hôlels, gastronomie, activités insolites… Offrez-vous une découverte albigeoise à la carte !
+          </p>
+        </div>
+        <br />
+        <br />
+      </div></>
   );
 }
 
@@ -458,7 +458,7 @@ function App() {
             <Suggestion2 onClick={setEtat}/> 
             <br/>
             <Suggestion4/>
-
+            <Graphique/>
             </>
           );
         case "formulaire":
