@@ -13,13 +13,13 @@
                 "Regardez-la bien, elle ne se compare à aucune autre."
             ],
             "horaire": [
-                "\n Ouvert du lundi au samedi de 10h à 18h .",
+                "\n Ouvert du lundi au samedi de 10h à 18h . |",
                 "\n fermé le dimanche matin pour la messe. Ouvert de 13h à 18h "
             ],
             "Tarifs": [
-                "Entrées dans le choeur: 5€ \n",
-                "Inclus dans le City pass \n",
-                "Gratuit pour les -12ans \n"
+                "Entrées dans le choeur: 5€ | \n",
+                "Inclus dans le City pass  |\n",
+                "Gratuit pour les -12ans  \n"
             ],
             "aime": 12,
             "ap": "default",
@@ -44,10 +44,10 @@
                 "Ouvert du mardi au dimanche de 10h30 à 12h et de 14h30 à 18h"
             ],
             "Tarifs": [
-                "Tarif normal: 6€ \n",
-                "Tarif Albi City pass: 5€\n",
-                "Tarif réduit: 4€\n",
-                "(Le tarif réduit concerne les enfants de 9 à 14 ans, les étudiants et les demandeur d'emploi)\n",
+                "Tarif normal: 6€  | \n",
+                "Tarif Albi City pass: 5€  |\n",
+                "Tarif réduit: 4€  |\n",
+                "(Le tarif réduit concerne les enfants de 9 à 14 ans, les étudiants et les demandeur d'emploi)  |\n",
                 "Gratuit pour les -8ans"
 
             ],
@@ -71,19 +71,19 @@
                 "Toiles de jeunesse, portraits majeurs, tableaux des maisons closes, estampes sur le monde du spectacle, réclames et œuvres tardives en font une collection exceptionnelle."
             ],
             "horaire": [
-                "Ouvert du 1er octobre au 31 mai:",
-                "du mardi au dimanche de 10h/12h30 et 14h/18h ",
-                "fermé le lundi",
-                "du 1er juin au 30 septembre:",
+                "Ouvert du 1er octobre au 31 mai: ",
+                "du mardi au dimanche de 10h/12h30 et 14h/18h,  ",
+                "fermé le lundi  |",
+                "du 1er juin au 30 septembre: ",
                 "tous les jour de 10h/18h"
             ],
             "Tarifs": [
-                "Inclus dans le City pass",
-                "Adultes: 10€ \n",
-                "Groupe de 15 à 25 personnes: 8€ \n",
-                "Groupe scolaire hors Occitanie, étudiants, demandeurs d'emploi ou bénéficiaires du RSA (sur présentation d'un justificatif) : 5 € \n",
-                "Enfants/Etudiants: Gratuit (jusqu'à 17ans)\n",
-                "Exposition temporaire seule: 6€\n",
+                "Inclus dans le City pass  |",
+                "Adultes: 10€  |\n",
+                "Groupe de 15 à 25 personnes: 8€  |\n",
+                "Groupe scolaire hors Occitanie, étudiants, demandeurs d'emploi ou bénéficiaires du RSA (sur présentation d'un justificatif) : 5 €  | \n",
+                "Enfants/Etudiants: Gratuit (jusqu'à 17ans)  |\n",
+                "Exposition temporaire seule: 6€  |\n",
                 "Audioguide: 4€\n"
             ],
             "aime": 20,
@@ -108,18 +108,18 @@
                 " Sans oublier l'espace rapaces et l'espace primates."
             ],
             "horaire": [
-                "Juillet, Aout: ouvert tous les jours de 10h à 18h",
-                "Mai,Juin,Septembre: ouvert du mardi au dimanche de 10h à 18h ",
-                "Mars, Avril, Octobre: ouvert le mercredi, le samedi, le dimanche de 10h à 12h et de 13h30 à 17h",
-                "Décembre, Février: ouvert tous les jours de 13h30 à 17h",
+                "Juillet, Aout: ouvert tous les jours de 10h à 18h  |",
+                "Mai,Juin,Septembre: ouvert du mardi au dimanche de 10h à 18h  |",
+                "Mars, Avril, Octobre: ouvert le mercredi, le samedi, le dimanche de 10h à 12h et de 13h30 à 17h  |",
+                "Décembre, Février: ouvert tous les jours de 13h30 à 17h  |",
                 "Les Vivariums sont fermés de 12h à 13h30"
             ],
             "Tarifs": [
-                "Adultes/Ados à partir de 12ans: 9€ \n",
-                "Enfants de -12ans: 6,50€ \n",
-                "Gratuit pour les -3ans: 5€ \n",
-                "Abonnement annuel Adulte: 27€\n",
-                "Abonnement annuel Enfant: 19,50€\n"
+                "Adultes/Ados à partir de 12ans: 9€ | \n",
+                "Enfants de -12ans: 6,50€  |\n",
+                "Gratuit pour les -3ans: 5€  |\n",
+                "Abonnement annuel Adulte: 27€  |\n",
+                "Abonnement annuel Enfant: 19,50€  |\n"
             ],
             "aime": 14,
             "ap": "default",
@@ -171,19 +171,19 @@
                 " Classé monument historique en 1862, il fait partie des palais épiscopaux les mieux conservés de France."
             ],
             "horaire": [
-                "Ouvert du 1er octobre au 31 mai:",
-                "du mardi au dimanche de 10h/12h30 et 14h/18h ",
-                "fermé le lundi",
-                "du 1er juin au 30 septembre:",
+                "Ouvert du 1er octobre au 31 mai: ",
+                "du mardi au dimanche de 10h/12h30 et 14h/18h, ",
+                "fermé le lundi |",
+                "du 1er juin au 30 septembre: ",
                 "tous les jour de 10h/18h"
             ],
             "Tarifs": [
-                "Inclus dans le City pass",
-                "Adultes: 10€ \n",
-                "Groupe de 15 à 25 personnes: 8€ \n",
-                "Groupe scolaire hors Occitanie, étudiants, demandeurs d'emploi ou bénéficiaires du RSA (sur présentation d'un justificatif) : 5 € \n",
-                "Enfants/Etudiants: Gratuit (jusqu'à 17ans)\n",
-                "Exposition temporaire seule: 6€\n",
+                "Inclus dans le City pass  |",
+                "Adultes: 10€  |\n",
+                "Groupe de 15 à 25 personnes: 8€   |\n",
+                "Groupe scolaire hors Occitanie, étudiants, demandeurs d'emploi ou bénéficiaires du RSA (sur présentation d'un justificatif) : 5 €  |\n",
+                "Enfants/Etudiants: Gratuit (jusqu'à 17ans)  |\n",
+                "Exposition temporaire seule: 6€  |\n",
                 "Audioguide: 4€\n"
             ],
             "aime": 16,
@@ -210,9 +210,9 @@
                 " De petits panneaux parsemés dans le parc présentent les espèces."
             ],
             "horaire": [
-                "Ouvert tous les jours",
-                "Octobre à avril: 8h/18h",
-                "Mai à septembre: 8h/20h"
+                "Ouvert tous les jours  |",
+                "Octobre à avril: 8h/18h  |",
+                "Mai à septembre: 8h/20h  |"
 
             ],
             "Tarifs": [
@@ -263,14 +263,14 @@
                 "C’est l’œuvre d’Annie Jaurès, artiste plasticienne, qui nous est donné à voir."
             ],
             "horaire": [
-                "1er avril au 30 septembre : 10h - 19h, fermé le lundi.",
-                "Le reste de l’année : 10h à 18h, fermé le lundi.",
+                "1er avril au 30 septembre : 10h - 19h, fermé le lundi.  |",
+                "Le reste de l’année : 10h à 18h, fermé le lundi.  | ",
                 "Fermeture annuelle en janvier."
 
             ],
             "Tarifs": [
-                "Entrées 5€ \n",
-                "Tarif réduit: 3.5€",
+                "Entrées 5€   |\n",
+                "Tarif réduit: 3.5€  |",
                 "Gratuit pour les -6ans"
             ],
             "aime": 13,
@@ -292,7 +292,7 @@
                 " Cap’Découverte constitue une étape touristique incontournable au cœur du Tarn et de l’Occitanie."
             ],
             "horaire": [
-                "Du lundi au vendredi du 25 au 29 avril et du 2 au 6 mai 2022: de 13h30 à 17h\n",
+                "Du lundi au vendredi du 25 au 29 avril et du 2 au 6 mai 2022: de 13h30 à 17h   |\n",
                 "du 9 juillet 2022 au 28 août 2022: tous les jours"
 
             ],
@@ -325,8 +325,8 @@
             "adresse": "4 Rue Henri de Toulouse Lautrec, 81000 Albi",
             "tel": ": 05 63 76 43 56",
             "horaire": [
-                "Ouvert lundi,jeudi,dimanche de 12h à 14h",
-                "Ouvert vendredi, samedi de 12h à 14h et de 19h30 à 22h30",
+                "Ouvert lundi,jeudi,dimanche de 12h à 14h   |",
+                "Ouvert vendredi, samedi de 12h à 14h et de 19h30 à 22h30   |",
                 "Fermé mardi et mercredi"
             ],
             "aime": 24,
@@ -351,8 +351,8 @@
             "adresse": "3 Rue de la Grand Côté, 81000 Albi",
             "tel": ":  05 63 76 83 95",
             "horaire": [
-                "Ouvert lundi,jeudi,vendredi,samedi,dimanche de 12h à 14h et de 19h à 22h",
-                "Brunch le samedi et dimanche de 9h à 11h",
+                "Ouvert lundi,jeudi,vendredi,samedi,dimanche de 12h à 14h et de 19h à 22h   |",
+                "Brunch le samedi et dimanche de 9h à 11h   |",
                 "Fermé mardi et mercredi"
             ],
             "aime": 20,
@@ -376,7 +376,7 @@
             "adresse": "21 Rue Saint-Julien, 81000 Albi",
             "tel": ":  05 63 76 38 99",
             "horaire": [
-                "Ouvert du lundi au dimanche de 7h 30 à 18h ",
+                "Ouvert du lundi au dimanche de 7h 30 à 18h   |",
                 "Fermé mercredi"
             ],
             "aime": 19,
@@ -399,7 +399,7 @@
             "adresse": "12 Av. Maréchal de Lattre de Tassigny, 81000 Albi",
             "tel": ":   09 81 63 21 76",
             "horaire": [
-                "Ouvert du lundi au vendredi 24h/24 ",
+                "Ouvert du lundi au vendredi 24h/24   |",
                 "Fermé samedi et dimanche"
             ],
             "aime": 15,
@@ -423,7 +423,7 @@
             "adresse": "2 Rue François Arago, 81000 Albi",
             "tel": ":   05 63 80 71 06",
             "horaire": [
-                "Ouvert du mardi au samedi de  12h à 13h45 et de 19h à 21h30 ",
+                "Ouvert du mardi au samedi de  12h à 13h45 et de 19h à 21h30   |",
                 "Fermé lundi et samedi "
             ],
             "aime": 23,
@@ -444,7 +444,7 @@
             "adresse": "7 Pl. de l'Archevêché, 81000 Albi",
             "tel": ":    05 63 54 05 23",
             "horaire": [
-                "Ouvert du lundi au dimanche de  12h à 13h30 et de 19h à 22h ",
+                "Ouvert du lundi au dimanche de  12h à 13h30 et de 19h à 22h   |",
                 "Fermé mercredi et jeudi "
             ],
             "aime": 22,
@@ -467,7 +467,7 @@
             "adresse": " 29 Rue Saint-Julien, 81000 Albi",
             "tel": ": 05 63 54 03 52",
             "horaire": [
-                "Ouvert du mardi au samedi de  9h à minuit ",
+                "Ouvert du mardi au samedi de  9h à minuit   |",
                 "Fermé dimanche et lundi "
             ],
             "aime": 21,
@@ -488,7 +488,7 @@
             "adresse": "  42 Pl. Jean Jaurès, 81000 Albi",
             "tel": ": 05 63 53 10 70",
             "horaire": [
-                "Ouvert du mardi au samedi de 12h à 14h et de 19h30 à 22h ",
+                "Ouvert du mardi au samedi de 12h à 14h et de 19h30 à 22h   |",
                 "Fermé dimanche et lundi "
             ],
             "aime": 17,
@@ -534,9 +534,9 @@
             "adresse": " 100 Rue Porta, 81000 Albi",
             "tel": ": 05 63 77 63 04",
             "horaire": [
-                "Ouvert du lundi,jeudi,vendredi de 19h30 à 22h30",
-                "Ouvert samedi de 10h à 14h et de 19h30 à 22h30",
-                "Ouvert dimanche de 11h30 à 14h et de 19h30 à 22h30",
+                "Ouvert du lundi,jeudi,vendredi de 19h30 à 22h30   |",
+                "Ouvert samedi de 10h à 14h et de 19h30 à 22h30   |",
+                "Ouvert dimanche de 11h30 à 14h et de 19h30 à 22h30   |",
                 "Fermé mardi et mercredi "
             ],
             "aime": 23,
@@ -556,16 +556,16 @@
             "description": ["A proximité du centre historique de la ville, notre hôtel de charme vous accueille dans un cadre raffiné et chaleureux.",
                 " L'hôtel les Pasteliers est climatisé et met à votre disposition des chambres à thème, à la décoration soignée disposent d'un accès Wi-Fi gratuit."
             ],
-            "information": ["Wi-Fi gratuit ",
-                "Petit déjeuner payant ",
-                "Climatisation ",
-                "Adapté aux enfants ",
+            "information": ["Wi-Fi gratuit   |",
+                "Petit déjeuner payant   |",
+                "Climatisation   |",
+                "Adapté aux enfants   |",
                 "Piscine "
             ],
             "adresse": "3 Rue Honore de Balzac, 81000 Albi",
             "tel": ":05 63 54 26 51",
             "horaire": [
-                "Ouvert du lundi au vendredi de 7h à 12h et de 15h à 21h",
+                "Ouvert du lundi au vendredi de 7h à 12h et de 15h à 21h   |",
                 "Ouvert samedi,dimanche de 8h à 12h et de 15h à 21h"
             ],
             "tarif": "60€",
@@ -585,11 +585,11 @@
             "description": ["Situé sur une place bordée d'arbres du centre-ville d'Albi, cet hôtel de style décontracté se trouve à 6 minutes à pied de la cathédrale Sainte-Cécile, et à 1,4 kmn de la gare.",
                 "Les chambres sobres et colorées disposent d'un accès Wi-Fi gratuit et d'une télévision à écran plat avec les chaînes du câble."
             ],
-            "information": ["Wi-Fi gratuit ",
-                "Petit déjeuner payant ",
-                "Climatisation ",
-                "Parking payant ",
-                "Accès handicapés ",
+            "information": ["Wi-Fi gratuit   |",
+                "Petit déjeuner payant   |",
+                "Climatisation    |",
+                "Parking payant   |",
+                "Accès handicapés   |",
                 "Restaurant "
             ],
             "adresse": "16 place du Vigan,  81000 Albi",
@@ -615,11 +615,11 @@
             "description": ["Cet hôtel de famille convivial se trouve à 2 minutes à pied de la scène nationale d'Albi, un centre culturel, ainsi qu'à 7 minutes du musée Toulouse-Lautrec.",
                 "Décorées dans des styles différents, les chambres à l'atmosphère décontractée disposent d'un accès Wi-Fi gratuit et d'une salle de bain attenante."
             ],
-            "information": ["Wi-Fi gratuit",
-                "Petit déjeuner payant",
-                "Climatisation",
-                "Parking payant",
-                "Accès handicapés",
+            "information": ["Wi-Fi gratuit   |",
+                "Petit déjeuner payant   |",
+                "Climatisation   |",
+                "Parking payant   |",
+                "Accès handicapés   |",
                 "Piscine extérieure"
             ],
             "adresse": "19-21 place Lapérouse,  81000 Albi",
@@ -645,10 +645,10 @@
             "description": ["Situé à 2 minutes de marche du parc Rochegude, cet hôtel chic se trouve à 9 minutes de la cathédrale d'Albi et du musée Toulouse-Lautrec.",
                 "Présentant une décoration élégante et contemporaine, les chambres chaleureuses aux touches colorées disposent d'une connexion Wi-Fi gratuite"
             ],
-            "information": ["Wi-Fi gratuit ",
-                "Petit déjeuner payant ",
-                "Adapté aux enfants ",
-                "Restaurant ",
+            "information": ["Wi-Fi gratuit   |",
+                "Petit déjeuner payant   |",
+                "Adapté aux enfants   |",
+                "Restaurant   |",
                 "Bar "
             ],
             "adresse": "3 Av. du Parc,  81000 Albi",
@@ -673,10 +673,10 @@
             "description": ["Cet hôtel de famille pittoresque a été construit en 1734 est situé à 10 minutes de marche de la cathédrale Sainte-Cécile d'Albi.",
                 "Décorées dans des styles différents, les chambres et suites claires disposent d'un accès Wi-Fi gratuit, d'une télévision à écran plat et d'un minibar. "
             ],
-            "information": ["Wi-Fi gratuit",
-                "Petit déjeuner payant",
-                "Climatisation",
-                "Parking payant",
+            "information": ["Wi-Fi gratuit   |",
+                "Petit déjeuner payant   |",
+                "Climatisation   |",
+                "Parking payant   |",
                 "Accès handicapés"
             ],
             "adresse": " 17 Rue Saint-Antoine,  81000 Albi",
@@ -702,16 +702,16 @@
             "description": ["Situé dans le centre-ville, cet hôtel à l'atmosphère décontractée se trouve à 1 km de la gare d'Albi-Ville et à 5 minutes à pied du parc Rochegude.",
                 "Les chambres standards au mobilier simple sont équipées d'une télévision à écran plat, d'une connexion Wi-Fi gratuite ainsi que d'un nécessaire à thé et café. "
             ],
-            "information": ["Wi-Fi gratuit ",
-                "Petit déjeuner payant ",
-                "Climatisation ",
-                "Accepte les animaux ",
+            "information": ["Wi-Fi gratuit   |",
+                "Petit déjeuner payant   |",
+                "Climatisation   |",
+                "Accepte les animaux   |",
                 "Adapté aux enfants "
             ],
             "adresse": " 41 Av. Maréchal Foch,  81000 Albi",
             "tel": ":05 63 47 64 00",
             "horaire": [
-                "Ouvert du lundi au vendredi de 7h30 à 12h et de 16h à 19h",
+                "Ouvert du lundi au vendredi de 7h30 à 12h et de 16h à 19h    |",
                 "Ouvert samedi,dimanche de 8h30 à 10h30 et de 16h à 19h"
             ],
             "tarif": "53€",
@@ -731,16 +731,16 @@
             "description": ["Situé à 5 minutes à pied du musée Toulouse-Lautrec, cet hôtel chic se trouve dans le centre historique, à 4 minutes à pied de la cathédrale Sainte-Cécile, et à 12 minutes de la gare d'Albi-Ville.",
                 "Les chambres haut de gamme avec balcon à la française disposent du Wi-Fi gratuit, d'un minibar, d'une télévision à écran plat, d'une cafetière et d'un coffre-fort."
             ],
-            "information": ["Wi-Fi gratuit ",
-                "Restaurant ",
-                "Bar ",
-                "Accepte les animaux ",
+            "information": ["Wi-Fi gratuit   |",
+                "Restaurant   |",
+                "Bar   |",
+                "Accepte les animaux   |",
                 "Adapté aux enfants "
             ],
             "adresse": " 12 Pl. du Palais,  81000 Albi",
             "tel": ": 05 63 76 18 18",
             "horaire": [
-                "Ouvert du lundi au jeudi et dimanche de 12h à 14h et de 19h à 21h",
+                "Ouvert du lundi au jeudi et dimanche de 12h à 14h et de 19h à 21h   |",
                 "Ouvert vendredi,samedi de 12h à 14h et de 19h à 23h"
             ],
             "tarif": "230€",
