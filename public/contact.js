@@ -16,6 +16,9 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 import CancelScheduleSendIcon from "@mui/icons-material/CancelScheduleSend";
 import SendIcon from "@mui/icons-material/Send";
+import emailjs from '@emailjs/browser'
+import { useRef } from 'react';
+import Button from '@mui/material/Button';
 
 export function ImageFond2(){
   return (
@@ -54,11 +57,24 @@ export function ImageFond2(){
 }
 
 export function Formulaire() {
+  const form = useRef();
+  var a = true;
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_kwb9sn7','template_o13i2e7', form.current,'yAV214GEzT_CoRl69').
+    then((resultat) => {
+      console.log(resultat.text);
+    }, (error) => {
+      console.log(error.text);
+    });
+  };
+
   const handleChange = (event) => {
-    document.getElementById("jesouhaite").style.visibility = "visible";
+    setOpen2(true)
   };
   const handleChange2 = (event) => {
-    document.getElementById("message").style.visibility = "visible";
+    setOpen3(true);
   };
   const handleChange3 = (event) => {
     if (event.target.value === 100) {
@@ -68,20 +84,31 @@ export function Formulaire() {
         document.getElementById("datedenaissance").value != "" &&
         document.getElementById("adresse").value != "" &&
         document.getElementById("telephone").value != "" &&
-        document.getElementById("codepostal").value != "" &&
+        document.getElementById("ville").value != "" &&
         document.getElementById("email").value != "" &&
         document.getElementById("textmessage").value != ""
       ) {
-        setOpen(true);
+        if (a==true){
+          document.getElementById("boutonenvoyer").click();
+          setOpen(true);
+          a=false;
+        }
+        
+        
       } else {
         alert("Veuillez compléter les cases vides !");
+        document.getElementById("slideenvoyer").setAttribute("defaultValue", 0);
       }
     }
   };
   const handleChange4 = (event) => {
-    document.getElementById("coordonnee").style.visibility = "visible";
+    setOpen4(true);
   };
   const [open, setOpen] = React.useState(false);
+  const [open2, setOpen2] = React.useState(false);
+  const [open3, setOpen3] = React.useState(false);
+  const [open4, setOpen4] = React.useState(false);
+
   const [slidevalue, setSlidevalue] = React.useState(0);
   const [checked, setChecked] = React.useState(false);
 
@@ -113,7 +140,7 @@ export function Formulaire() {
     }
   });
   return (
-    <>
+    <form ref={form} onSubmit={sendEmail}>
       <br/>
       <div style={{ textAlign: "center" }}>
         <FormControl id="jesuis" sx={{ m: 1, width: 600 }}>
@@ -135,10 +162,10 @@ export function Formulaire() {
         </FormControl>
       </div>
       <div style={{ textAlign: "center" }}>
+      <Collapse in={open2}>
         <FormControl
           id="jesouhaite"
           sx={{ m: 1, width: 600 }}
-          style={{ visibility: "hidden" }}
         >
           <InputLabel id="demo-simple-select-autowidth-label">
             Je souhaite*
@@ -163,11 +190,13 @@ export function Formulaire() {
             <MenuItem value="aide3">Autre demande</MenuItem>
           </Select>
         </FormControl>
+      </Collapse>
       </div>
 
       <br />
 
-      <div id="message" style={{ textAlign: "center", visibility: "hidden" }}>
+      <div id="message" style={{ textAlign: "center"}}>
+      <Collapse in={open3}>
         <FormControl id="civilité" sx={{ m: 1, width: 600 }}>
           <InputLabel id="civilité2">Civilité*</InputLabel>
           <Select
@@ -180,21 +209,23 @@ export function Formulaire() {
             <MenuItem value="Monsieur">Monsieur</MenuItem>
           </Select>
         </FormControl>
+      </Collapse>
       </div>
       <br />
       <div
         id="coordonnee"
-        style={{ textAlign: "center", visibility: "hidden" }}
+        style={{ textAlign: "center"}}
       >
+        <Collapse in={open4}>
         <FormControl id="civilité" sx={{ m: 1, width: 600 }}/>
 
           <br/>
 
-          <TextField id="nom" label="Nom*" sx={{ m: 1, width: 600 }}/>
+          <TextField id="nom" name="nom" label="Nom*" sx={{ m: 1, width: 600 }}/>
 
           <br />
 
-          <TextField id="prenom" label="Prénom*" sx={{ m: 1, width: 600 }}/>
+          <TextField id="prenom" name="prenom" label="Prénom*" sx={{ m: 1, width: 600 }}/>
 
           <br />
 
@@ -203,24 +234,25 @@ export function Formulaire() {
             label="Date de naisssance"
             InputLabelProps={{ shrink: true, required: true }}
             type="date"
+            name="datedenaissance"
             sx={{ m: 1, width: 600 }}
           />
 
           <br />
 
-          <TextField id="adresse" label="Adresse*" sx={{ m: 1, width: 600 }} />
+          <TextField id="adresse" name="adresse" label="Adresse*" sx={{ m: 1, width: 600 }} />
 
           <br />
 
-          <TextField id="codepostal" label="Code postal*" sx={{ m: 1, width: 600 }}/>
+          <TextField id="ville" name="ville" label="Ville*" sx={{ m: 1, width: 600 }}/>
 
           <br />
 
-          <TextField id="telephone" label="Téléphone*" sx={{ m: 1, width: 600 }}/>
+          <TextField id="telephone" name="telephone" label="Téléphone*" sx={{ m: 1, width: 600 }}/>
 
           <br />
 
-          <TextField id="email" label="E-mail*" sx={{ m: 1, width: 600 }}/>
+          <TextField id="email" name="email" label="E-mail*" sx={{ m: 1, width: 600 }}/>
 
           <br />
         
@@ -231,6 +263,7 @@ export function Formulaire() {
             <TextareaAutosize
               id="textmessage"
               placeholder="Votre message"
+              name="message"
               style={{ resize: "none", width: 600 }}
               minRows={15}
             ></TextareaAutosize>
@@ -260,9 +293,9 @@ export function Formulaire() {
             </ThemeProvider>
           </Grid>
         </Grid>
-
+        </Collapse>
         <br />
-
+        <Button type="submit" id="boutonenvoyer" style={{visibility: "hidden"}}>Envoyer</Button>
         <div id="messageenvoye" style={{ width: "100%" }}>
           <Collapse in={open}>
             <Alert
@@ -273,7 +306,7 @@ export function Formulaire() {
                   size="small"
                   onClick={() => {
                     setOpen(false);
-                    window.location.reload();
+                    
                   }}
                 >
                   <CloseIcon fontSize="inherit" />
@@ -281,11 +314,22 @@ export function Formulaire() {
               }
               sx={{ mb: 2 }}
             >
-              Message envoyé!
+              Votre message a bien été envoyé!
             </Alert>
           </Collapse>
         </div>
+        
+        <Collapse in={open}>
+          <Button 
+            style={{textAlign: "center"}}
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.reload();
+            }}>
+            Raffraichir la page
+          </Button>
+        </Collapse>
       </div>
-    </>
+    </form>
   );
 }
