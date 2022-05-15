@@ -235,22 +235,23 @@ export  function Sejour(){
               
                 <CardActions disableSpacing>
                 <Badge color="secondary" badgeContent={ Data.lieux[l._id].aime }>
-                  <IconButton aria-label="add to favorites" color={state}  onClick={() => {
-                          if  (Data.lieux[l._id].ap==false){
+                  <IconButton aria-label="add to favorites" color={ Data.lieux[l._id].ap}  onClick={() => {
+                          if  (Data.lieux[l._id].ap=="default"){
                             
                             Data.lieux[l._id].aime=Data.lieux[l._id].aime+1
                             setCount(Data.lieux[l._id].aime)
-                            Data.lieux[l._id].ap=true
+                            Data.lieux[l._id].ap="primary"
                             
-                            handleChangeState();
-                           /// setState(0);
+                            ///handleChangeState();
+                            setState( Data.lieux[l._id].ap);
                           }
                           else{
                             Data.lieux[l._id].aime=Data.lieux[l._id].aime-1
-                            Data.lieux[l._id].ap=false
+                            Data.lieux[l._id].ap="default"
                             setCount(Data.lieux[l._id].aime)
 
-                            handleChangeState();
+                           /// handleChangeState();
+                            setState( Data.lieux[l._id].ap);
                            /// setState(1);
                           }
                           
@@ -331,19 +332,24 @@ export  function Sejour(){
               
                 <CardActions disableSpacing>
                 <Badge color="secondary" badgeContent={Data.Resto[l._id].aime}>
-                  <IconButton aria-label="add to favorites" color={state10 === 0 ? "primary" : "default" }  onClick={() => {
-                          if (Data.Resto[l._id].ap==false){
+                  <IconButton aria-label="add to favorites" color={ Data.Resto[l._id].ap}    onClick={() => {
+                          if (Data.Resto[l._id].ap=="default"){
                             Data.Resto[l._id].aime=Data.Resto[l._id].aime+1
                             setCount10(Data.Resto[l._id].aime)
-                            Data.Resto[l._id].ap=true
-                            setState10(0);
+                            Data.Resto[l._id].ap="primary"
+                            
+                            ///handleChangeState();
+                            setState( Data.Resto[l._id].ap);
                             
                           }
                           else{
                             Data.Resto[l._id].aime=Data.Resto[l._id].aime-1
-                            Data.Resto[l._id].ap=false
+                            
                             setCount10(Data.Resto[l._id].aime)
-                            setState10(1);
+                            Data.Resto[l._id].ap="default"
+                            
+                            ///handleChangeState();
+                            setState( Data.Resto[l._id].ap);
                           }
                           
                           }}>
@@ -426,19 +432,24 @@ export  function Sejour(){
               
                 <CardActions disableSpacing>
                 <Badge color="secondary" badgeContent={Data.Hotel[l._id].aime}>
-                  <IconButton aria-label="add to favorites" color={state20 === 0 ? "primary" : "default" }  onClick={() => {
-                          if (Data.Hotel[l._id].ap==false){
+                  <IconButton aria-label="add to favorites" color={ Data.Hotel[l._id].ap}  onClick={() => {
+                          if (Data.Hotel[l._id].ap=="default"){
                             Data.Hotel[l._id].aime=Data.Hotel[l._id].aime+1
                             setCount20(Data.Hotel[l._id].aime)
-                            Data.Hotel[l._id].ap=true
-                            setState20(0);
+                            Data.Hotel[l._id].ap="primary"
+                            
+                            ///handleChangeState();
+                            setState( Data.Hotel[l._id].ap);
                             
                           }
                           else{
                             Data.Hotel[l._id].aime=Data.Hotel[l._id].aime-1
-                            Data.Hotel[l._id].ap=false
+                            
                             setCount20(Data.Hotel[l._id].aime)
-                            setState20(1);
+                            Data.Hotel[l._id].ap="default"
+                            
+                            ///handleChangeState();
+                            setState( Data.Hotel[l._id].ap);
                           }
                           
                           }}>
