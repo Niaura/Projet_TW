@@ -5,6 +5,19 @@ import ReactDOM from 'react-dom';
 import Data from "./Bdd/data.json";
 import { Itineraire } from './itineraire.js';
 import { Formulaire } from './contact.js';
+import { Index } from './index.js';
+
+//pour le bouton iti
+import Container from '@mui/material/Container';
+import Toolbar from '@mui/material/Toolbar';
+import Button from '@mui/material/Button';
+import HomeIcon from '@mui/icons-material/Home';
+import SearchIcon from '@mui/icons-material/Search';
+import InputBase from '@mui/material/InputBase';
+import LocationCityIcon from '@mui/icons-material/LocationCity';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 
 
@@ -45,7 +58,7 @@ import { Fragment } from "react";
 
 import SwipeableViews from 'react-swipeable-views';
 import { useTheme } from '@mui/material/styles';
-import { styled } from '@mui/material/styles';
+import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 
 
@@ -56,6 +69,9 @@ import PropTypes from 'prop-types';
 import Link from '@mui/material/Link';
 
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { ResetTvRounded } from '@mui/icons-material';
+
+
 
 
 function TabPanel(props) {
@@ -98,6 +114,196 @@ function constructor(props) {
 
 function onButtonClicked (id) {
   setState({ currentButton: state.currentButton === id ? null : id });
+};
+
+
+const Search = styled('div')(({ theme }) => ({
+  position: 'relative',
+  borderRadius: theme.shape.borderRadius,
+  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  '&:hover': {
+    backgroundColor: alpha(theme.palette.common.white, 0.25),
+  },
+  marginLeft: 0,
+  width: '100%',
+  [theme.breakpoints.up('sm')]: {
+    marginLeft: theme.spacing(1),
+    width: 'auto',
+  },
+}));
+
+const SearchIconWrapper = styled('div')(({ theme }) => ({
+  padding: theme.spacing(0, 2),
+  height: '100%',
+  position: 'absolute',
+  pointerEvents: 'none',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+}));
+
+const StyledInputBase = styled(InputBase)(({ theme }) => ({
+  color: 'inherit',
+  '& .MuiInputBase-input': {
+    padding: theme.spacing(1, 1, 1, 0),
+    // vertical padding + font size from searchIcon
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    transition: theme.transitions.create('width'),
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      width: '12ch',
+      '&:focus': {
+        width: '20ch',
+      },
+    },
+  },
+}));
+
+
+
+//----------------------------BARRE TOP------------------------------
+const ResponsiveAppBar = ({ onClick }) => {
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
+
+
+  return (
+    <AppBar position="sticky" style={{ background: 'linear-gradient(to right, blue, purple)' }}>
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <Typography>
+            <Button
+              variant="outlined"
+              onClick={() => onClick('accueil')}
+            >
+              <HomeIcon style={{ color: "white" }}/>
+            </Button>
+          </Typography>
+
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            <Button
+              variant="outlined"
+              sx={{ my: 2, color: 'white', display: 'block' }}
+              onClick={() => onClick('itineraire')}
+            >
+              Destinations
+            </Button>
+            <Button
+              variant="outlined"
+              sx={{ my: 2, color: 'white', display: 'block' }}
+              onClick={() => onClick('sejour')}
+            >
+              Séjours
+            </Button>
+            <Button
+              variant="outlined"
+              sx={{ my: 2, color: 'white', display: 'block' }}
+              onClick={() => onClick('formulaire')}
+            >
+              Contacts
+            </Button>
+          </Box>
+          <Search>
+            <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase
+              placeholder="Search…"
+              inputProps={{ 'aria-label': 'search' }}
+            />
+          </Search>
+        </Toolbar>
+      </Container>
+    </AppBar>
+  );
+};
+
+
+//----------------------------BARRE BOTTOM------------------------------
+const ResponsiveAppBarFoot = ({ onClick }) => {
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
+
+
+  return (
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" style={{ background: '#34383e' }}>
+        <Toolbar>
+          <Grid container spacing={3}>
+            <Grid item xs={5}>
+              <Typography component="div">
+                <LocationCityIcon /><strong>Albi Tourisme</strong> <br /><br /> Albi Tourisme est un site indépendant<br /> et nouvelle génération qui vous permet<br /> de trouver toutes les informations pour<br /> organiser vos voyages.
+              </Typography>
+            </Grid>
+            <Grid item xs={5} >
+              <Typography>
+                <strong>À propos</strong> <br /><br /> <a>Qui sommes-nous ?</a> <br /> <a>L'équipe</a> <br /> <a>Conditions générales</a> <br /> <a>Confidentialité</a>
+              </Typography>
+            </Grid>
+            <Grid item xs>
+              <Typography>
+                <Button
+                  onClick={() => onClick('formulaire')}
+                >Nous contacter</Button> <br />
+                <Button
+                  type="button"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href='https://fr-fr.facebook.com/officedetourismealbi/';
+                  }}
+                ><FacebookIcon /></Button>
+
+                <Button
+                  type="button"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href='https://www.instagram.com/albitourisme/?hl=fr';
+                  }}
+                ><InstagramIcon /></Button>
+                <Button
+                  type="button"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href='https://twitter.com/tourisme_albi';
+                  }}
+                ><TwitterIcon /></Button>
+              </Typography>
+            </Grid>
+          </Grid>
+        </Toolbar>
+      </AppBar>
+    </Box>
+  );
 };
 
 
@@ -183,6 +389,42 @@ export  function Sejour(){
     setExpandedId(expandedId === i ? -1 : i);
   }
 
+  //changement page
+  let [etat, setEtat] = React.useState("notsejour");
+  function render() {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+      })
+      switch (etat) {
+        case "sejour":
+          return <Sejour />;
+        case "itineraire":
+          return <Itineraire />;
+        case "accueil":
+          return (
+            <>
+            <ImageFond />
+            <Suggestion3 onClick={setEtat}/>
+            <Suggestion2 onClick={setEtat}/> 
+            <br/>
+            <Suggestion4/>
+            <Graphique/>
+            </>
+          );
+        case "formulaire":
+          return (
+            <>
+            <ImageFond2 />
+            <Formulaire />
+            </>
+          );
+        default:
+          return <></>
+    }
+  }
+
   
   return (
     
@@ -262,7 +504,15 @@ export  function Sejour(){
                 
                 <IconButton aria-label="open map" color="default" >
                     
-                    <LocationOnIcon/>
+                    <LocationOnIcon onClick={() => {
+                      setEtat("itineraire");
+                      
+                      { render()};
+                      ReactDOM.render(<> <ResponsiveAppBar/> <br />
+                        <Itineraire /> <br /> <ResponsiveAppBarFoot/>
+                      </>, document.querySelector('#root'));
+                      console.log("test");
+                    }}/>
                 </IconButton>
               
                 <IconButton
@@ -512,4 +762,8 @@ export  function Sejour(){
     </Box>
   );
     }
+
+    
+
+    
   
