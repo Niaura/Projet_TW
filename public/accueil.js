@@ -317,7 +317,7 @@ export  function Groupes() {
     
     <div>
       <Typography style={{fontFamily: "Comic Sans MS", textAlign: "center", fontSize: "30px"}}>
-        PARTICIPER A DES EXCURSION EN GROUPE! 
+        PARTICIPER À DES EXCURSIONS EN GROUPE!
       </Typography>
       <hr style={{
         margin: "10px auto",
@@ -328,7 +328,7 @@ export  function Groupes() {
       }}/>
       <p style={{textAlign: "center", fontSize: "19px"}}>
         <strong>Toute les excursions en groupe à Albi.</strong><br />
-        Consultez l'ensemble des articles en choisissant le sujet qui vous plaît ! Retrouvez les excursion groupé à Albi pour rencontrer de nouvelles personnes !
+        Consultez l'ensemble des articles en choisissant le sujet qui vous plaît ! Retrouvez les excursions en groupe à Albi pour rencontrer de nouvelles personnes !
       </p>
     </div>
     <br />
