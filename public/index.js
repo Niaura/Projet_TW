@@ -393,6 +393,7 @@ const Suggestion3 = ({ onClick }) => {
         <strong>Albi est une ville du Sud-Ouest de la France caractérisée par la présence de son patrimoine exceptionnel classé à l'Unesco.</strong><br />
         La richesse de sa vie culturelle, la vitalité de son tissu associatif et sportif comme la qualité de son environnement inscrivent résolument le patrimoine vivant dans la vie de chacun.
       </p>
+      
         <Button
           onClick={() => onClick('itineraire')}
           style={{
@@ -409,7 +410,13 @@ const Suggestion3 = ({ onClick }) => {
         </Button>
         <br />
         <br />
-        <br />
+        <Grid container spacing={1}>
+          <Grid item xs={4}/>
+          <Grid item xs={4}>
+            <Suggestion/>
+          </Grid>
+          <Grid item xs={4}/>
+        </Grid>
 
         <div>
           <Typography style={{ fontFamily: "Comic Sans MS", textAlign: "center", fontSize: "30px" }}>
@@ -430,7 +437,8 @@ const Suggestion3 = ({ onClick }) => {
         </div>
         <br />
         <br />
-      </div></>
+      </div>
+    </>
   );
 }
 
