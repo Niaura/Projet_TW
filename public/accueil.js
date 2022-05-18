@@ -497,7 +497,7 @@ export  function Inscri() {
             <MenuItem value="Le centre historique">Le centre historique</MenuItem>
             <MenuItem value="Les aventuriers de la ville rouge">Les aventuriers de la ville rouge</MenuItem>
             <MenuItem value="Chasse au trésor">Chasse au trésor</MenuItem>
-            <MenuItem value="Crimes et faits divers à ALbi">Crimes et faits divers à ALbi</MenuItem>
+            <MenuItem value="Crimes et faits divers à ALbi">Crimes et faits divers à Albi</MenuItem>
             <MenuItem value="Promenade avec madame Lapérouse">Promenade avec madame Lapérouse</MenuItem>
             <MenuItem value="Les monstrueuses nocturnes d'Albi">Les monstrueuses nocturnes d'Albi</MenuItem>
           </Select>
