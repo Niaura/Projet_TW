@@ -290,6 +290,80 @@ export  function Groupe() {
 
   const Nbgroup = [{ _id: "0" },{ _id: "1" }, { _id: "2" }, { _id: "3" },{ _id: "4" }, { _id: "5" }, { _id: "6" }];
   
+  
+
+  return (
+    <>
+    
+    <div>
+      <Typography style={{fontFamily: "Comic Sans MS", textAlign: "center", fontSize: "30px"}}>
+        PARTICIPER A DES EXCURSION EN GROUPE! 
+      </Typography>
+      <hr style={{
+        margin: "10px auto",
+        width: "50%",
+        height: "2px",
+        backgroundColor: "#f90",
+        border: "none"
+      }}/>
+      <p style={{textAlign: "center", fontSize: "19px"}}>
+        <strong>Toute les excursions en groupe à Albi.</strong><br />
+        Consultez l'ensemble des articles en choisissant le sujet qui vous plaît ! Retrouvez les excursion groupé à Albi pour rencontrer de nouvelles personnes !
+      </p>
+    </div>
+    <br />
+    <div className={classes.root}>
+      <AppBar position="static" color="default">
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          indicatorColor="primary"
+          textColor="primary"
+          variant="scrollable"
+          scrollButtons="auto"
+          aria-label="scrollable auto tabs example"
+        >
+        {Nbgroup.map((l, i) => (
+        <Tab label={Data.Groupe[l._id].nom} {...a11yProps(l._id)} />
+        ))}
+        </Tabs>
+      </AppBar>
+      {Nbgroup.map((l, i) => (
+        <TabPanel value={value} index={i}>
+          
+          <Grid container spacing={1}>
+            <Grid item xs={2}>
+              <img
+                  src={Data.Groupe[i].image}
+                  alt={Data.Groupe[i].id}
+                  width="100%"
+              />
+            </Grid>
+            <Grid item xs={10}>
+              <p><strong> {Data.Groupe[i].date} - {Data.Groupe[i].adresse}</strong> <br /> <br/>{Data.Groupe[i].decription}<br/>{Data.Groupe[i].description2}</p>
+            </Grid>
+            </Grid>
+
+            </TabPanel>
+             ))}
+             </div>
+
+    </>
+  );
+}
+
+
+//----------------------------FONCTION EXCURSION INSCRIPTION------------------------------
+export  function Inscri() {
+  const classes = useStyles();
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  const Nbgroup = [{ _id: "0" },{ _id: "1" }, { _id: "2" }, { _id: "3" },{ _id: "4" }, { _id: "5" }, { _id: "6" }];
+  
   //---email
   const form = useRef();
   var a = true;
@@ -313,8 +387,10 @@ export  function Groupe() {
   const handleChange3 = (event) => {
     if (event.target.value === 100) {
       if (
+        document.getElementById("jesouhaite").value != "" &&
         document.getElementById("nom").value != "" &&
         document.getElementById("prenom").value != "" &&
+        document.getElementById("datedenaissance").value != "" &&
         document.getElementById("email").value != "" 
       ) {
         if (a==true){
@@ -372,65 +448,40 @@ export  function Groupe() {
   return (
     <>
     <form ref={form} onSubmit={sendEmail}>
-    <div>
-      <Typography style={{fontFamily: "Comic Sans MS", textAlign: "center", fontSize: "30px"}}>
-        PARTICIPER A DES EXCURSION EN GROUPE! 
-      </Typography>
-      <hr style={{
-        margin: "10px auto",
-        width: "50%",
-        height: "2px",
-        backgroundColor: "#f90",
-        border: "none"
-      }}/>
-      <p style={{textAlign: "center", fontSize: "19px"}}>
-        <strong>Toute les excursions en groupe à Albi.</strong><br />
-        Consultez l'ensemble des articles en choisissant le sujet qui vous plaît ! Retrouvez les excursion groupé à Albi pour rencontrer de nouvelles personnes !
-      </p>
-    </div>
-    <br />
-    <div className={classes.root}>
-      <AppBar position="static" color="default">
-        <Tabs
-          value={value}
-          onChange={handleChange6}
-          indicatorColor="primary"
-          textColor="primary"
-          variant="scrollable"
-          scrollButtons="auto"
-          aria-label="scrollable auto tabs example"
-        >
-        {Nbgroup.map((l, i) => (
-        <Tab label={Data.Groupe[l._id].nom} {...a11yProps(l._id)} />
-        ))}
-        </Tabs>
-      </AppBar>
-      {Nbgroup.map((l, i) => (
-        <TabPanel value={value} index={i}>
-          
-          <Grid container spacing={1}>
-            <Grid item xs={2}>
-              <img
-                  src={Data.Groupe[i].image}
-                  alt={Data.Groupe[i].id}
-                  width="100%"
-              />
-            </Grid>
-            <Grid item xs={10}>
-              <p><strong> {Data.Groupe[i].date} - {Data.Groupe[i].adresse}</strong> <br /> <br/>{Data.Groupe[i].decription}<br/>{Data.Groupe[i].description2}</p>
-            </Grid>
-
-            <Grid container spacing={1}>
-            <p style={{textAlign: "center", fontSize: "19px"}}>
+    
+        <p style={{textAlign: "center", fontSize: "19px"}}>
         <strong>Remplissez le formulaire pour vous inscrire!</strong><br />
       </p>
             
       <br/>
+      <div style={{ textAlign: "center" }}>
+        <FormControl id="jesouhaite" sx={{ m: 1, width: 600 }}>
+          <InputLabel id="demo-simple-select-autowidth-label">
+            Je souhaite m'inscrire pour*
+          </InputLabel>
+          <Select
+            labelId="demo-simple-select-autowidth-label"
+            id="select1"
+            onChange={handleChange4}
+            autoWidth
+            label="Je souhaite m'inscrire pour*"
+          >
+            <MenuItem value="cite">La cité épiscopale d'Albi</MenuItem>
+            <MenuItem value="centre">Le centre historique</MenuItem>
+            <MenuItem value="aventuriers">Les aventuriers de la ville rouge</MenuItem>
+            <MenuItem value="chasse">Chasse au trésor</MenuItem>
+            <MenuItem value="crimes">Crimes et faits divers à ALbi</MenuItem>
+            <MenuItem value="promenade">Promenade avec madame Lapérouse</MenuItem>
+            <MenuItem value="monstrueuse">Les monstrueuses nocturnes d'Albi</MenuItem>
+          </Select>
+        </FormControl>
+      </div>
       
       <div
         id="coordonnee"
         style={{ textAlign: "center"}}
       >
+        <Collapse in={open4}>
         
         <FormControl id="civilité" sx={{ m: 1, width: 600 }}/>
 
@@ -441,6 +492,17 @@ export  function Groupe() {
           <br />
 
           <TextField id="prenom" name="prenom" label="Prénom*" sx={{ m: 1, width: 600 }}/>
+
+          <br />
+
+          <TextField
+            id="datedenaissance"
+            label="Date de naisssance"
+            InputLabelProps={{ shrink: true, required: true }}
+            type="date"
+            name="datedenaissance"
+            sx={{ m: 1, width: 600 }}
+          />
 
           <br />
 
@@ -477,6 +539,7 @@ export  function Groupe() {
             </ThemeProvider>
           </Grid>
         </Grid>
+        </Collapse>
         <br />
         <Button type="submit" id="boutonenvoyer" style={{visibility: "hidden"}}>Envoyer</Button>
         <div id="messageenvoye" style={{ width: "100%" }}>
@@ -513,12 +576,7 @@ export  function Groupe() {
           </Button>
         </Collapse>
       </div>
-    
-            </Grid>
-          </Grid>
-        </TabPanel>
-      ))}
-    </div>
+       
     </form>
     </>
   );
