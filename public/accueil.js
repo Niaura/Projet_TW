@@ -279,6 +279,73 @@ export  function Suggestion4() {
   );
 }
 
+//----------------------------FONCTION EXCURSION GROUPE------------------------------
+export  function Groupe() {
+  const classes = useStyles();
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  const Nbgroup = [{ _id: "0" },{ _id: "1" }, { _id: "2" }, { _id: "3" },{ _id: "4" }, { _id: "5" }, { _id: "6" }];
+  return (
+    <>
+    <div>
+      <Typography style={{fontFamily: "Comic Sans MS", textAlign: "center", fontSize: "30px"}}>
+        PARTICIPER A DES EXCURSION EN GROUPE! 
+      </Typography>
+      <hr style={{
+        margin: "10px auto",
+        width: "50%",
+        height: "2px",
+        backgroundColor: "#f90",
+        border: "none"
+      }}/>
+      <p style={{textAlign: "center", fontSize: "19px"}}>
+        <strong>Toute les excursions en groupe à Albi.</strong><br />
+        Consultez l'ensemble des articles en choisissant le sujet qui vous plaît ! Retrouvez les excursion groupé à Albi pour rencontrer de nouvelles personnes !
+      </p>
+    </div>
+    <br />
+    <div className={classes.root}>
+      <AppBar position="static" color="default">
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          indicatorColor="primary"
+          textColor="primary"
+          variant="scrollable"
+          scrollButtons="auto"
+          aria-label="scrollable auto tabs example"
+        >
+        {Nbgroup.map((l, i) => (
+        <Tab label={Data.Groupe[l._id].nom} {...a11yProps(l._id)} />
+        ))}
+        </Tabs>
+      </AppBar>
+      {Nbgroup.map((l, i) => (
+        <TabPanel value={value} index={i}>
+          
+          <Grid container spacing={1}>
+            <Grid item xs={2}>
+              <img
+                  src={Data.Groupe[i].image}
+                  alt={Data.Groupe[i].id}
+                  width="100%"
+              />
+            </Grid>
+            <Grid item xs={10}>
+              <p><strong> {Data.Groupe[i].date} - {Data.Groupe[i].adresse}</strong> <br /> <br/>{Data.Groupe[i].decription}<br/>{Data.Groupe[i].description2}</p>
+            </Grid>
+          </Grid>
+        </TabPanel>
+      ))}
+    </div>
+    </>
+  );
+}
+
 
 //----------------------------FONCTION ETAPE / PREPARATION SEJOUR------------------------------
 export function Etape() {
