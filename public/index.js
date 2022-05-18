@@ -17,7 +17,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import Grid from '@mui/material/Grid';
 import { Sejour } from './sejour.js';
 import { Itineraire } from './itineraire.js';
-import { ImageFond, Suggestion, Actualite, Etape, Suggestion4, Graphique } from './accueil.js';
+import { ImageFond, Suggestion, Actualite, Etape, Suggestion4, Graphique, Groupe, Inscri } from './accueil.js';
 import { Formulaire, ImageFond2 } from './contact.js';
 import HomeIcon from '@mui/icons-material/Home';
 import ButtonBase from '@mui/material/ButtonBase';
@@ -458,6 +458,8 @@ function App() {
             <Suggestion2 onClick={setEtat}/> 
             <br/>
             <Suggestion4/>
+            <Groupe/>
+            <Inscri/>
             <Graphique/>
             </>
           );
