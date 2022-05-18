@@ -280,30 +280,22 @@ const Map = () => {
 
     map.on('click', function (e) {
       var container = L.DomUtil.create('div'),
-        geolocalisationBtn = createButton('Commencer à partir de votre position', container),
-        startBtn = createButton('Commencer à partir de cette localisation', container),
-        bonusBtn = createButton('Ajouter une destination', container),
-        destBtn = createButton('Arriver ici', container);
+        geoBtn = createButton('Partir depuis votre geocalisation', container),
+        startBtn = createButton('Ajouter une destination', container),
+        destBtn = createButton('Arriver ici', container),
+        resetBtn = createButton('Supprimer les itinéraires', container);
 
       L.popup()
         .setContent(container)
         .setLatLng(e.latlng)
         .openOn(map);
-        
 
-      L.DomEvent.on(geolocalisationBtn, 'click', function () {
-        lesPoints = [];
+      L.DomEvent.on(geoBtn, 'click', function(){
         lesPoints.push(coordGeolocalisation[0]);
         map.closePopup();
-      });
-
+      })
+        
       L.DomEvent.on(startBtn, 'click', function () {
-        lesPoints = [];
-        lesPoints.push([e.latlng.lat, e.latlng.lng]);
-        map.closePopup();
-      });
-
-      L.DomEvent.on(bonusBtn, 'click', function () {
         lesPoints.push([e.latlng.lat, e.latlng.lng]);
         map.closePopup();
       });
@@ -320,6 +312,12 @@ const Map = () => {
           autoRoute: true,
           language: 'fr'
         }).addTo(map);
+
+        lesPoints = [];
+      });
+
+      L.DomEvent.on(resetBtn, 'click', function(){
+        window.location.reload();
       });
     });
 
