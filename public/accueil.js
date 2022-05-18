@@ -33,6 +33,26 @@ import {
 import { Bar } from 'react-chartjs-2';
 import { Pie } from 'react-chartjs-2';
 
+
+import { TextField, Slider } from "@mui/material";
+import Autocomplete from '@mui/material/Autocomplete';
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { blue } from "@mui/material/colors";
+import Alert from "@mui/material/Alert";
+import IconButton from "@mui/material/IconButton";
+import Collapse from "@mui/material/Collapse";
+import CloseIcon from "@mui/icons-material/Close";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Switch from "@mui/material/Switch";
+import CancelScheduleSendIcon from "@mui/icons-material/CancelScheduleSend";
+import SendIcon from "@mui/icons-material/Send";
+import emailjs from '@emailjs/browser'
+import { useRef } from 'react';
+
 //----------------------------FONCTION IMAGE FOND ACCUEIL------------------------------
 export function ImageFond(){
     return (
