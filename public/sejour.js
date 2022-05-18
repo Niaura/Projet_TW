@@ -741,7 +741,7 @@ export  function Sejour(){
                 Horaire: <br />
                 {Data.Hotel[l._id].horaire}
                 </Typography>
-                <Link href={Data.Hotel[l._id].reservation} underline="none">
+                <Link href={Data.Hotel[l._id].reservation} color="inherit" underline="hover">
                 Cliqué ici pour réserver une chambre!
                 </Link>
                 
