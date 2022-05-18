@@ -277,19 +277,19 @@ const Map = () => {
       alert("Géolocalisation indisponible");
     }
 
-    var l = new L.Routing.Formatter('fr');
 
     map.on('click', function (e) {
       var container = L.DomUtil.create('div'),
-        geolocalisationBtn = createButton('Commencer à partir de votre localisation', container),
-        startBtn = createButton('Commencer ici', container),
+        geolocalisationBtn = createButton('Commencer à partir de votre position', container),
+        startBtn = createButton('Commencer à partir de cette localisation', container),
         bonusBtn = createButton('Ajouter une destination', container),
-        destBtn = createButton('Aller ici', container);
+        destBtn = createButton('Arriver ici', container);
 
       L.popup()
         .setContent(container)
         .setLatLng(e.latlng)
         .openOn(map);
+        
 
       L.DomEvent.on(geolocalisationBtn, 'click', function () {
         lesPoints = [];
@@ -318,7 +318,7 @@ const Map = () => {
           waypoints: lesPoints,
           collapsible: true,
           autoRoute: true,
-          formatter: l
+          language: 'fr'
         }).addTo(map);
       });
     });
@@ -371,37 +371,17 @@ export function Itineraire() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={1}>
-        <Grid item xs={3}>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Typography>Itinéraires disponibles :</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                Voici une liste d'itinéraires spécialement préparé pour vous ! :D
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Typography>Calculer un itinéraire :</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                Vous pouvez calculer un itinéraire, sois avec des coordonées personnalisés sois grâce aux lieux déjà présent sur la map ! :D
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
+        <Grid item xs={2}>
+          <Typography>
+            <br />
+            <strong> Albi Touriste vous offres la possibilité de calculer des itinéraires personnalisés grâce à cette carte mise à votre disposition </strong>
+            <br />
+
+            Pour pouvoir calculer des itinéraires, tout ce passe directement sur la map. 
+            
+            </Typography>
         </Grid>
-        <Grid item xs={7}>
+        <Grid item xs={8}>
           <Map />
         </Grid>
       </Grid>
