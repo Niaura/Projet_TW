@@ -96,8 +96,8 @@
         {
             "id": "zoo",
             "nom": "Espace zoologique exoticamis",
-            "lagitude": 43.929580823387596,
-            "longitude": 2.1435570749485002,
+            "lagitude": 43.853827,
+            "longitude": 2.275734,
             "description": ["Le parc présente 200 animaux de 30 espèces différentes sur 1 hectare de végétation.",
                 "L'espace présente des serpents, des lézards, des caïmans des singes, lémuriens, tortues, animaux de la ferme et oiseaux exotiques."
             ],
@@ -926,127 +926,6 @@
         }
 
     ],
-    "Groupe": [{
-            "id": "épiscopale",
-            "image": "./images/cite.jpg",
-            "nom": "La Cité épiscopale d'Albi",
-            "decription": [" Visite guidée avec un guide conférencier du centre historique et de la cathédrale Sainte-Cécile inscrits au Patrimoine mondial par l'UNESCO - durée 2h"],
-            "description2": ["Découverte des sites phares du périmètre classé au Patrimoine Mondial : la Cathédrale, le Palais de la Berbie, la collégiale Saint-Salvi et son cloître, les berges du Tarn, le Pont-vieux....",
-                "Pour bénéficier du tarif Albi City Pass, présentation obligatoire du pass au guide. N'oubliez pas d'acheter le pass - en réservation sur ce site ou auprès de l'Office de Tourisme"
-            ],
-            "date": "Samedi et Dimanche de 14h30 à 16h30",
-            "adresse": " Office de Tourisme, 42 rue Mariès",
-            "localitation": "43.92849913116018, 2.144078633121076",
-            "tarifs": ["A partir de 13€ ",
-                "Etudiant: 12€",
-                "8-14 ans: 8€",
-                "-8ans: gratuit"
-            ]
-        },
-        {
-            "id": "centre",
-            "image": "./images/centre.jpg",
-            "nom": "Le centre historique",
-            "decription": [" En partenariat avec l'Association des Guides Interprètes du Tarn."],
-            "description2": ["Un parcours à travers vingt siècles d'histoire, dans les quartiers anciens, harmonieusement restaurés: le Pont-Vieux (XIème s.), la collégiale et le cloître Saint-Salvi (XIIème s.),",
-                " les maisons médiévales, les hôtels particuliers de la Renaissance...",
-                "Ce secteur sauvegardé, en grande partie piéton rythme aussi avec commerces et animations."
-            ],
-            "date": "Toute la semaine (sauf mercredi), de 11h30 à 13 et de 15h à 16h30",
-            "adresse": " Office de Tourisme, 42 rue Mariès",
-            "localitation": "43.92849913116018, 2.144078633121076",
-            "tarifs": ["A partir de 7€ ",
-                "Etudiant: 6€",
-                "8-14 ans: 6€",
-                "-8ans: gratuit"
-            ]
-        },
-        {
-            "id": "aventuriers",
-            "image": "./images/avature.jpg",
-            "nom": "Les Aventuriers de la ville rouge",
-            "decription": [" Envie d'un moment de partage et de découverte en famille ? En voici l'occasion !"],
-            "description2": ["Petits et grands, cette visite ludique et interactive d’Albi vous permettra,",
-                " grâce à votre guide et sa mallette remplie d'accessoires (boussole, miroir, jeux et autres surprises…) de devenir ou de redevenir un véritable explorateur, arpentant les rues de la Ville Rouge pour mieux en percer les secrets !"
-            ],
-            "date": "Mercredi 13/07 de 10h30 à 12h",
-            "adresse": " Office de Tourisme, 42 rue Mariès",
-            "localitation": "43.92849913116018, 2.144078633121076",
-            "tarifs": ["A partir de 9€ ",
-                "6-14 ans: 8€",
-                "-6ans: gratuit"
-            ]
-        },
-        {
-            "id": "chase",
-            "image": "./images/tresor.jpg",
-            "nom": "Chasse au trésor en famille ou entre amis",
-            "decription": ["La Chasse aux trésors d’Albi est ouverte, alors à vous de jouer !"],
-            "description2": ["Seul ou avec votre tribu d’aventuriers, lancez-vous dans les rues de la Cité épiscopale, munis d’un carnet de route, d’un plan et de vos méninges, afin de résoudre les énigmes et ainsi retrouver le trésor dissimulé.",
-                " Une manière amusante et originale de découvrir l’histoire et les détails insolites d’Albi, en autonomie mais sous l’œil attentif de votre guide, avec récompense et convivialité garantis !"
-            ],
-            "date": "A partir du 12/07 ,mardi et samedi de 16h30 à 18h",
-            "adresse": " Office de Tourisme, 42 rue Mariès",
-            "localitation": "43.92849913116018, 2.144078633121076",
-            "tarifs": ["A partir de 10€ ",
-                "8-14 ans: 8€",
-                "-8ans: gratuit"
-            ]
-        },
-        {
-            "id": "crimes",
-            "image": "./images/crimes.jpg",
-            "nom": "Crimes et Faits divers à Albi",
-            "decription": ["Plongez dans l’histoire truculente et sordide de la ville d'Albi ! Meurtres, larcins, univers carcéral, justice…"],
-            "description2": ["Découvrez les anecdotes et les évènements qui ont défrayé la chronique au Moyen Age et ceux qui ont fait la une des journaux à l'époque plus moderne."],
-            "date": "A partir du 12/07 ,mardi de 18h à 19h30",
-            "adresse": " Office de Tourisme, 42 rue Mariès",
-            "localitation": "43.92849913116018, 2.144078633121076",
-            "tarifs": ["A partir de 9€ ",
-                "8-14 ans: 8€",
-                "-8ans: gratuit"
-            ]
-        },
-        {
-            "id": "madame",
-            "image": "./images/madame.jpg",
-            "nom": "Promenade avec Madame Lapérouse",
-            "decription": ["Visite insolite d’Albi pour découvrir la ville sous un nouvel angle, en faisant la connaissance de l’un des grands noms de l’histoire de la ville."],
-            "description2": ["Durant cette balade, vous revivrez Albi en immersion au XVIIIe siècle sous Louis XVI à l'époque de la destruction des remparts.",
-                " Vous découvrirez la vie du port, ou encore les derniers potins sur les grandes familles de la ville sans oublier les détails de la rencontre d'Eléonore avec Jean-François, ce beau navigateur qui a fait chavirer son coeur.",
-                "Pour que l'immersion soit la plus totale, la visite sera menée en costume."
-            ],
-            "date": "Vendredi 27/05 de 10h30 à 12h",
-            "adresse": " Office de Tourisme, 42 rue Mariès",
-            "localitation": "43.92849913116018, 2.144078633121076",
-            "tarifs": ["A partir de 15€ ",
-                "8-12 ans: 5€",
-                "13-17 ans: 7€",
-                "Etudiants: 10€",
-                "-7ans: gratuit"
-            ]
-        },
-        {
-            "id": "monstueuse",
-            "image": "./images/monstre.jpg",
-            "nom": "Les Monstrueuses Nocturnes d'Albi",
-            "decription": ["Une visite guidée, théatralisée, en nocturne, dans le centre historique ! Suivez un bien étrange personnage, vêtu en costume d'époque. A la lueur des flambeaux, il conte le patrimoine et l'histoire de la ville. Idéal en famille !"],
-            "description2": ["A l'heure où les honnêtes gens quittent les ruelles pittoresques de la Ville rouge pour rejoindre leurs pénates, Albi s'endort... mais pas tout à fait... Sirènes,",
-                " gargouilles et autres créatures mystérieuses cachées dans la pierre et la brique de vieille cité, s'éveillent. Oyez grands et petits !",
-                "Venez dès maintenant découvrir ces monstres légendaires tapis dans l'ombre, leurs symboles et leurs secrets. Seul ou en famille, une visite fascinante à ne pas manquer !"
-            ],
-            "date": "A partie du 11/07, Lundi ou Vendredi de 20h45 à 22h30",
-            "adresse": " Office de Tourisme, 42 rue Mariès",
-            "localitation": "43.92849913116018, 2.144078633121076",
-            "tarifs": ["A partir de 10€ ",
-                "8-14 ans: 8€",
-                "Forfait famille: 8€",
-                "Etudiants: 8€",
-                "-8ans: gratuit"
-            ]
-        }
-    ],
-
     "ClientelesEtrangers2020": [{
             "id": "Espagne",
             "nom": "Espagne",
