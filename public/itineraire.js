@@ -54,7 +54,7 @@ import LocationCityIcon from '@mui/icons-material/LocationCity';
 
 // Voir sur npm -> leaflet react : VA REMPLACER GOOGLE
 
-import L, {control} from 'leaflet';
+import L, { control } from 'leaflet';
 import marker from 'leaflet';
 import popup from 'leaflet';
 
@@ -108,6 +108,10 @@ const Map = () => {
     layers: [MAP_TILE]
   };
 
+
+
+
+
   // Mettre ici toute les fonctions etc qui ont un effet sur map
   useEffect(() => {
     const map = L.map("map", mapParams);
@@ -117,6 +121,8 @@ const Map = () => {
     var lesLieux = [];
     var lesResto = [];
     var lesHotels = [];
+
+
 
     {
       NbLieux.map((l, i) => (
@@ -179,14 +185,14 @@ const Map = () => {
     });
 
 
-
+    var popup;
 
 
     for (var i = 0; i < lesLieux.length; i++) {
 
-      var marker = L.marker([lesLieux[i][0], lesLieux[i][1]]);
+      var marker = L.marker([lesLieux[i][0], lesLieux[i][1]], { icon: redIcon });
 
-      var popup = L.popup().setContent(lesLieux[i][2]);
+      popup = L.popup().setContent(lesLieux[i][2]);
 
       marker.bindPopup(popup).openPopup();
       marker.addTo(map);
@@ -197,7 +203,7 @@ const Map = () => {
 
       var marker = L.marker([lesResto[i][0], lesResto[i][1]], { icon: greenIcon });
 
-      var popup = L.popup().setContent(lesResto[i][2]);
+      popup = L.popup().setContent(lesResto[i][2]);
 
       marker.bindPopup(popup).openPopup();
       marker.addTo(map);
@@ -208,7 +214,7 @@ const Map = () => {
 
       var marker = L.marker([lesHotels[i][0], lesHotels[i][1]], { icon: purpleIcon });
 
-      var popup = L.popup().setContent(lesHotels[i][2]);
+      popup = L.popup().setContent(lesHotels[i][2]);
 
       marker.bindPopup(popup).openPopup();
       marker.addTo(map);
@@ -243,39 +249,7 @@ const Map = () => {
 
     var lesPoints = [];
 
-    map.on('click', function(e) {
-      var container = L.DomUtil.create('div'),
-          startBtn = createButton('Commencer ici', container),
-          bonusBtn = createButton('Ajouter une destination', container),
-          destBtn = createButton('Aller ici', container);
-  
-      L.popup()
-          .setContent(container)
-          .setLatLng(e.latlng)
-          .openOn(map);
-
-      L.DomEvent.on(startBtn, 'click', function(){
-        lesPoints = [];
-        lesPoints.push([e.latlng.lat, e.latlng.lng]);
-        map.closePopup();
-      });
-
-      L.DomEvent.on(bonusBtn, 'click', function(){
-        lesPoints.push([e.latlng.lat, e.latlng.lng]);
-        map.closePopup();
-      });
-
-
-      L.DomEvent.on(destBtn, 'click', function() {
-        lesPoints.push([e.latlng.lat, e.latlng.lng]);
-        console.log(lesPoints);
-        map.closePopup();
-
-        L.Routing.control({waypoints : lesPoints}).addTo(map);
-      });
-    });
-
-
+    var coordGeolocalisation = [];
 
 
     const locationOptions = {
@@ -288,6 +262,7 @@ const Map = () => {
       /* Zoom avant de trouver la localisation */
       map.setZoom(16);
       /* Centre la carte sur la latitude et la longitude de la localisation de l'utilisateur */
+      coordGeolocalisation.push([position.coords.latitude, position.coords.longitude]);
       map.panTo(new L.LatLng(position.coords.latitude, position.coords.longitude));
     }
 
@@ -301,6 +276,53 @@ const Map = () => {
       /* Le navigateur n'est pas compatible */
       alert("Géolocalisation indisponible");
     }
+
+    var l = new L.Routing.Formatter('fr');
+
+    map.on('click', function (e) {
+      var container = L.DomUtil.create('div'),
+        geolocalisationBtn = createButton('Commencer à partir de votre localisation', container),
+        startBtn = createButton('Commencer ici', container),
+        bonusBtn = createButton('Ajouter une destination', container),
+        destBtn = createButton('Aller ici', container);
+
+      L.popup()
+        .setContent(container)
+        .setLatLng(e.latlng)
+        .openOn(map);
+
+      L.DomEvent.on(geolocalisationBtn, 'click', function () {
+        lesPoints = [];
+        lesPoints.push(coordGeolocalisation[0]);
+        map.closePopup();
+      });
+
+      L.DomEvent.on(startBtn, 'click', function () {
+        lesPoints = [];
+        lesPoints.push([e.latlng.lat, e.latlng.lng]);
+        map.closePopup();
+      });
+
+      L.DomEvent.on(bonusBtn, 'click', function () {
+        lesPoints.push([e.latlng.lat, e.latlng.lng]);
+        map.closePopup();
+      });
+
+
+      L.DomEvent.on(destBtn, 'click', function () {
+        lesPoints.push([e.latlng.lat, e.latlng.lng]);
+        console.log(lesPoints);
+        map.closePopup();
+
+        L.Routing.control({ 
+          waypoints: lesPoints,
+          collapsible: true,
+          autoRoute: true,
+          formatter: l
+        }).addTo(map);
+      });
+    });
+
 
   }, []);
 
