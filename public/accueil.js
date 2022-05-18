@@ -280,7 +280,7 @@ export  function Suggestion4() {
 }
 
 //----------------------------FONCTION EXCURSION GROUPE------------------------------
-export  function Groupe() {
+export  function Groupes() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
