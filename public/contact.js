@@ -1,5 +1,5 @@
 import * as React from "react";
-import { TextField, Typography, Slider } from "@mui/material";
+import { TextField, Typography, Slider, Hidden } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import TextareaAutosize from "@mui/base/TextareaAutosize";
 import InputLabel from "@mui/material/InputLabel";
@@ -19,6 +19,7 @@ import SendIcon from "@mui/icons-material/Send";
 import emailjs from '@emailjs/browser'
 import { useRef } from 'react';
 import Button from '@mui/material/Button';
+import { ConstructionRounded } from "@mui/icons-material";
 
 export function ImageFond2(){
   return (
@@ -70,11 +71,19 @@ export function Formulaire() {
     });
   };
 
+  const [value, setValue] = React.useState("");
+  const [value2, setValue2] = React.useState("");
+  const [value3, setValue3] = React.useState("");
+
   const handleChange = (event) => {
-    setOpen2(true)
+    setOpen2(true);
+    
+    setValue(event.target.value);
   };
   const handleChange2 = (event) => {
     setOpen3(true);
+
+    setValue2(event.target.value);
   };
   const handleChange3 = (event) => {
     if (event.target.value === 100) {
@@ -103,6 +112,8 @@ export function Formulaire() {
   };
   const handleChange4 = (event) => {
     setOpen4(true);
+
+    setValue3(event.target.value);
   };
   const [open, setOpen] = React.useState(false);
   const [open2, setOpen2] = React.useState(false);
@@ -139,6 +150,8 @@ export function Formulaire() {
       }
     }
   });
+
+
   return (
     <form ref={form} onSubmit={sendEmail}>
       <br/>
@@ -154,10 +167,10 @@ export function Formulaire() {
             autoWidth
             label="Je suis*"
           >
-            <MenuItem value="particulier">Particulier</MenuItem>
-            <MenuItem value="professionnel">Professionnel</MenuItem>
-            <MenuItem value="collectivite">Collectivité</MenuItem>
-            <MenuItem value="candidat">Candidat</MenuItem>
+            <MenuItem value="Particulier">Particulier</MenuItem>
+            <MenuItem value="Professionnel">Professionnel</MenuItem>
+            <MenuItem value="Collectivite">Collectivité</MenuItem>
+            <MenuItem value="Candidat">Candidat</MenuItem>
           </Select>
         </FormControl>
       </div>
@@ -172,22 +185,22 @@ export function Formulaire() {
           </InputLabel>
           <Select
             labelId="demo-simple-select-autowidth-label"
-            id="demo-simple-select-autowidth"
+            id="jesouhaite"
             onChange={handleChange2}
             autoWidth
             label="Je souhaite*"
           >
-            <MenuItem value="contacter">
+            <MenuItem value="Contacter le service client concernant une visite">
               Contacter le service client concernant une visite
             </MenuItem>
-            <MenuItem value="demander">
+            <MenuItem value="Demander des informations sur un lieu de la ville">
               Demander des informations sur un lieu de la ville
             </MenuItem>
-            <MenuItem value="aide1">De l'aide concernant mon séjour</MenuItem>
-            <MenuItem value="aide2">
+            <MenuItem value="De l'aide concernant mon séjour">De l'aide concernant mon séjour</MenuItem>
+            <MenuItem value="De l'aide sur le fonctionnement du site">
               De l'aide sur le fonctionnement du site
             </MenuItem>
-            <MenuItem value="aide3">Autre demande</MenuItem>
+            <MenuItem value="Autre demande">Autre demande</MenuItem>
           </Select>
         </FormControl>
       </Collapse>
@@ -330,6 +343,13 @@ export function Formulaire() {
           </Button>
         </Collapse>
       </div>
+     
+      <div style={{visibility: "hidden", display: "inline"}}>
+        <TextField name="jesuis" value={value}/>
+        <TextField name="jesouhaite" value={value2}/>
+        <TextField name="civilité" value={value3}/>
+      </div>
+      
     </form>
   );
 }
