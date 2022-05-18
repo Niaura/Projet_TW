@@ -440,8 +440,8 @@ export  function Sejour(){
           position="fixed"
         >
           <Tab icon={< LandscapeIcon  />} label="Nos lieux à visiter" {...a11yProps(0)} />
-          <Tab icon={< HotelIcon />} label="Nos restaurant" {...a11yProps(1)} />
-          <Tab icon={< RestaurantIcon />} label="Nos hotel" {...a11yProps(2)} />
+          <Tab icon={< HotelIcon />} label="Nos restaurants" {...a11yProps(1)} />
+          <Tab icon={< RestaurantIcon />} label="Nos hôtels" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
       <SwipeableViews
