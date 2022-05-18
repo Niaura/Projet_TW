@@ -125,15 +125,7 @@ const ResponsiveAppBar = ({ onClick }) => {
               Contacts
             </Button>
           </Box>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
+          
         </Toolbar>
       </Container>
     </AppBar>
