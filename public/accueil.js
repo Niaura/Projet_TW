@@ -289,8 +289,89 @@ export  function Groupe() {
   };
 
   const Nbgroup = [{ _id: "0" },{ _id: "1" }, { _id: "2" }, { _id: "3" },{ _id: "4" }, { _id: "5" }, { _id: "6" }];
+  
+  //---email
+  const form = useRef();
+  var a = true;
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_kwb9sn7','template_o13i2e7', form.current,'yAV214GEzT_CoRl69').
+    then((resultat) => {
+      console.log(resultat.text);
+    }, (error) => {
+      console.log(error.text);
+    });
+  };
+
+  const handleChange6 = (event) => {
+    setOpen2(true)
+  };
+  const handleChange2 = (event) => {
+    setOpen3(true);
+  };
+  const handleChange3 = (event) => {
+    if (event.target.value === 100) {
+      if (
+        document.getElementById("nom").value != "" &&
+        document.getElementById("prenom").value != "" &&
+        document.getElementById("email").value != "" 
+      ) {
+        if (a==true){
+          document.getElementById("boutonenvoyer").click();
+          setOpen(true);
+          a=false;
+        }
+        
+        
+      } else {
+        alert("Veuillez compléter les cases vides !");
+        document.getElementById("slideenvoyer").setAttribute("defaultValue", 0);
+      }
+    }
+  };
+  const handleChange4 = (event) => {
+    setOpen4(true);
+  };
+  const [open, setOpen] = React.useState(false);
+  const [open2, setOpen2] = React.useState(false);
+  const [open3, setOpen3] = React.useState(false);
+  const [open4, setOpen4] = React.useState(false);
+
+  const [slidevalue, setSlidevalue] = React.useState(0);
+  const [checked, setChecked] = React.useState(false);
+
+  const handleChange5 = () => {
+    setChecked((prev) => !prev);
+  };
+
+  const marks = [
+    {
+      value: 0,
+      label: <CancelScheduleSendIcon />
+    },
+    {
+      value: 100,
+      label: <SendIcon />
+    }
+  ];
+
+  const theme = createTheme({
+    palette: {
+      primary: {
+        // Purple and green play nicely together.
+        main: blue[800]
+      },
+      secondary: {
+        // This is green.A700 as hex.
+        main: "#11cb5f"
+      }
+    }
+  });
+
   return (
     <>
+    <form ref={form} onSubmit={sendEmail}>
     <div>
       <Typography style={{fontFamily: "Comic Sans MS", textAlign: "center", fontSize: "30px"}}>
         PARTICIPER A DES EXCURSION EN GROUPE! 
@@ -312,7 +393,7 @@ export  function Groupe() {
       <AppBar position="static" color="default">
         <Tabs
           value={value}
-          onChange={handleChange}
+          onChange={handleChange6}
           indicatorColor="primary"
           textColor="primary"
           variant="scrollable"
@@ -338,10 +419,107 @@ export  function Groupe() {
             <Grid item xs={10}>
               <p><strong> {Data.Groupe[i].date} - {Data.Groupe[i].adresse}</strong> <br /> <br/>{Data.Groupe[i].decription}<br/>{Data.Groupe[i].description2}</p>
             </Grid>
+
+            <Grid container spacing={1}>
+            <p style={{textAlign: "center", fontSize: "19px"}}>
+        <strong>Remplissez le formulaire pour vous inscrire!</strong><br />
+      </p>
+            
+      <br/>
+      
+      <div
+        id="coordonnee"
+        style={{ textAlign: "center"}}
+      >
+        
+        <FormControl id="civilité" sx={{ m: 1, width: 600 }}/>
+
+          <br/>
+
+          <TextField id="nom" name="nom" label="Nom*" sx={{ m: 1, width: 600 }}/>
+
+          <br />
+
+          <TextField id="prenom" name="prenom" label="Prénom*" sx={{ m: 1, width: 600 }}/>
+
+          <br />
+
+          <TextField id="email" name="email" label="E-mail*" sx={{ m: 1, width: 600 }}/>
+
+          <br />
+        
+
+        <br />
+        <Grid container spacing={2}>
+          
+          <Grid item xs={12}>
+            <FormControlLabel
+              control={<Switch checked={checked} onChange={handleChange5} />}
+              label="J’accepte que mes informations soient enregistrées afin de rendre le service demandé"
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <ThemeProvider theme={theme} id="themeprovider">
+              <Slider
+                id="slideenvoyer"
+                defaultValue={slidevalue}
+                color="primary"
+                onChange={handleChange3}
+                marks={marks}
+                sx={{
+                  width: 175,
+                  color: "success.dark",
+                  "& .MuiSlider-thumb": {
+                    borderRadius: "6px"
+                  }
+                }}
+              />
+            </ThemeProvider>
+          </Grid>
+        </Grid>
+        <br />
+        <Button type="submit" id="boutonenvoyer" style={{visibility: "hidden"}}>Envoyer</Button>
+        <div id="messageenvoye" style={{ width: "100%" }}>
+          <Collapse in={open}>
+            <Alert
+              action={
+                <IconButton
+                  aria-label="close"
+                  color="inherit"
+                  size="small"
+                  onClick={() => {
+                    setOpen(false);
+                    
+                  }}
+                >
+                  <CloseIcon fontSize="inherit" />
+                </IconButton>
+              }
+              sx={{ mb: 2 }}
+            >
+              Votre demande d'inscription a bien été envoyé!
+            </Alert>
+          </Collapse>
+        </div>
+        
+        <Collapse in={open}>
+          <Button 
+            style={{textAlign: "center"}}
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.reload();
+            }}>
+            Raffraichir la page
+          </Button>
+        </Collapse>
+      </div>
+    
+            </Grid>
           </Grid>
         </TabPanel>
       ))}
     </div>
+    </form>
     </>
   );
 }
