@@ -117,7 +117,7 @@ const images = [
   };
 
   return (
-    <Box sx={{ maxWidth: 600, flexGrow: 1 }} b>
+    <Box sx={{ maxWidth: 500, flexGrow: 1, justifyContent:"center" }} b>
       <Paper
         square
         elevation={0}
@@ -143,9 +143,9 @@ const images = [
               <Box
                 component="img"
                 sx={{
-                  height: 350,
+                  height: 250,
                   display: 'block',
-                  maxWidth: 600,
+                  maxWidth: 500,
                   overflow: 'hidden',
                   width: '100%',
                 }}
@@ -426,8 +426,13 @@ export  function Inscri() {
       }
     }
   };
+
+  const [value2, setValue2] = React.useState("");
+
   const handleChange4 = (event) => {
     setOpen4(true);
+
+    setValue2(event.target.value);
   };
   const [open, setOpen] = React.useState(false);
   const [open2, setOpen2] = React.useState(false);
@@ -465,6 +470,8 @@ export  function Inscri() {
     }
   });
 
+  
+
   return (
     <>
     <form ref={form} onSubmit={sendEmail}>
@@ -486,13 +493,13 @@ export  function Inscri() {
             autoWidth
             label="Je souhaite m'inscrire pour*"
           >
-            <MenuItem value="cite">La cité épiscopale d'Albi</MenuItem>
-            <MenuItem value="centre">Le centre historique</MenuItem>
-            <MenuItem value="aventuriers">Les aventuriers de la ville rouge</MenuItem>
-            <MenuItem value="chasse">Chasse au trésor</MenuItem>
-            <MenuItem value="crimes">Crimes et faits divers à ALbi</MenuItem>
-            <MenuItem value="promenade">Promenade avec madame Lapérouse</MenuItem>
-            <MenuItem value="monstrueuse">Les monstrueuses nocturnes d'Albi</MenuItem>
+            <MenuItem value="La cité épiscopale d'Albi">La cité épiscopale d'Albi</MenuItem>
+            <MenuItem value="Le centre historique">Le centre historique</MenuItem>
+            <MenuItem value="Les aventuriers de la ville rouge">Les aventuriers de la ville rouge</MenuItem>
+            <MenuItem value="Chasse au trésor">Chasse au trésor</MenuItem>
+            <MenuItem value="Crimes et faits divers à ALbi">Crimes et faits divers à ALbi</MenuItem>
+            <MenuItem value="Promenade avec madame Lapérouse">Promenade avec madame Lapérouse</MenuItem>
+            <MenuItem value="Les monstrueuses nocturnes d'Albi">Les monstrueuses nocturnes d'Albi</MenuItem>
           </Select>
         </FormControl>
       </div>
@@ -596,7 +603,9 @@ export  function Inscri() {
           </Button>
         </Collapse>
       </div>
-       
+      <div style={{visibility: "hidden"}}>
+          <TextField name="jesouhaite" value={value2}/>
+      </div>
     </form>
     </>
   );
